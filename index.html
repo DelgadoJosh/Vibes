@@ -25,6 +25,13 @@
         .card:hover {
             transform: translateY(-5px);
         }
+        /* The hover transform creates a stacking context that traps the
+           dropdown menu, so lift the active card above its neighbours. */
+        .card:hover,
+        .card:focus-within,
+        .card:has(.dropdown-menu.show) {
+            z-index: 10;
+        }
         .card-title {
             color: #ffffff;
             font-weight: 500;
