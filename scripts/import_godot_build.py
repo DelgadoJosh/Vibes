@@ -74,7 +74,8 @@ def download_and_extract(url, sha, workdir):
 def copy_files(src, dest):
     dest.mkdir(parents=True, exist_ok=True)
     for f in src.iterdir():
-        if f.is_file():
+        # The repo README holds the zip link; never let a stale copy from the zip clobber it.
+        if f.is_file() and f.name not in ("README.md", ".DS_Store"):
             shutil.copy2(f, dest / f.name)
 
 
