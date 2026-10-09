@@ -6,7 +6,7 @@
       "folder": "Games/Puyo's Revenge",
       "description": "Pulling off a block heist from Tetris",
       "updated": "2026-01-24",
-      "model": "Claude Opus (likely 4.8)",
+      "model": "Opus (likely 4.8)",
       "context": "Built as a proof of concept.",
       "images": [
         "Images/Puyos Revenge Title Screenshot 2026-10-08 182518.png",
@@ -35,7 +35,7 @@
       "folder": "Games/Dangerous Delivery Driver",
       "description": "A new driving challenge.",
       "updated": "2026-03-18",
-      "model": "Claude Opus (likely 4.8)",
+      "model": "Opus (likely 4.8)",
       "context": "",
       "images": [
         "Images/Dangerous Delivery Driver Title Screenshot 2026-10-08 182750.png",
@@ -54,7 +54,7 @@
       "folder": "Games/Time Keeper",
       "description": "Keep time on your side.",
       "updated": "2026-07-28",
-      "model": "Claude Opus (4.8 or 5)",
+      "model": "Opus (4.8 or 5)",
       "context": "",
       "images": [
         "Images/Time Keeper Title Screenshot 2026-10-08 182840.png",
@@ -111,7 +111,7 @@
       "folder": "Games/Deadblock",
       "description": "A top-down open world survival game. Gather survivors and keep them alive against the zombies.",
       "updated": "2026-09-13",
-      "model": "Claude Opus (likely 5)",
+      "model": "Opus (likely 5)",
       "context": "",
       "images": [
         "Images/Deadblock Title Screenshot 2026-10-08 182927.png",
@@ -173,8 +173,8 @@
       "folder": "Games/Deadblock 3D 2 - Ashfall",
       "description": "Ashfall. An endless voxel survival world under constant falling ash. Mine and place every block.",
       "updated": "2026-10-05",
-      "model": "Claude Opus 5.5",
-      "context": "Made to test Claude Opus 5.5's 3D abilities.",
+      "model": "Opus 5.5",
+      "context": "Made to test Opus 5.5's 3D abilities.",
       "images": [
         "Images/Deadblock 3D 2 Title Screenshot 2026-10-08 183154.png",
         "Images/Deadblock 3D 2 In Game Screenshot 2026-10-08 183618.png",
@@ -457,7 +457,7 @@
       "folder": "Games/Potion Maker",
       "description": "A duck alchemist (with a cute hat) brews potions to sell.",
       "updated": "2026-10-04",
-      "model": "Claude Opus 5.5",
+      "model": "Opus 5.5",
       "context": "",
       "images": [
         "Images/Potion Maker Title Screenshot 2026-10-08 184358.png",
@@ -526,7 +526,7 @@
       "folder": "Apps/Dnd Initiative Tracker",
       "description": "A realtime turn manager for Dungeons & Dragons 5e, providing synchronized views for DMs and players.",
       "updated": "2026-10-04",
-      "model": "Claude Opus (likely 4.8)",
+      "model": "Opus (likely 4.8)",
       "context": "",
       "images": [
         "Images/Dnd Turn Manager Title Screenshot 2026-10-08 184628.png"
