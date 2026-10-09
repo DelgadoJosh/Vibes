@@ -10,7 +10,7 @@ All card content lives in [`games.json`](games.json); `index.html` renders it. E
 
 - `title`, `description`, `kind` (`game` or `app`), `folder`
 - `model` – what made it (shown as a tag), `context` – why it was made (shown under "Why I made this")
-- `thumbnail` – path to an image (16:9 works best, e.g. `Thumbnails/time-keeper.png`); blank uses the placeholder
+- `images` – screenshots shown in the card gallery, first one is the cover (e.g. `Images/Time Keeper Title Screenshot.png`); empty uses the placeholder
 - `updated`, `historyPage` (optional), `versions` (newest first; optional `label` per version)
 
 `scripts/import_godot_build.py` adds new versions and games to `games.json` automatically.

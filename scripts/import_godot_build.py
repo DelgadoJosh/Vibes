@@ -100,7 +100,7 @@ def update_data(cfg, version, html_name):
     project = next((p for p in data["projects"] if p["folder"] == folder), None)
     if project is None:
         project = {"title": cfg["title"], "kind": "game", "folder": folder, "description": cfg["description"],
-                   "updated": today, "model": "", "context": "", "thumbnail": "", "versions": []}
+                   "updated": today, "model": "", "context": "", "images": [], "versions": []}
         data["projects"].append(project)
         print("  added new project to games.json (fill in model/context there)")
 
