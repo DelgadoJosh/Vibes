@@ -172,7 +172,7 @@
       "kind": "game",
       "folder": "Games/Deadblock 3D 2 - Ashfall",
       "description": "Ashfall. An endless voxel survival world under constant falling ash. Mine and place every block.",
-      "updated": "2026-10-05",
+      "updated": "2026-10-08",
       "model": "Opus 5.5",
       "context": "Made to test Opus 5.5's 3D abilities.",
       "images": [
@@ -185,6 +185,18 @@
         "Images/Deadblock 3D 2 In Game 6 Screenshot 2026-10-08 184202.png"
       ],
       "versions": [
+        {
+          "version": "v0.8.0",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.8.0/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.7.3",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.7.3/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.7.2",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.7.2/Deadblock 3D 2 — Ashfall.html"
+        },
         {
           "version": "v0.7.1",
           "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.7.1/Deadblock 3D 2 — Ashfall.html"
