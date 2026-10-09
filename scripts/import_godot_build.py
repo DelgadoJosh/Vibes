@@ -43,7 +43,9 @@ def game_info(game):
     info.update(OVERRIDES.get(game, {}))
     return info
 
-LINK_RE = re.compile(r"\]\((https://[^)\s]+\.zip)\)[^`\n]*SHA-256\s*`([0-9a-f]{64})`")
+# Accepts "[x.zip](url) — SHA-256 `hash`" and "**Download:** url" / "**SHA-256:** hash" on separate lines.
+URL_RE = re.compile(r"https://[^\s)<>]+\.zip")
+SHA_RE = re.compile(r"SHA-256[^0-9a-f\n]*\n?[^0-9a-f\n]*([0-9a-f]{64})")
 
 
 def version_key(v):
@@ -51,8 +53,10 @@ def version_key(v):
 
 
 def find_zip(readme):
-    m = LINK_RE.search(readme.read_text()) if readme.exists() else None
-    return (m.group(1), m.group(2)) if m else None
+    text = readme.read_text() if readme.exists() else ""
+    url = URL_RE.search(text)
+    sha = url and SHA_RE.search(text, url.end())
+    return (url.group(0), sha.group(1)) if sha else None
 
 
 def download_and_extract(url, sha, workdir):
