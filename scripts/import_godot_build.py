@@ -9,11 +9,12 @@ For each version it:
   1. reads the zip link + SHA-256 from Exports/Games/<Game>/<version>/README.md
   2. downloads into a temp dir, verifies the hash, and unzips safely
   3. copies the files into VC2's export folder and Vibes' Games/<Game>/Versions/<version>/
-  4. adds the version to the game's dropdown in Vibes/index.html (creating the card if needed)
+  4. adds the version to the game's entry in Vibes/games.json (creating the entry if needed)
 Commits are left to the caller.
 """
+import datetime
 import hashlib
-import html
+import json
 import re
 import shutil
 import subprocess
@@ -89,69 +90,30 @@ def copy_files(src, dest):
             shutil.copy2(f, dest / f.name)
 
 
-def li(href, label):
-    return f'                                <li><a class="dropdown-item" href="{href}">{label}</a></li>'
+def update_data(cfg, version, html_name):
+    data_file = VIBES / "games.json"
+    data = json.loads(data_file.read_text())
+    folder = f"Games/{cfg['vibes_dir']}"
+    href = f"{folder}/Versions/{version}/{html_name}"
+    today = datetime.date.today().isoformat()
 
+    project = next((p for p in data["projects"] if p["folder"] == folder), None)
+    if project is None:
+        project = {"title": cfg["title"], "kind": "game", "folder": folder, "description": cfg["description"],
+                   "updated": today, "model": "", "context": "", "thumbnail": "", "versions": []}
+        data["projects"].append(project)
+        print("  added new project to games.json (fill in model/context there)")
 
-def update_index(cfg, version, html_name):
-    index = VIBES / "index.html"
-    text = index.read_text()
-    prefix = f"Games/{cfg['vibes_dir']}/Versions/"
-    href = f"{prefix}{version}/{html_name}"
-
-    if href in text:
-        print("  index.html already lists this version")
+    versions = project["versions"]
+    if any(v["href"] == href for v in versions):
+        print("  games.json already lists this version")
         return
-
-    if prefix not in text:
-        card = f"""            <div class="col-md-6 col-lg-4 mt-4">
-                <div class="card p-3 h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title mb-0">{html.escape(cfg['title'])}</h5>
-                            <span class="badge rounded-pill">{version}</span>
-                        </div>
-                        <p class="card-text">{html.escape(cfg['description'])}</p>
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Play Version
-                            </button>
-                            <ul class="dropdown-menu w-100">
-{li(href, version + " (Latest)")}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-"""
-        # Append after the last card in the grid.
-        anchor = text.rfind("            </div>\n        </div>") + len("            </div>\n")
-        text = text[:anchor] + card + text[anchor:]
-        print("  added new card to index.html")
-    else:
-        start = text.find(prefix)
-        card_start = text.rfind('<div class="card-body">', 0, start)
-        card_end = text.find("</ul>", start)
-        card = text[card_start:card_end]
-        existing = re.findall(re.escape(prefix) + r"([^/\"]+)/", card)
-        is_latest = all(version_key(version) > version_key(v) for v in existing)
-        if is_latest:
-            card = card.replace(" (Latest)</a>", "</a>")
-            card = re.sub(r'(<span class="badge rounded-pill">)[^<]*(</span>)', rf"\g<1>{version}\g<2>", card, count=1)
-            ul = card.find('<ul class="dropdown-menu w-100">') + len('<ul class="dropdown-menu w-100">')
-            card = card[:ul] + "\n" + li(href, version + " (Latest)") + card[ul:]
-        else:
-            # Insert in version order below newer entries.
-            lines = card.split("\n")
-            ver_re = re.compile(re.escape(prefix) + r"([^/\"]+)/")
-            pos = next((i for i, l in enumerate(lines)
-                        if prefix in l and version_key(ver_re.search(l).group(1)) < version_key(version)),
-                       len(lines) - 1)
-            lines.insert(pos, li(href, version))
-            card = "\n".join(lines)
-        text = text[:card_start] + card + text[card_end:]
-        print("  added dropdown entry to index.html")
-    index.write_text(text)
+    versions = [v for v in versions if v["version"] != version] + [{"version": version, "href": href}]
+    project["versions"] = sorted(versions, key=lambda v: version_key(v["version"]), reverse=True)
+    if project["versions"][0]["version"] == version:
+        project["updated"] = today
+    data_file.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+    print("  added version to games.json")
 
 
 def import_version(game, cfg, version):
@@ -166,7 +128,7 @@ def import_version(game, cfg, version):
         copy_files(src, EXPORTS / game / version)
         copy_files(src, VIBES / "Games" / cfg["vibes_dir"] / "Versions" / version)
         print(f"  copied {sum(1 for f in src.iterdir() if f.is_file())} files to both repos")
-    update_index(cfg, version, html_name)
+    update_data(cfg, version, html_name)
 
 
 def versions_of(game):
