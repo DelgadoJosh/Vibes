@@ -1,0 +1,543 @@
+{
+  "projects": [
+    {
+      "title": "Puyo's revenge",
+      "kind": "game",
+      "folder": "Games/Puyo's Revenge",
+      "description": "Pulling off a block heist from Tetris",
+      "updated": "2026-01-24",
+      "model": "Claude Opus (likely 4.8)",
+      "context": "Built as a proof of concept.",
+      "thumbnail": "",
+      "historyPage": "puyos_revenge_versions.html",
+      "versions": [
+        {
+          "version": "v1.0.4",
+          "href": "Games/Puyo's Revenge/Versions/v1.0.4/Godot Inventory Manager v1.0.4.html"
+        },
+        {
+          "version": "v1.0.3",
+          "href": "Games/Puyo's Revenge/Versions/v1.0.3/Godot Inventory Manager v1.0.3.html"
+        },
+        {
+          "version": "v1.0.2",
+          "href": "Games/Puyo's Revenge/Versions/v1.0.2/Godot Inventory Manager v1.0.2.html"
+        }
+      ]
+    },
+    {
+      "title": "Dangerous Delivery Driver",
+      "kind": "game",
+      "folder": "Games/Dangerous Delivery Driver",
+      "description": "A new driving challenge.",
+      "updated": "2026-03-18",
+      "model": "Claude Opus (likely 4.8)",
+      "context": "",
+      "thumbnail": "",
+      "versions": [
+        {
+          "version": "v0.1.0",
+          "href": "Games/Dangerous Delivery Driver/Versions/v0.1.0/v0.1.0/Godot Delivery Truck v0.1.0.html"
+        }
+      ]
+    },
+    {
+      "title": "Time Keeper",
+      "kind": "game",
+      "folder": "Games/Time Keeper",
+      "description": "Keep time on your side.",
+      "updated": "2026-07-28",
+      "model": "Claude Opus (4.8 or 5)",
+      "context": "",
+      "thumbnail": "",
+      "versions": [
+        {
+          "version": "v0.5.1",
+          "href": "Games/Time Keeper/Versions/v0.5.1/index.html"
+        },
+        {
+          "version": "v0.5.0",
+          "label": "Scoreboard",
+          "href": "Games/Time Keeper/Versions/v0.5.0 Scoreboard/index.html"
+        },
+        {
+          "version": "v0.4.4",
+          "label": "GMTK release",
+          "href": "Games/Time Keeper/Versions/v0.4.4 GMTK release/index.html"
+        },
+        {
+          "version": "v0.4.3",
+          "href": "Games/Time Keeper/Versions/v0.4.3/index.html"
+        },
+        {
+          "version": "v0.4.2",
+          "href": "Games/Time Keeper/Versions/v0.4.2/index.html"
+        },
+        {
+          "version": "v0.4.1",
+          "href": "Games/Time Keeper/Versions/v0.4.1/index.html"
+        },
+        {
+          "version": "v0.4.0",
+          "href": "Games/Time Keeper/Versions/v0.4.0/index.html"
+        },
+        {
+          "version": "v0.3.0",
+          "href": "Games/Time Keeper/Versions/v0.3.0/index.html"
+        },
+        {
+          "version": "v0.2.0",
+          "href": "Games/Time Keeper/Versions/v0.2.0/index.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Time Keeper/Versions/v0.1.0/index.html"
+        }
+      ]
+    },
+    {
+      "title": "Deadblock",
+      "kind": "game",
+      "folder": "Games/Deadblock",
+      "description": "A top-down open world survival game. Gather survivors and keep them alive against the zombies.",
+      "updated": "2026-09-13",
+      "model": "Claude Opus (likely 5)",
+      "context": "",
+      "thumbnail": "",
+      "versions": [
+        {
+          "version": "v0.1.2",
+          "href": "Games/Deadblock/Versions/v0.1.2/Deadblock — Open World Survival.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Deadblock/Versions/v0.1.1/Deadblock — Open World Survival.html"
+        }
+      ]
+    },
+    {
+      "title": "Deadblock 3D",
+      "kind": "game",
+      "folder": "Games/Deadblock 3D",
+      "description": "The Quiet After. Deadblock's zombie survival, rebuilt in 3D.",
+      "updated": "2026-09-19",
+      "model": "GPT 6 Astra",
+      "context": "Made to test GPT 6 Astra's 3D abilities.",
+      "thumbnail": "",
+      "versions": [
+        {
+          "version": "v0.2.1",
+          "href": "Games/Deadblock 3D/Versions/v0.2.1/Deadblock 3D — The Quiet After.html"
+        },
+        {
+          "version": "v0.2.0",
+          "href": "Games/Deadblock 3D/Versions/v0.2.0/Deadblock 3D — The Quiet After.html"
+        },
+        {
+          "version": "v0.1.3",
+          "href": "Games/Deadblock 3D/Versions/v0.1.3/Deadblock 3D — The Quiet After.html"
+        },
+        {
+          "version": "v0.1.2",
+          "href": "Games/Deadblock 3D/Versions/v0.1.2/Deadblock 3D — The Quiet After.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Deadblock 3D/Versions/v0.1.1/Deadblock 3D — The Quiet After.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Deadblock 3D/Versions/v0.1.0/v0.1.0/Deadblock 3D — The Quiet After.html"
+        }
+      ]
+    },
+    {
+      "title": "Deadblock 3D 2",
+      "kind": "game",
+      "folder": "Games/Deadblock 3D 2 - Ashfall",
+      "description": "Ashfall. An endless voxel survival world under constant falling ash. Mine and place every block.",
+      "updated": "2026-10-05",
+      "model": "Claude Opus 5.5",
+      "context": "Made to test Claude Opus 5.5's 3D abilities.",
+      "thumbnail": "",
+      "versions": [
+        {
+          "version": "v0.7.1",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.7.1/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.7.0",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.7.0/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.6.0",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.6.0/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.5.4",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.5.4/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.5.3",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.5.3/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.5.2",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.5.2/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.5.1",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.5.1/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.5.0",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.5.0/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.4.2",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.4.2/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.4.1",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.4.1/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.4.0",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.4.0/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.3.6",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.6/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.3.5",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.5/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.3.4",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.4/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.3.3",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.3/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.3.2",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.2/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.3.1",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.1/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.3.0",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.0/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.2.7",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.7/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.2.6",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.6/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.2.5",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.5/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.2.4",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.4/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.2.3",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.3/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.2.2",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.2/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.2.1",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.1/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.2.0",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.0/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.39",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.39/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.38",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.38/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.37",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.37/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.36",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.36/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.35",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.35/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.34",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.34/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.33",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.33/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.32",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.32/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.31",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.31/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.30",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.30/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.29",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.29/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.28",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.28/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.27",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.27/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.26",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.26/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.25",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.25/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.24",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.24/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.23",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.23/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.22",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.22/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.21",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.21/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.20",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.20/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.19",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.19/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.18",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.18/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.17",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.17/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.16",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.16/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.15",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.15/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.14",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.14/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.13",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.13/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.12",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.12/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.11",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.11/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.10",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.10/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.9",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.9/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.8",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.8/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.7",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.7/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.6",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.6/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.5",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.5/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.4",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.4/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.3",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.3/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.2",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.2/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.1/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.0/Deadblock 3D 2 — Ashfall.html"
+        }
+      ]
+    },
+    {
+      "title": "Potion Maker",
+      "kind": "game",
+      "folder": "Games/Potion Maker",
+      "description": "A duck alchemist (with a cute hat) brews potions to sell.",
+      "updated": "2026-10-04",
+      "model": "Claude Opus 5.5",
+      "context": "",
+      "thumbnail": "",
+      "versions": [
+        {
+          "version": "v0.1.5",
+          "href": "Games/Potion Maker/Versions/v0.1.5/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.4",
+          "href": "Games/Potion Maker/Versions/v0.1.4/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.3",
+          "href": "Games/Potion Maker/Versions/v0.1.3/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.2",
+          "href": "Games/Potion Maker/Versions/v0.1.2/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Potion Maker/Versions/v0.1.1/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Potion Maker/Versions/v0.1.0/Potion Maker.html"
+        }
+      ]
+    },
+    {
+      "title": "Dead City Survival",
+      "kind": "game",
+      "folder": "Games/Dead City Survival",
+      "description": "Survive the dead city. Scavenge, hold out, and make it through the night.",
+      "updated": "2026-10-07",
+      "model": "Muse (unknown model, Oct 2026)",
+      "context": "",
+      "thumbnail": "",
+      "versions": [
+        {
+          "version": "v0.1.3",
+          "href": "Games/Dead City Survival/Versions/v0.1.3/index.html"
+        },
+        {
+          "version": "v0.1.2",
+          "href": "Games/Dead City Survival/Versions/v0.1.2/index.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Dead City Survival/Versions/v0.1.1/index.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Dead City Survival/Versions/v0.1.0/index.html"
+        }
+      ]
+    },
+    {
+      "title": "DnD Initiative Tracker",
+      "kind": "app",
+      "folder": "Apps/Dnd Initiative Tracker",
+      "description": "A realtime turn manager for Dungeons & Dragons 5e, providing synchronized views for DMs and players.",
+      "updated": "2026-10-04",
+      "model": "Claude Opus (likely 4.8)",
+      "context": "",
+      "thumbnail": "",
+      "versions": [
+        {
+          "version": "v1.0.0",
+          "href": "Apps/Dnd Initiative Tracker/v1/Dnd Turn Manager/dist/index.html"
+        }
+      ]
+    },
+    {
+      "title": "BeltAndSteam",
+      "kind": "game",
+      "folder": "Games/BeltAndSteam",
+      "description": "3D grid-based factory automation: miners, belts, inserters, assemblers, steam power, research, turrets and biters.",
+      "updated": "2026-10-08",
+      "model": "Muse (unknown model, Oct 2026)",
+      "context": "",
+      "thumbnail": "",
+      "versions": [
+        {
+          "version": "v0.1.0",
+          "href": "Games/BeltAndSteam/Versions/v0.1.0/index.html"
+        }
+      ]
+    },
+    {
+      "title": "Dead City Survival 2D",
+      "kind": "game",
+      "folder": "Games/Dead City Survival 2D",
+      "description": "2D top-down open world zombie survival - explore a city, scavenge, craft, build barricades, farm, recruit survivors.",
+      "updated": "2026-10-08",
+      "model": "Muse (unknown model, Oct 2026)",
+      "context": "",
+      "thumbnail": "",
+      "versions": [
+        {
+          "version": "v0.1.0",
+          "href": "Games/Dead City Survival 2D/Versions/v0.1.0/index.html"
+        }
+      ]
+    }
+  ]
+}

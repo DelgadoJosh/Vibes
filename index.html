@@ -17,6 +17,7 @@
         }
         .container {
             margin-top: 100px;
+            margin-bottom: 60px;
         }
         .card {
             background-color: #1e1e1e;
@@ -35,6 +36,12 @@
         .card:has(.dropdown-menu.show) {
             z-index: 10;
         }
+        .card-thumb {
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #2a2a2a;
+        }
         .card-title {
             color: #ffffff;
             font-weight: 500;
@@ -50,6 +57,29 @@
             background-color: #bb86fc;
             color: #000;
         }
+        .model-tag {
+            display: inline-block;
+            border: 1px solid #03dac6;
+            color: #03dac6;
+            border-radius: 999px;
+            padding: 0.1rem 0.6rem;
+            font-size: 0.75rem;
+        }
+        .info-toggle {
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 50%;
+            border: 1px solid #808080;
+            background: none;
+            color: #808080;
+            font: italic 600 0.75rem/1 Georgia, serif;
+            padding: 0;
+        }
+        .info-toggle:hover,
+        .info-toggle[aria-expanded="true"] {
+            border-color: #03dac6;
+            color: #03dac6;
+        }
         .btn-primary {
             background-color: #03dac6;
             border: none;
@@ -59,318 +89,167 @@
             background-color: #018786;
             color: #fff;
         }
+        .link-accent {
+            color: #bb86fc;
+            text-decoration: none;
+        }
+        .link-accent:hover {
+            color: #03dac6;
+        }
+        .context-toggle {
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 0.85rem;
+        }
+        .context-toggle::after {
+            content: " \25BE";
+        }
+        .context-toggle[aria-expanded="true"]::after {
+            content: " \25B4";
+        }
+        .context-text {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            border-left: 2px solid #bb86fc;
+            padding-left: 0.75rem;
+        }
         h1 {
             font-weight: 700;
-            margin-bottom: 50px;
+            margin-bottom: 24px;
             text-align: center;
+        }
+        h2 {
+            font-weight: 500;
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin: 48px 0 0;
+        }
+        .sort-toggle .btn {
+            color: #b0b0b0;
+            border-color: #444;
+        }
+        .sort-toggle .btn.active {
+            background-color: #bb86fc;
+            border-color: #bb86fc;
+            color: #000;
         }
         .version-menu {
             max-height: 260px;
             overflow-y: auto;
+        }
+        .footnote {
+            color: #808080;
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: 48px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Vibes</h1>
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
-                <div class="card p-3">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title mb-0">Puyo's revenge</h5>
-                            <span class="badge rounded-pill">v1.0.4</span>
-                        </div>
-                        <p class="card-text">Pulling off a block heist from Tetris</p>
-                        <p class="card-updated mb-0">Updated <time datetime="2026-01-24">Jan 24, 2026</time></p>
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Play Version
-                            </button>
-                            <ul class="dropdown-menu w-100">
-                                <li><a class="dropdown-item" href="Games/Puyo's Revenge/Versions/v1.0.4/Godot Inventory Manager v1.0.4.html">v1.0.4 (Latest)</a></li>
-                                <li><a class="dropdown-item" href="Games/Puyo's Revenge/Versions/v1.0.3/Godot Inventory Manager v1.0.3.html">v1.0.3</a></li>
-                                <li><a class="dropdown-item" href="Games/Puyo's Revenge/Versions/v1.0.2/Godot Inventory Manager v1.0.2.html">v1.0.2</a></li>
-                            </ul>
-                        </div>
-                        <a href="puyos_revenge_versions.html" class="d-block text-center mt-3" style="color: #bb86fc; text-decoration: none;">Version history</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-4 mt-md-0">
-                <div class="card p-3 h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title mb-0">Dangerous Delivery Driver</h5>
-                            <span class="badge rounded-pill">v0.1.0</span>
-                        </div>
-                        <p class="card-text">A new driving challenge.</p>
-                        <p class="card-updated mb-0">Updated <time datetime="2026-03-18">Mar 18, 2026</time></p>
-                        <a href="Games/Dangerous Delivery Driver/Versions/v0.1.0/v0.1.0/Godot Delivery Truck v0.1.0.html" class="btn btn-primary w-100 mt-3">Play Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-4 mt-lg-0">
-                <div class="card p-3 h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title mb-0">Time Keeper</h5>
-                            <span class="badge rounded-pill">v0.5.1</span>
-                        </div>
-                        <p class="card-text">Keep time on your side.</p>
-                        <p class="card-updated mb-0">Updated <time datetime="2026-07-28">Jul 28, 2026</time></p>
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Play Version
-                            </button>
-                            <ul class="dropdown-menu w-100 version-menu">
-                                <li><a class="dropdown-item" href="Games/Time Keeper/Versions/v0.5.1/index.html">v0.5.1 (Latest)</a></li>
-                                <li><a class="dropdown-item" href="Games/Time Keeper/Versions/v0.5.0 Scoreboard/index.html">v0.5.0 &mdash; Scoreboard</a></li>
-                                <li><a class="dropdown-item" href="Games/Time Keeper/Versions/v0.4.4 GMTK release/index.html">v0.4.4 &mdash; GMTK release</a></li>
-                                <li><a class="dropdown-item" href="Games/Time Keeper/Versions/v0.4.3/index.html">v0.4.3</a></li>
-                                <li><a class="dropdown-item" href="Games/Time Keeper/Versions/v0.4.2/index.html">v0.4.2</a></li>
-                                <li><a class="dropdown-item" href="Games/Time Keeper/Versions/v0.4.1/index.html">v0.4.1</a></li>
-                                <li><a class="dropdown-item" href="Games/Time Keeper/Versions/v0.4.0/index.html">v0.4.0</a></li>
-                                <li><a class="dropdown-item" href="Games/Time Keeper/Versions/v0.3.0/index.html">v0.3.0</a></li>
-                                <li><a class="dropdown-item" href="Games/Time Keeper/Versions/v0.2.0/index.html">v0.2.0</a></li>
-                                <li><a class="dropdown-item" href="Games/Time Keeper/Versions/v0.1.0/index.html">v0.1.0</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-4">
-                <div class="card p-3 h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title mb-0">Deadblock</h5>
-                            <span class="badge rounded-pill">v0.1.2</span>
-                        </div>
-                        <p class="card-text">A top-down open world survival game. Gather survivors and keep them alive against the zombies.</p>
-                        <p class="card-updated mb-0">Updated <time datetime="2026-09-13">Sep 13, 2026</time></p>
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Play Version
-                            </button>
-                            <ul class="dropdown-menu w-100">
-                                <li><a class="dropdown-item" href="Games/Deadblock/Versions/v0.1.2/Deadblock — Open World Survival.html">v0.1.2 (Latest)</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock/Versions/v0.1.1/Deadblock — Open World Survival.html">v0.1.1</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-4">
-                <div class="card p-3 h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title mb-0">Deadblock 3D</h5>
-                            <span class="badge rounded-pill">v0.2.1</span>
-                        </div>
-                        <p class="card-text">The Quiet After. Deadblock's zombie survival, rebuilt in 3D.</p>
-                        <p class="card-updated mb-0">Updated <time datetime="2026-09-19">Sep 19, 2026</time></p>
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Play Version
-                            </button>
-                            <ul class="dropdown-menu w-100">
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D/Versions/v0.2.1/Deadblock 3D — The Quiet After.html">v0.2.1 (Latest)</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D/Versions/v0.2.0/Deadblock 3D — The Quiet After.html">v0.2.0</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D/Versions/v0.1.3/Deadblock 3D — The Quiet After.html">v0.1.3</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D/Versions/v0.1.2/Deadblock 3D — The Quiet After.html">v0.1.2</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D/Versions/v0.1.1/Deadblock 3D — The Quiet After.html">v0.1.1</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D/Versions/v0.1.0/v0.1.0/Deadblock 3D — The Quiet After.html">v0.1.0</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-4">
-                <div class="card p-3 h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title mb-0">Deadblock 3D 2</h5>
-                            <span class="badge rounded-pill">v0.7.1</span>
-                        </div>
-                        <p class="card-text">Ashfall. An endless voxel survival world under constant falling ash. Mine and place every block.</p>
-                        <p class="card-updated mb-0">Updated <time datetime="2026-10-05">Oct 5, 2026</time></p>
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Play Version
-                            </button>
-                            <ul class="dropdown-menu w-100">
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.7.1/Deadblock 3D 2 — Ashfall.html">v0.7.1 (Latest)</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.7.0/Deadblock 3D 2 — Ashfall.html">v0.7.0</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.6.0/Deadblock 3D 2 — Ashfall.html">v0.6.0</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.5.4/Deadblock 3D 2 — Ashfall.html">v0.5.4</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.5.3/Deadblock 3D 2 — Ashfall.html">v0.5.3</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.5.2/Deadblock 3D 2 — Ashfall.html">v0.5.2</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.5.1/Deadblock 3D 2 — Ashfall.html">v0.5.1</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.5.0/Deadblock 3D 2 — Ashfall.html">v0.5.0</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.4.2/Deadblock 3D 2 — Ashfall.html">v0.4.2</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.4.1/Deadblock 3D 2 — Ashfall.html">v0.4.1</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.4.0/Deadblock 3D 2 — Ashfall.html">v0.4.0</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.6/Deadblock 3D 2 — Ashfall.html">v0.3.6</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.5/Deadblock 3D 2 — Ashfall.html">v0.3.5</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.4/Deadblock 3D 2 — Ashfall.html">v0.3.4</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.3/Deadblock 3D 2 — Ashfall.html">v0.3.3</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.2/Deadblock 3D 2 — Ashfall.html">v0.3.2</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.1/Deadblock 3D 2 — Ashfall.html">v0.3.1</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.3.0/Deadblock 3D 2 — Ashfall.html">v0.3.0</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.7/Deadblock 3D 2 — Ashfall.html">v0.2.7</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.6/Deadblock 3D 2 — Ashfall.html">v0.2.6</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.5/Deadblock 3D 2 — Ashfall.html">v0.2.5</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.4/Deadblock 3D 2 — Ashfall.html">v0.2.4</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.3/Deadblock 3D 2 — Ashfall.html">v0.2.3</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.2/Deadblock 3D 2 — Ashfall.html">v0.2.2</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.1/Deadblock 3D 2 — Ashfall.html">v0.2.1</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.2.0/Deadblock 3D 2 — Ashfall.html">v0.2.0</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.39/Deadblock 3D 2 — Ashfall.html">v0.1.39</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.38/Deadblock 3D 2 — Ashfall.html">v0.1.38</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.37/Deadblock 3D 2 — Ashfall.html">v0.1.37</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.36/Deadblock 3D 2 — Ashfall.html">v0.1.36</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.35/Deadblock 3D 2 — Ashfall.html">v0.1.35</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.34/Deadblock 3D 2 — Ashfall.html">v0.1.34</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.33/Deadblock 3D 2 — Ashfall.html">v0.1.33</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.32/Deadblock 3D 2 — Ashfall.html">v0.1.32</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.31/Deadblock 3D 2 — Ashfall.html">v0.1.31</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.30/Deadblock 3D 2 — Ashfall.html">v0.1.30</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.29/Deadblock 3D 2 — Ashfall.html">v0.1.29</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.28/Deadblock 3D 2 — Ashfall.html">v0.1.28</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.27/Deadblock 3D 2 — Ashfall.html">v0.1.27</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.26/Deadblock 3D 2 — Ashfall.html">v0.1.26</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.25/Deadblock 3D 2 — Ashfall.html">v0.1.25</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.24/Deadblock 3D 2 — Ashfall.html">v0.1.24</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.23/Deadblock 3D 2 — Ashfall.html">v0.1.23</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.22/Deadblock 3D 2 — Ashfall.html">v0.1.22</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.21/Deadblock 3D 2 — Ashfall.html">v0.1.21</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.20/Deadblock 3D 2 — Ashfall.html">v0.1.20</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.19/Deadblock 3D 2 — Ashfall.html">v0.1.19</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.18/Deadblock 3D 2 — Ashfall.html">v0.1.18</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.17/Deadblock 3D 2 — Ashfall.html">v0.1.17</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.16/Deadblock 3D 2 — Ashfall.html">v0.1.16</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.15/Deadblock 3D 2 — Ashfall.html">v0.1.15</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.14/Deadblock 3D 2 — Ashfall.html">v0.1.14</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.13/Deadblock 3D 2 — Ashfall.html">v0.1.13</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.12/Deadblock 3D 2 — Ashfall.html">v0.1.12</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.11/Deadblock 3D 2 — Ashfall.html">v0.1.11</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.10/Deadblock 3D 2 — Ashfall.html">v0.1.10</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.9/Deadblock 3D 2 — Ashfall.html">v0.1.9</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.8/Deadblock 3D 2 — Ashfall.html">v0.1.8</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.7/Deadblock 3D 2 — Ashfall.html">v0.1.7</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.6/Deadblock 3D 2 — Ashfall.html">v0.1.6</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.5/Deadblock 3D 2 — Ashfall.html">v0.1.5</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.4/Deadblock 3D 2 — Ashfall.html">v0.1.4</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.3/Deadblock 3D 2 — Ashfall.html">v0.1.3</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.2/Deadblock 3D 2 — Ashfall.html">v0.1.2</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.1/Deadblock 3D 2 — Ashfall.html">v0.1.1</a></li>
-                                <li><a class="dropdown-item" href="Games/Deadblock 3D 2 - Ashfall/Versions/v0.1.0/Deadblock 3D 2 — Ashfall.html">v0.1.0</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-4">
-                <div class="card p-3 h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title mb-0">Potion Maker</h5>
-                            <span class="badge rounded-pill">v0.1.5</span>
-                        </div>
-                        <p class="card-text">A duck alchemist (with a cute hat) brews potions to sell.</p>
-                        <p class="card-updated mb-0">Updated <time datetime="2026-10-04">Oct 4, 2026</time></p>
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Play Version
-                            </button>
-                            <ul class="dropdown-menu w-100">
-                                <li><a class="dropdown-item" href="Games/Potion Maker/Versions/v0.1.5/Potion Maker.html">v0.1.5 (Latest)</a></li>
-                                <li><a class="dropdown-item" href="Games/Potion Maker/Versions/v0.1.4/Potion Maker.html">v0.1.4</a></li>
-                                <li><a class="dropdown-item" href="Games/Potion Maker/Versions/v0.1.3/Potion Maker.html">v0.1.3</a></li>
-                                <li><a class="dropdown-item" href="Games/Potion Maker/Versions/v0.1.2/Potion Maker.html">v0.1.2</a></li>
-                                <li><a class="dropdown-item" href="Games/Potion Maker/Versions/v0.1.1/Potion Maker.html">v0.1.1</a></li>
-                                <li><a class="dropdown-item" href="Games/Potion Maker/Versions/v0.1.0/Potion Maker.html">v0.1.0</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-4">
-                <div class="card p-3 h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title mb-0">Dead City Survival</h5>
-                            <span class="badge rounded-pill">v0.1.3</span>
-                        </div>
-                        <p class="card-text">Survive the dead city. Scavenge, hold out, and make it through the night.</p>
-                        <p class="card-updated mb-0">Updated <time datetime="2026-10-07">Oct 7, 2026</time></p>
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Play Version
-                            </button>
-                            <ul class="dropdown-menu w-100">
-                                <li><a class="dropdown-item" href="Games/Dead City Survival/Versions/v0.1.3/index.html">v0.1.3 (Latest)</a></li>
-                                <li><a class="dropdown-item" href="Games/Dead City Survival/Versions/v0.1.2/index.html">v0.1.2</a></li>
-                                <li><a class="dropdown-item" href="Games/Dead City Survival/Versions/v0.1.1/index.html">v0.1.1</a></li>
-                                <li><a class="dropdown-item" href="Games/Dead City Survival/Versions/v0.1.0/index.html">v0.1.0</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-4">
-                <div class="card p-3 h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title mb-0">DnD Initiative Tracker</h5>
-                            <span class="badge rounded-pill">v1.0.0</span>
-                        </div>
-                        <p class="card-text">A realtime turn manager for Dungeons & Dragons 5e, providing synchronized views for DMs and players.</p>
-                        <p class="card-updated mb-0">Updated <time datetime="2026-10-04">Oct 4, 2026</time></p>
-                        <a href="Apps/Dnd Initiative Tracker/v1/Dnd Turn Manager/dist/index.html" class="btn btn-primary w-100 mt-3">Open App</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-4">
-                <div class="card p-3 h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title mb-0">BeltAndSteam</h5>
-                            <span class="badge rounded-pill">v0.1.0</span>
-                        </div>
-                        <p class="card-text">3D grid-based factory automation: miners, belts, inserters, assemblers, steam power, research, turrets and biters.</p>
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Play Version
-                            </button>
-                            <ul class="dropdown-menu w-100">
-                                <li><a class="dropdown-item" href="Games/BeltAndSteam/Versions/v0.1.0/index.html">v0.1.0 (Latest)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-4">
-                <div class="card p-3 h-100">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title mb-0">Dead City Survival 2D</h5>
-                            <span class="badge rounded-pill">v0.1.0</span>
-                        </div>
-                        <p class="card-text">2D top-down open world zombie survival - explore a city, scavenge, craft, build barricades, farm, recruit survivors.</p>
-                        <div class="dropdown mt-3">
-                            <button class="btn btn-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Play Version
-                            </button>
-                            <ul class="dropdown-menu w-100">
-                                <li><a class="dropdown-item" href="Games/Dead City Survival 2D/Versions/v0.1.0/index.html">v0.1.0 (Latest)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <div class="d-flex justify-content-center">
+            <div class="btn-group btn-group-sm sort-toggle" role="group" aria-label="Sort order">
+                <button type="button" class="btn btn-outline-secondary" data-sort="default">Default order</button>
+                <button type="button" class="btn btn-outline-secondary" data-sort="updated">Recently updated</button>
             </div>
         </div>
+        <section>
+            <h2>Games</h2>
+            <div class="row" id="games"></div>
+        </section>
+        <section>
+            <h2>Apps</h2>
+            <div class="row" id="apps"></div>
+        </section>
+        <p class="footnote">"Claude Opus" means the newest Opus model at the time it was made.</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // All card content lives in games.json; scripts/import_godot_build.py keeps it up to date.
+        const PLACEHOLDER = "Thumbnails/placeholder.svg";
+        let projects = [];
+
+        const esc = s => String(s).replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+        const fmtDate = iso => new Date(iso + "T00:00:00").toLocaleDateString("en-US", {month: "short", day: "numeric", year: "numeric"});
+
+        function playControl(p) {
+            const verb = p.kind === "app" ? "Open App" : "Play Now";
+            if (p.versions.length === 1) {
+                return `<a href="${esc(p.versions[0].href)}" class="btn btn-primary w-100">${verb}</a>`;
+            }
+            const items = p.versions.map((v, i) => {
+                const label = esc(v.version) + (v.label ? ` &mdash; ${esc(v.label)}` : "") + (i === 0 ? " (Latest)" : "");
+                return `<li><a class="dropdown-item" href="${esc(v.href)}">${label}</a></li>`;
+            }).join("");
+            return `<div class="dropdown">
+                <button class="btn btn-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Play Version</button>
+                <ul class="dropdown-menu w-100 version-menu">${items}</ul>
+            </div>`;
+        }
+
+        function card(p, i) {
+            const ctxId = `context-${i}`;
+            const modelId = `model-${i}`;
+            return `<div class="col-md-6 col-lg-4 mt-4">
+                <div class="card p-3 h-100">
+                    <div class="card-body d-flex flex-column">
+                        <img class="card-thumb w-100 mb-3" src="${esc(p.thumbnail || PLACEHOLDER)}" alt="" loading="lazy">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="card-title mb-0">${esc(p.title)}</h5>
+                            <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                                ${p.model ? `<button class="info-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#${modelId}" aria-expanded="false" aria-controls="${modelId}" aria-label="Show model used" title="Model used">i</button>` : ""}
+                                <span class="badge rounded-pill">${esc(p.versions[0].version)}</span>
+                            </div>
+                        </div>
+                        ${p.model ? `<div class="collapse" id="${modelId}"><div class="mb-2"><span class="model-tag">Made with ${esc(p.model)}</span></div></div>` : ""}
+                        <p class="card-text">${esc(p.description)}</p>
+                        ${p.updated ? `<p class="card-updated mb-0">Updated <time datetime="${esc(p.updated)}">${fmtDate(p.updated)}</time></p>` : ""}
+                        ${p.context ? `<div class="mt-2">
+                            <button class="context-toggle link-accent" type="button" data-bs-toggle="collapse" data-bs-target="#${ctxId}" aria-expanded="false" aria-controls="${ctxId}">Why I made this</button>
+                            <div class="collapse" id="${ctxId}"><p class="context-text mt-2 mb-0">${esc(p.context)}</p></div>
+                        </div>` : ""}
+                        <div class="mt-auto pt-3">
+                            ${playControl(p)}
+                            ${p.historyPage ? `<a href="${esc(p.historyPage)}" class="d-block text-center mt-3 link-accent">Version history</a>` : ""}
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        function render(sort) {
+            const list = projects.map((p, i) => ({p, i}));
+            if (sort === "updated") {
+                list.sort((a, b) => (b.p.updated || "").localeCompare(a.p.updated || "") || a.i - b.i);
+            }
+            for (const kind of ["game", "app"]) {
+                document.getElementById(kind + "s").innerHTML =
+                    list.filter(({p}) => p.kind === kind).map(({p, i}) => card(p, i)).join("");
+            }
+            document.querySelectorAll("[data-sort]").forEach(b => {
+                b.classList.toggle("active", b.dataset.sort === sort);
+                b.setAttribute("aria-pressed", b.dataset.sort === sort);
+            });
+        }
+
+        function savedSort() {
+            try { return localStorage.getItem("vibes-sort") || "default"; } catch { return "default"; }
+        }
+
+        document.querySelectorAll("[data-sort]").forEach(b => b.addEventListener("click", () => {
+            try { localStorage.setItem("vibes-sort", b.dataset.sort); } catch {}
+            render(b.dataset.sort);
+        }));
+
+        fetch("games.json")
+            .then(r => r.json())
+            .then(data => { projects = data.projects; render(savedSort()); })
+            .catch(() => {
+                document.getElementById("games").innerHTML =
+                    '<p class="mt-4 text-center">Couldn\'t load games.json. If you opened this file directly, serve the folder instead: <code>python3 -m http.server</code></p>';
+            });
+    </script>
 </body>
 </html>
