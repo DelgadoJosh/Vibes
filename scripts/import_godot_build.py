@@ -2,7 +2,7 @@
 """Import a zipped Godot web export from VibeCoding-2-Extra-Vibes into both repos.
 
 Usage:
-    python3 -I scripts/import_godot_build.py                     # newest build of every game, if not yet imported
+    python3 -I scripts/import_godot_build.py                     # every version of every game not yet imported
     python3 -I scripts/import_godot_build.py GAME [VERSION ...]  # GAME = folder under Exports/Games (default: newest)
 
 For each version it:
@@ -27,6 +27,9 @@ VIBES = Path(__file__).resolve().parent.parent
 VC2 = VIBES.parent / "VibeCoding-2-Extra-Vibes"
 
 EXPORTS = VC2 / "Exports" / "Games"
+
+# VC2 games are built by Muse; edit the project in games.json if one was made differently.
+DEFAULT_MODEL = "Muse (unknown model, Oct 2026)"
 
 # Optional per-game overrides; otherwise title/description come from the game's project.godot.
 OVERRIDES = {
@@ -100,9 +103,9 @@ def update_data(cfg, version, html_name):
     project = next((p for p in data["projects"] if p["folder"] == folder), None)
     if project is None:
         project = {"title": cfg["title"], "kind": "game", "folder": folder, "description": cfg["description"],
-                   "updated": today, "model": "", "context": "", "images": [], "versions": []}
+                   "updated": today, "model": DEFAULT_MODEL, "context": "", "images": [], "versions": []}
         data["projects"].append(project)
-        print("  added new project to games.json (fill in model/context there)")
+        print("  added new project to games.json (fill in context/thumbnail there)")
 
     versions = project["versions"]
     if any(v["href"] == href for v in versions):
@@ -149,16 +152,17 @@ def main():
             import_version(game, game_info(game), version)
         return
 
-    # No args: newest build of every game that has a zip and isn't in Vibes yet.
+    # No args: every version of every game that isn't in Vibes yet.
     for d in sorted(EXPORTS.iterdir()):
-        if not d.is_dir() or not versions_of(d.name):
+        if not d.is_dir():
             continue
         game, cfg = d.name, game_info(d.name)
-        latest = versions_of(game)[-1]
-        if any((VIBES / "Games" / cfg["vibes_dir"] / "Versions" / latest).glob("*.html")):
-            print(f"{game} {latest}: already imported")
-        else:
-            import_version(game, cfg, latest)
+        new = [v for v in versions_of(game)
+               if not any((VIBES / "Games" / cfg["vibes_dir"] / "Versions" / v).glob("*.html"))]
+        if not new:
+            print(f"{game}: up to date")
+        for version in new:
+            import_version(game, cfg, version)
 
 
 if __name__ == "__main__":

@@ -551,6 +551,10 @@
       ],
       "versions": [
         {
+          "version": "v0.1.1",
+          "href": "Games/BeltAndSteam/Versions/v0.1.1/index.html"
+        },
+        {
           "version": "v0.1.0",
           "href": "Games/BeltAndSteam/Versions/v0.1.0/index.html"
         }
@@ -568,6 +572,10 @@
         "Images/Dead City Survival 2D Screenshot 2026-10-08 184922.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.1",
+          "href": "Games/Dead City Survival 2D/Versions/v0.1.1/index.html"
+        },
         {
           "version": "v0.1.0",
           "href": "Games/Dead City Survival 2D/Versions/v0.1.0/index.html"
