@@ -2,9 +2,9 @@
 """Import a zipped Godot web export from VibeCoding-2-Extra-Vibes into both repos.
 
 Usage:
-    python3 -I scripts/import_godot_build.py [VERSION ...]
+    python3 -I scripts/import_godot_build.py                     # newest build of every game, if not yet imported
+    python3 -I scripts/import_godot_build.py GAME [VERSION ...]  # GAME = folder under Exports/Games (default: newest)
 
-With no VERSION, imports the newest version folder that has a zip link.
 For each version it:
   1. reads the zip link + SHA-256 from Exports/Games/<Game>/<version>/README.md
   2. downloads into a temp dir, verifies the hash, and unzips safely
@@ -25,15 +25,23 @@ from pathlib import Path
 VIBES = Path(__file__).resolve().parent.parent
 VC2 = VIBES.parent / "VibeCoding-2-Extra-Vibes"
 
-# VC2 export folder name -> how it appears in Vibes
-GAMES = {
-    "DeadCitySurvival": {
-        "vibes_dir": "Dead City Survival",
-        "title": "Dead City Survival",
-        "description": "Survive the dead city. Scavenge, hold out, and make it through the night.",
-    },
+EXPORTS = VC2 / "Exports" / "Games"
+
+# Optional per-game overrides; otherwise title/description come from the game's project.godot.
+OVERRIDES = {
+    "DeadCitySurvival": {"vibes_dir": "Dead City Survival", "title": "Dead City Survival"},
 }
-GAME = "DeadCitySurvival"
+
+
+def game_info(game):
+    project = VC2 / "Games" / game / "project.godot"
+    text = project.read_text() if project.exists() else ""
+    name = re.search(r'^config/name="([^"]*)"', text, re.M)
+    desc = re.search(r'^config/description="([^"]*)"', text, re.M)
+    title = name.group(1) if name else game
+    info = {"vibes_dir": title, "title": title, "description": desc.group(1) if desc else f"{title}, made in Godot."}
+    info.update(OVERRIDES.get(game, {}))
+    return info
 
 LINK_RE = re.compile(r"\]\((https://[^)\s]+\.zip)\)[^`\n]*SHA-256\s*`([0-9a-f]{64})`")
 
@@ -43,10 +51,8 @@ def version_key(v):
 
 
 def find_zip(readme):
-    m = LINK_RE.search(readme.read_text())
-    if not m:
-        raise SystemExit(f"No zip link + SHA-256 found in {readme}")
-    return m.group(1), m.group(2)
+    m = LINK_RE.search(readme.read_text()) if readme.exists() else None
+    return (m.group(1), m.group(2)) if m else None
 
 
 def download_and_extract(url, sha, workdir):
@@ -83,8 +89,7 @@ def li(href, label):
     return f'                                <li><a class="dropdown-item" href="{href}">{label}</a></li>'
 
 
-def update_index(game, version, html_name):
-    cfg = GAMES[game]
+def update_index(cfg, version, html_name):
     index = VIBES / "index.html"
     text = index.read_text()
     prefix = f"Games/{cfg['vibes_dir']}/Versions/"
@@ -115,9 +120,8 @@ def update_index(game, version, html_name):
                 </div>
             </div>
 """
-        # Insert after the last game card (the last card with a "Play Version" dropdown).
-        last_ul = text.rfind("</ul>", 0, text.find("Open App") if "Open App" in text else len(text))
-        anchor = text.find("            <div class=\"col-", last_ul)
+        # Append after the last card in the grid.
+        anchor = text.rfind("            </div>\n        </div>") + len("            </div>\n")
         text = text[:anchor] + card + text[anchor:]
         print("  added new card to index.html")
     else:
@@ -146,28 +150,49 @@ def update_index(game, version, html_name):
     index.write_text(text)
 
 
+def import_version(game, cfg, version):
+    print(f"{game} {version}")
+    zip_info = find_zip(EXPORTS / game / version / "README.md")
+    if not zip_info:
+        print("  no zip link + SHA-256 in README yet, skipping")
+        return
+    with tempfile.TemporaryDirectory() as tmp:
+        src = download_and_extract(*zip_info, Path(tmp))
+        html_name = next(src.glob("*.html")).name
+        copy_files(src, EXPORTS / game / version)
+        copy_files(src, VIBES / "Games" / cfg["vibes_dir"] / "Versions" / version)
+        print(f"  copied {sum(1 for f in src.iterdir() if f.is_file())} files to both repos")
+    update_index(cfg, version, html_name)
+
+
+def versions_of(game):
+    return sorted((d.name for d in (EXPORTS / game).iterdir() if (d / "README.md").exists()), key=version_key)
+
+
 def main():
-    game = GAME
-    exports = VC2 / "Exports" / "Games" / game
-    r = subprocess.run(["git", "-C", str(VC2), "pull", "-q"], capture_output=True, text=True)
+    r = subprocess.run(["git", "-C", str(VC2), "pull", "-q", "--rebase", "--autostash"], capture_output=True, text=True)
     if r.returncode:
         print(f"warning: git pull in VC2 failed, using local copy ({r.stderr.strip().splitlines()[-1]})")
 
-    versions = sys.argv[1:]
-    if not versions:
-        candidates = sorted((d.name for d in exports.iterdir() if (d / "README.md").exists()), key=version_key)
-        versions = [candidates[-1]]
+    if len(sys.argv) > 1:
+        match = [d.name for d in EXPORTS.iterdir() if d.name.lower() == sys.argv[1].lower()]
+        if not match:
+            raise SystemExit(f"Unknown game {sys.argv[1]!r}; choose from {sorted(d.name for d in EXPORTS.iterdir() if d.is_dir())}")
+        game = match[0]
+        for version in sys.argv[2:] or versions_of(game)[-1:]:
+            import_version(game, game_info(game), version)
+        return
 
-    for version in versions:
-        print(f"{game} {version}")
-        url, sha = find_zip(exports / version / "README.md")
-        with tempfile.TemporaryDirectory() as tmp:
-            src = download_and_extract(url, sha, Path(tmp))
-            html_name = next(src.glob("*.html")).name
-            copy_files(src, exports / version)
-            copy_files(src, VIBES / "Games" / GAMES[game]["vibes_dir"] / "Versions" / version)
-            print(f"  copied {sum(1 for f in src.iterdir() if f.is_file())} files to both repos")
-        update_index(game, version, html_name)
+    # No args: newest build of every game that has a zip and isn't in Vibes yet.
+    for d in sorted(EXPORTS.iterdir()):
+        if not d.is_dir() or not versions_of(d.name):
+            continue
+        game, cfg = d.name, game_info(d.name)
+        latest = versions_of(game)[-1]
+        if any((VIBES / "Games" / cfg["vibes_dir"] / "Versions" / latest).glob("*.html")):
+            print(f"{game} {latest}: already imported")
+        else:
+            import_version(game, cfg, latest)
 
 
 if __name__ == "__main__":
