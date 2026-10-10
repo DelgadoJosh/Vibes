@@ -36,11 +36,55 @@
         .card:has(.dropdown-menu.show) {
             z-index: 10;
         }
+        .gallery {
+            position: relative;
+        }
         .card-thumb {
             aspect-ratio: 16 / 9;
             object-fit: cover;
             border-radius: 8px;
             background-color: #2a2a2a;
+            display: block;
+        }
+        .gallery-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            font-size: 1.1rem;
+            line-height: 1;
+            padding: 0;
+            opacity: 0.75;
+            transition: opacity 0.15s, background-color 0.15s;
+        }
+        .gallery:hover .gallery-arrow,
+        .gallery-arrow:focus-visible {
+            opacity: 1;
+        }
+        .gallery-arrow:hover {
+            background-color: #bb86fc;
+            color: #000;
+        }
+        .gallery-prev {
+            left: 8px;
+        }
+        .gallery-next {
+            right: 8px;
+        }
+        .gallery-count {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background-color: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            font-size: 0.75rem;
+            border-radius: 999px;
+            padding: 0.1rem 0.5rem;
         }
         .card-title {
             color: #ffffff;
@@ -163,7 +207,7 @@
             <h2>Apps</h2>
             <div class="row" id="apps"></div>
         </section>
-        <p class="footnote">"Claude Opus" means the newest Opus model at the time it was made.</p>
+        <p class="footnote">"Opus" means the newest Opus model at the time it was made.</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -189,13 +233,39 @@
             </div>`;
         }
 
+        // Only the visible image is in the DOM, so a card's other screenshots load when you click to them.
+        function gallery(p, i) {
+            const images = p.images && p.images.length ? p.images : [PLACEHOLDER];
+            const arrows = images.length > 1 ? `
+                <button class="gallery-arrow gallery-prev" type="button" data-gallery="${i}" data-step="-1" aria-label="Previous image">&#8249;</button>
+                <button class="gallery-arrow gallery-next" type="button" data-gallery="${i}" data-step="1" aria-label="Next image">&#8250;</button>
+                <span class="gallery-count">1 / ${images.length}</span>` : "";
+            return `<div class="gallery mb-3" data-index="0">
+                <img class="card-thumb w-100" src="${esc(images[0])}" alt="${esc(p.title)} screenshot 1" loading="lazy">${arrows}
+            </div>`;
+        }
+
+        document.addEventListener("click", e => {
+            const btn = e.target.closest(".gallery-arrow");
+            if (!btn) return;
+            const p = projects[btn.dataset.gallery];
+            const box = btn.closest(".gallery");
+            const n = p.images.length;
+            const index = (Number(box.dataset.index) + Number(btn.dataset.step) + n) % n;
+            box.dataset.index = index;
+            const img = box.querySelector("img");
+            img.src = p.images[index];
+            img.alt = `${p.title} screenshot ${index + 1}`;
+            box.querySelector(".gallery-count").textContent = `${index + 1} / ${n}`;
+        });
+
         function card(p, i) {
             const ctxId = `context-${i}`;
             const modelId = `model-${i}`;
             return `<div class="col-md-6 col-lg-4 mt-4">
                 <div class="card p-3 h-100">
                     <div class="card-body d-flex flex-column">
-                        <img class="card-thumb w-100 mb-3" src="${esc(p.thumbnail || PLACEHOLDER)}" alt="" loading="lazy">
+                        ${gallery(p, i)}
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <h5 class="card-title mb-0">${esc(p.title)}</h5>
                             <div class="d-flex align-items-center gap-2 flex-shrink-0">
