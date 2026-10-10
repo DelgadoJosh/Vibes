@@ -641,6 +641,30 @@
       "images": [],
       "versions": [
         {
+          "version": "v0.1.28",
+          "href": "Games/Bloomworks/Versions/v0.1.28/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.27",
+          "href": "Games/Bloomworks/Versions/v0.1.27/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.26",
+          "href": "Games/Bloomworks/Versions/v0.1.26/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.25",
+          "href": "Games/Bloomworks/Versions/v0.1.25/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.24",
+          "href": "Games/Bloomworks/Versions/v0.1.24/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.23",
+          "href": "Games/Bloomworks/Versions/v0.1.23/Bloomworks.html"
+        },
+        {
           "version": "v0.1.22",
           "href": "Games/Bloomworks/Versions/v0.1.22/Bloomworks.html"
         },
