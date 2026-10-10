@@ -638,7 +638,10 @@
       "updated": "2026-10-10",
       "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Bloomworks Title Screenshot 2026-10-10 014440.png",
+        "Images/Bloomworks In Game Screenshot 2026-10-10 014450.png"
+      ],
       "versions": [
         {
           "version": "v0.1.28",
