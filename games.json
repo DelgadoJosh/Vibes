@@ -186,6 +186,26 @@
       ],
       "versions": [
         {
+          "version": "v0.9.0",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.9.0/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.8.4",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.8.4/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.8.3",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.8.3/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.8.2",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.8.2/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.8.1",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.8.1/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
           "version": "v0.8.0",
           "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.8.0/Deadblock 3D 2 — Ashfall.html"
         },
@@ -468,7 +488,7 @@
       "kind": "game",
       "folder": "Games/Potion Maker",
       "description": "A duck alchemist (with a cute hat) brews potions to sell.",
-      "updated": "2026-10-04",
+      "updated": "2026-10-05",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -476,6 +496,18 @@
         "Images/Potion Maker In Game Screenshot 2026-10-08 184436.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.8",
+          "href": "Games/Potion Maker/Versions/v0.1.8/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.7",
+          "href": "Games/Potion Maker/Versions/v0.1.7/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.6",
+          "href": "Games/Potion Maker/Versions/v0.1.6/Potion Maker.html"
+        },
         {
           "version": "v0.1.5",
           "href": "Games/Potion Maker/Versions/v0.1.5/Potion Maker.html"
@@ -595,6 +627,90 @@
         {
           "version": "v0.1.0",
           "href": "Games/Dead City Survival 2D/Versions/v0.1.0/index.html"
+        }
+      ]
+    },
+    {
+      "title": "Bloomworks",
+      "kind": "game",
+      "folder": "Games/Bloomworks",
+      "description": "Bloomworks, made in Godot.",
+      "updated": "2026-10-09",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.17",
+          "href": "Games/Bloomworks/Versions/v0.1.17/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.16",
+          "href": "Games/Bloomworks/Versions/v0.1.16/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.15",
+          "href": "Games/Bloomworks/Versions/v0.1.15/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.14",
+          "href": "Games/Bloomworks/Versions/v0.1.14/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.13",
+          "href": "Games/Bloomworks/Versions/v0.1.13/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.12",
+          "href": "Games/Bloomworks/Versions/v0.1.12/Cooking Factory.html"
+        },
+        {
+          "version": "v0.1.11",
+          "href": "Games/Bloomworks/Versions/v0.1.11/Cooking Factory.html"
+        },
+        {
+          "version": "v0.1.10",
+          "href": "Games/Bloomworks/Versions/v0.1.10/Cooking Factory.html"
+        },
+        {
+          "version": "v0.1.9",
+          "href": "Games/Bloomworks/Versions/v0.1.9/Cooking Factory.html"
+        },
+        {
+          "version": "v0.1.8",
+          "href": "Games/Bloomworks/Versions/v0.1.8/Cooking Factory.html"
+        },
+        {
+          "version": "v0.1.7",
+          "href": "Games/Bloomworks/Versions/v0.1.7/Cooking Factory.html"
+        },
+        {
+          "version": "v0.1.6",
+          "href": "Games/Bloomworks/Versions/v0.1.6/Cooking Factory.html"
+        },
+        {
+          "version": "v0.1.5",
+          "href": "Games/Bloomworks/Versions/v0.1.5/Cooking Factory.html"
+        },
+        {
+          "version": "v0.1.4",
+          "href": "Games/Bloomworks/Versions/v0.1.4/Cooking Factory.html"
+        },
+        {
+          "version": "v0.1.3",
+          "href": "Games/Bloomworks/Versions/v0.1.3/Cooking Factory.html"
+        },
+        {
+          "version": "v0.1.2",
+          "href": "Games/Bloomworks/Versions/v0.1.2/Cooking Factory.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Bloomworks/Versions/v0.1.1/Cooking Factory.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Bloomworks/Versions/v0.1.0/Cooking Factory.html"
         }
       ]
     }
