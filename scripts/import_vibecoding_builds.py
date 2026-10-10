@@ -35,6 +35,8 @@ SOURCES = {
     "Deadblock 3D 2 - Ashfall": {},
     "Potion Maker": {},
     "Time Keeper": {},
+    "WebRTC Zombies": {"vibes_dir": "Multiplayer Tech Demo", "title": "Multiplayer Tech Demo",
+                       "description": "Testing to see if we can have Multiplayer in Godot Web exports"},
     "Delivery Driver": {"skip": True},  # single flat build, already on the site as Dangerous Delivery Driver
 }
 SKIP_FILES = {".DS_Store", "README.md"}
@@ -94,7 +96,7 @@ def import_build(data, cfg, src, version, label, dry):
     project = find_project(data, cfg)
     if project is None:
         project = {"title": cfg["title"], "kind": "game", "folder": f"Games/{cfg['vibes_dir']}",
-                   "description": f"{cfg['title']}, made in Godot.", "updated": "", "model": "",
+                   "description": cfg.get("description", f"{cfg['title']}, made in Godot."), "updated": "", "model": "",
                    "context": "", "images": [], "versions": []}
         data["projects"].append(project)
         print("  (new project in games.json: fill in description, model, context and images)")
