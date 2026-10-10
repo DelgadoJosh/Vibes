@@ -868,6 +868,22 @@
           "href": "Games/Bloomworks/Versions/v0.1.0/Cooking Factory.html"
         }
       ]
+    },
+    {
+      "title": "Multiplayer Tech Demo",
+      "kind": "game",
+      "folder": "Games/Multiplayer Tech Demo",
+      "description": "Testing to see if we can have Multiplayer in Godot Web exports",
+      "updated": "2026-10-10",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.0",
+          "href": "Games/Multiplayer Tech Demo/Versions/v0.1.0/WebRTC Zombies.html"
+        }
+      ]
     }
   ]
 }
