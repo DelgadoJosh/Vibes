@@ -634,9 +634,9 @@
       "title": "Bloomworks",
       "kind": "game",
       "folder": "Games/Bloomworks",
-      "description": "Bloomworks, made in Godot.",
+      "description": "Bring a dead valley back to life, one belt at a time",
       "updated": "2026-10-09",
-      "model": "",
+      "model": "Opus 5.5",
       "context": "",
       "images": [],
       "versions": [
