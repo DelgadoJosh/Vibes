@@ -1047,7 +1047,8 @@
           "version": "v0.1.0",
           "href": "Games/Puyos Revenge/Versions/v0.1.0/Godot Inventory Manager v0.1.0.html"
         }
-      ]
+      ],
+      "hidden": true
     }
   ]
 }
