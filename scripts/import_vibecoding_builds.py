@@ -24,10 +24,11 @@ VC = VIBES.parent / "VibeCoding"
 EXPORTS = VC / "Exports"
 DATA = VIBES / "games.json"
 
-# Export folder -> how it maps into Vibes. Unlisted folders become new games named after the folder.
+# Export folder -> how it maps into Vibes. Unlisted folders are only reported (folders get renamed upstream);
+# add them here, or name one on the command line to import it as a new game.
 # Order matters where two folders feed one project (Cooking Factory was renamed Bloomworks at v0.1.13).
 SOURCES = {
-    "": {"vibes_dir": "Puyo's Revenge"},  # loose Exports/v* folders are Godot Inventory Manager = Puyo's Revenge
+    "Puyos Revenge": {"vibes_dir": "Puyo's Revenge"},  # Godot Inventory Manager builds
     "Cooking Factory": {"vibes_dir": "Bloomworks", "title": "Bloomworks"},
     "Bloomworks": {},
     "Deadblock": {"rename": {"v1.0.1": "v0.1.1", "v1.0.2": "v0.1.2"}},
@@ -35,6 +36,8 @@ SOURCES = {
     "Deadblock 3D 2 - Ashfall": {},
     "Potion Maker": {},
     "Time Keeper": {},
+    "WebRTC Zombies": {"vibes_dir": "Multiplayer Tech Demo", "title": "Multiplayer Tech Demo",
+                       "description": "Testing to see if we can have Multiplayer in Godot Web exports"},
     "Delivery Driver": {"skip": True},  # single flat build, already on the site as Dangerous Delivery Driver
 }
 SKIP_FILES = {".DS_Store", "README.md"}
@@ -94,7 +97,7 @@ def import_build(data, cfg, src, version, label, dry):
     project = find_project(data, cfg)
     if project is None:
         project = {"title": cfg["title"], "kind": "game", "folder": f"Games/{cfg['vibes_dir']}",
-                   "description": f"{cfg['title']}, made in Godot.", "updated": "", "model": "",
+                   "description": cfg.get("description", f"{cfg['title']}, made in Godot."), "updated": "", "model": "",
                    "context": "", "images": [], "versions": []}
         data["projects"].append(project)
         print("  (new project in games.json: fill in description, model, context and images)")
@@ -109,12 +112,13 @@ def main():
     dry = "-n" in args
     args = [a for a in args if a != "-n"]
     data = json.loads(DATA.read_text())
-    names = list(SOURCES) + sorted(d.name for d in EXPORTS.iterdir()
-                                   if d.is_dir() and d.name not in SOURCES and not VERSION_DIR.match(d.name))
+    names = [n for n in SOURCES if (EXPORTS / n).is_dir()]
+    unlisted = sorted(d.name for d in EXPORTS.iterdir()
+                      if d.is_dir() and d.name not in SOURCES and not VERSION_DIR.match(d.name))
 
     if args:
         game = args[0].lower()
-        names = [n for n in names if game in (n.lower(), config(n)["vibes_dir"].lower())]
+        names = [n for n in names + unlisted if game in (n.lower(), config(n)["vibes_dir"].lower())]
         if not names:
             raise SystemExit(f"Unknown game {args[0]!r}")
 
@@ -122,7 +126,7 @@ def main():
         cfg = config(name)
         if cfg["skip"] and not args:
             continue
-        print(f"{name or 'Exports (root)'} -> {cfg['vibes_dir']}")
+        print(f"{name} -> {cfg['vibes_dir']}")
         found = 0
         for src, version, label in builds(name, cfg):
             if args[1:]:
@@ -138,6 +142,8 @@ def main():
         if not found:
             print("  up to date")
 
+    if unlisted and not args:
+        print(f"Not imported, unknown export folders: {unlisted}. Add them to SOURCES or pass one as GAME.")
     if not dry:
         DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 
