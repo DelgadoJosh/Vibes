@@ -1101,6 +1101,90 @@
         }
       ],
       "hidden": true
+    },
+    {
+      "title": "Honk Raid",
+      "kind": "game",
+      "folder": "Games/Honk Raid",
+      "description": "Honk Raid, made in Godot.",
+      "updated": "2026-10-11",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.6",
+          "href": "Games/Honk Raid/Versions/v0.1.6/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.5",
+          "href": "Games/Honk Raid/Versions/v0.1.5/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.4",
+          "href": "Games/Honk Raid/Versions/v0.1.4/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.3",
+          "href": "Games/Honk Raid/Versions/v0.1.3/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.2",
+          "href": "Games/Honk Raid/Versions/v0.1.2/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Honk Raid/Versions/v0.1.1/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Honk Raid/Versions/v0.1.0/Honk Raid.html"
+        }
+      ]
+    },
+    {
+      "title": "Top Down Mech",
+      "kind": "game",
+      "folder": "Games/Top Down Mech",
+      "description": "Top Down Mech, made in Godot.",
+      "updated": "2026-10-11",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.7",
+          "href": "Games/Top Down Mech/Versions/v0.1.7/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.6",
+          "href": "Games/Top Down Mech/Versions/v0.1.6/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.5",
+          "href": "Games/Top Down Mech/Versions/v0.1.5/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.4",
+          "href": "Games/Top Down Mech/Versions/v0.1.4/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.3",
+          "href": "Games/Top Down Mech/Versions/v0.1.3/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.2",
+          "href": "Games/Top Down Mech/Versions/v0.1.2/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Top Down Mech/Versions/v0.1.1/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Top Down Mech/Versions/v0.1.0/Top Down Mech.html"
+        }
+      ]
     }
   ]
 }
