@@ -29,7 +29,7 @@ VC2 = VIBES.parent / "VibeCoding-2-Extra-Vibes"
 EXPORTS = VC2 / "Exports" / "Games"
 
 # VC2 games are built by Muse; edit the project in games.json if one was made differently.
-DEFAULT_MODEL = "Muse (unknown model, Oct 2026)"
+DEFAULT_MODEL = "Muse Spark 1.3"
 
 # Optional per-game overrides; otherwise title/description come from the game's project.godot.
 OVERRIDES = {
