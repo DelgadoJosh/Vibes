@@ -660,6 +660,10 @@
       ],
       "versions": [
         {
+          "version": "v0.1.64",
+          "href": "Games/Bloomworks/Versions/v0.1.64/Bloomworks.html"
+        },
+        {
           "version": "v0.1.63",
           "href": "Games/Bloomworks/Versions/v0.1.63/Bloomworks.html"
         },
