@@ -925,7 +925,9 @@
       "updated": "2026-10-10",
       "model": "",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Multiplayer Tech Demo In Game Screenshot 2026-10-10 192807.png"
+      ],
       "versions": [
         {
           "version": "v0.1.2",
