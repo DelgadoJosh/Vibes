@@ -14,7 +14,7 @@ if git diff --cached --quiet; then
 fi
 
 # e.g. "Bloomworks v0.1.38-v0.1.40, Potion Maker v0.1.9"
-summary=$(git diff --cached --name-only -- Games | python3 -I -c '
+summary=$(git -c core.quotepath=off diff --cached --name-only -- Games | python3 -I -c '
 import re, sys
 found = {}
 for line in sys.stdin:
