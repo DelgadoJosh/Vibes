@@ -67,7 +67,7 @@ def download_and_extract(url, sha, workdir):
     zpath = workdir / "export.zip"
     print(f"  downloading {url.rsplit('/', 1)[-1]} ...")
     # curl uses the system cert store (python.org builds often lack CA certs).
-    subprocess.run(["curl", "-fsSL", "-o", str(zpath), url], check=True)
+    subprocess.run(["curl", "-fsSL", "--retry", "2", "-o", str(zpath), url], check=True)
     digest = hashlib.sha256(zpath.read_bytes()).hexdigest()
     if digest != sha:
         raise SystemExit(f"  SHA-256 mismatch: got {digest}, expected {sha}")
@@ -119,6 +119,9 @@ def update_data(cfg, version, html_name):
     print("  added version to games.json")
 
 
+FAILED = []
+
+
 def import_version(game, cfg, version):
     print(f"{game} {version}")
     zip_info = find_zip(EXPORTS / game / version / "README.md")
@@ -126,7 +129,14 @@ def import_version(game, cfg, version):
         print("  no zip link + SHA-256 in README yet, skipping")
         return
     with tempfile.TemporaryDirectory() as tmp:
-        src = download_and_extract(*zip_info, Path(tmp))
+        try:
+            src = download_and_extract(*zip_info, Path(tmp))
+        except (subprocess.CalledProcessError, SystemExit) as e:
+            # Muse links expire after ~2 days; report and keep going with other versions.
+            reason = "download failed (link dead or expired?)" if isinstance(e, subprocess.CalledProcessError) else str(e).strip()
+            print(f"  FAILED: {reason}")
+            FAILED.append((game, version, zip_info[0], reason))
+            return
         html_name = next(src.glob("*.html")).name
         copy_files(src, EXPORTS / game / version)
         copy_files(src, VIBES / "Games" / cfg["vibes_dir"] / "Versions" / version)
@@ -167,3 +177,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+    if FAILED:
+        print("\nFailed (refresh these links):")
+        for game, version, url, reason in FAILED:
+            print(f"  {game} {version}: {reason}\n    {url}")
+        sys.exit(1)
