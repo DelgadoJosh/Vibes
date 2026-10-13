@@ -25,6 +25,8 @@ from pathlib import Path
 
 VIBES = Path(__file__).resolve().parent.parent
 VC2 = VIBES.parent / "VibeCoding-2-Extra-Vibes"
+if not VC2.exists():  # cloud sessions clone it lowercase
+    VC2 = VIBES.parent / "vibecoding-2-extra-vibes"
 
 EXPORTS = VC2 / "Exports" / "Games"
 
