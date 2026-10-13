@@ -1235,6 +1235,22 @@
           "href": "Games/Top Down Mech/Versions/v0.1.0/Top Down Mech.html"
         }
       ]
+    },
+    {
+      "title": "ForgeGrid",
+      "kind": "game",
+      "folder": "Games/ForgeGrid",
+      "description": "3D graphics on a 2D grid: a bright, peaceful Factorio-like factory builder. Miners, belts, inserters, furnaces, assemblers, solar power, and research.",
+      "updated": "2026-10-12",
+      "model": "Muse Spark 1.3",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.0",
+          "href": "Games/ForgeGrid/Versions/v0.1.0/index.html"
+        }
+      ]
     }
   ]
 }
