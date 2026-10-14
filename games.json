@@ -599,13 +599,17 @@
       "kind": "game",
       "folder": "Games/BeltAndSteam",
       "description": "3D grid-based factory automation: miners, belts, inserters, assemblers, steam power, research, turrets and biters.",
-      "updated": "2026-10-13",
+      "updated": "2026-10-14",
       "model": "Muse Spark 1.3 (v0.1.0–v0.1.3); Muse Spark 1.3 + Muse Wonder (v0.1.4+)",
       "context": "",
       "images": [
         "Images/BeltAndSteam In Game Screenshot 2026-10-08 184752.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.8",
+          "href": "Games/BeltAndSteam/Versions/v0.1.8/index.html"
+        },
         {
           "version": "v0.1.7",
           "href": "Games/BeltAndSteam/Versions/v0.1.7/index.html"
@@ -1257,14 +1261,34 @@
       "kind": "game",
       "folder": "Games/ForgeGrid",
       "description": "3D graphics on a 2D grid: a bright, peaceful Factorio-like factory builder. Miners, belts, inserters, furnaces, assemblers, solar power, and research.",
-      "updated": "2026-10-12",
+      "updated": "2026-10-14",
+      "model": "Muse Spark 1.3 + Muse Wonder",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.1",
+          "href": "Games/ForgeGrid/Versions/v0.1.1/index.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/ForgeGrid/Versions/v0.1.0/index.html"
+        }
+      ]
+    },
+    {
+      "title": "CrowdRunner",
+      "kind": "game",
+      "folder": "Games/CrowdRunner",
+      "description": "A mobile-ad style endless crowd runner: auto-run upward, auto-shoot, steer through gates to grow your crowd, and blast numbered enemies before they reach you. Portrait, touch-first, built for phones.",
+      "updated": "2026-10-14",
       "model": "Muse Spark 1.3",
       "context": "",
       "images": [],
       "versions": [
         {
           "version": "v0.1.0",
-          "href": "Games/ForgeGrid/Versions/v0.1.0/index.html"
+          "href": "Games/CrowdRunner/Versions/v0.1.0/index.html"
         }
       ]
     }
