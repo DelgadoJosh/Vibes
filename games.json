@@ -1281,11 +1281,15 @@
       "kind": "game",
       "folder": "Games/CrowdRunner",
       "description": "A mobile-ad style endless crowd runner: auto-run upward, auto-shoot, steer through gates to grow your crowd, and blast numbered enemies before they reach you. Portrait, touch-first, built for phones.",
-      "updated": "2026-10-14",
+      "updated": "2026-10-15",
       "model": "Muse Wonder",
       "context": "",
       "images": [],
       "versions": [
+        {
+          "version": "v0.1.1",
+          "href": "Games/CrowdRunner/Versions/v0.1.1/index.html"
+        },
         {
           "version": "v0.1.0",
           "href": "Games/CrowdRunner/Versions/v0.1.0/index.html"
