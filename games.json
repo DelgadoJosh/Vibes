@@ -671,7 +671,7 @@
       "kind": "game",
       "folder": "Games/Bloomworks",
       "description": "Bring a dead valley back to life, one belt at a time",
-      "updated": "2026-10-16",
+      "updated": "2026-10-17",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -679,6 +679,10 @@
         "Images/Bloomworks In Game Screenshot 2026-10-10 014450.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.85",
+          "href": "Games/Bloomworks/Versions/v0.1.85/Bloomworks.html"
+        },
         {
           "version": "v0.1.84",
           "href": "Games/Bloomworks/Versions/v0.1.84/Bloomworks.html"
