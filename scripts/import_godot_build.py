@@ -9,7 +9,8 @@ For each version it:
   1. reads the zip link + SHA-256 from Exports/Games/<Game>/<version>/README.md
   2. downloads into a temp dir, verifies the hash, and unzips safely
   3. copies the files into VC2's export folder and Vibes' Games/<Game>/Versions/<version>/
-  4. adds the version to the game's entry in Vibes/games.json (creating the entry if needed)
+  4. moves the engine into the shared Engines/ folder (scripts/share_engines.py)
+  5. adds the version to the game's entry in Vibes/games.json (creating the entry if needed)
 Commits are left to the caller.
 """
 import datetime
@@ -22,6 +23,9 @@ import sys
 import tempfile
 import zipfile
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from share_engines import share_engines  # noqa: E402
 
 VIBES = Path(__file__).resolve().parent.parent
 VC2 = VIBES.parent / "VibeCoding-2-Extra-Vibes"
@@ -160,6 +164,7 @@ def main():
         game = match[0]
         for version in sys.argv[2:] or versions_of(game)[-1:]:
             import_version(game, game_info(game), version)
+        share_engines()
         return
 
     # No args: every version of every game that isn't in Vibes yet.
@@ -173,6 +178,7 @@ def main():
             print(f"{game}: up to date")
         for version in new:
             import_version(game, cfg, version)
+    share_engines()
 
 
 if __name__ == "__main__":

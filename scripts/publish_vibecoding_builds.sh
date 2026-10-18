@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.."
 git pull -q --rebase origin main
 python3 -I scripts/import_vibecoding_builds.py "$@"
 
-git add games.json Games
+git add games.json Games Engines
 if git diff --cached --quiet; then
     echo "Nothing new to publish."
     exit 0

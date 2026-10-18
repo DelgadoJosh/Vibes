@@ -19,6 +19,9 @@ import subprocess
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from share_engines import share_engines  # noqa: E402
+
 VIBES = Path(__file__).resolve().parent.parent
 VC = VIBES.parent / "VibeCoding"
 EXPORTS = VC / "Exports"
@@ -149,6 +152,7 @@ def main():
         print(f"Not imported, unknown export folders: {unlisted}. Add them to SOURCES or pass one as GAME.")
     if not dry:
         DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+        share_engines()
 
 
 if __name__ == "__main__":
