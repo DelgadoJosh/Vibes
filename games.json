@@ -186,6 +186,22 @@
       ],
       "versions": [
         {
+          "version": "v0.13.32",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.32/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.13.31",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.31/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.13.30",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.30/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.13.29",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.29/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
           "version": "v0.13.28",
           "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.28/Deadblock 3D 2 — Ashfall.html"
         },
@@ -863,7 +879,7 @@
       "kind": "game",
       "folder": "Games/Bloomworks",
       "description": "Bring a dead valley back to life, one belt at a time",
-      "updated": "2026-10-17",
+      "updated": "2026-10-18",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -871,6 +887,22 @@
         "Images/Bloomworks In Game Screenshot 2026-10-10 014450.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.98",
+          "href": "Games/Bloomworks/Versions/v0.1.98/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.97",
+          "href": "Games/Bloomworks/Versions/v0.1.97/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.96",
+          "href": "Games/Bloomworks/Versions/v0.1.96/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.95",
+          "href": "Games/Bloomworks/Versions/v0.1.95/Bloomworks.html"
+        },
         {
           "version": "v0.1.94",
           "href": "Games/Bloomworks/Versions/v0.1.94/Bloomworks.html"
@@ -1445,7 +1477,7 @@
       "kind": "game",
       "folder": "Games/Honk Raid",
       "description": "Honk Raid, made in Godot.",
-      "updated": "2026-10-11",
+      "updated": "2026-10-18",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -1454,6 +1486,14 @@
         "Images/Honk Raid In Game 2 Screenshot 2026-10-17 231644.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.8",
+          "href": "Games/Honk Raid/Versions/v0.1.8/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.7",
+          "href": "Games/Honk Raid/Versions/v0.1.7/Honk Raid.html"
+        },
         {
           "version": "v0.1.6",
           "href": "Games/Honk Raid/Versions/v0.1.6/Honk Raid.html"
@@ -1536,13 +1576,17 @@
       "kind": "game",
       "folder": "Games/ForgeGrid",
       "description": "3D graphics on a 2D grid: a bright, peaceful Factorio-like factory builder. Miners, belts, inserters, furnaces, assemblers, solar power, and research.",
-      "updated": "2026-10-14",
+      "updated": "2026-10-18",
       "model": "Muse Wonder",
       "context": "",
       "images": [
         "Images/ForgeGrid In Game 1 Screenshot 2026-10-17 232932.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.2",
+          "href": "Games/ForgeGrid/Versions/v0.1.2/index.html"
+        },
         {
           "version": "v0.1.1",
           "href": "Games/ForgeGrid/Versions/v0.1.1/index.html"
@@ -1575,6 +1619,98 @@
         {
           "version": "v0.1.0",
           "href": "Games/CrowdRunner/Versions/v0.1.0/index.html"
+        }
+      ]
+    },
+    {
+      "title": "Infection Cleaner",
+      "kind": "game",
+      "folder": "Games/Infection Cleaner",
+      "description": "Infection Cleaner, made in Godot.",
+      "updated": "2026-10-18",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.19",
+          "href": "Games/Infection Cleaner/Versions/v0.1.19/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.18",
+          "href": "Games/Infection Cleaner/Versions/v0.1.18/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.17",
+          "href": "Games/Infection Cleaner/Versions/v0.1.17/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.16",
+          "href": "Games/Infection Cleaner/Versions/v0.1.16/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.15",
+          "href": "Games/Infection Cleaner/Versions/v0.1.15/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.14",
+          "href": "Games/Infection Cleaner/Versions/v0.1.14/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.13",
+          "href": "Games/Infection Cleaner/Versions/v0.1.13/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.12",
+          "href": "Games/Infection Cleaner/Versions/v0.1.12/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.11",
+          "href": "Games/Infection Cleaner/Versions/v0.1.11/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.10",
+          "href": "Games/Infection Cleaner/Versions/v0.1.10/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.9",
+          "href": "Games/Infection Cleaner/Versions/v0.1.9/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.8",
+          "href": "Games/Infection Cleaner/Versions/v0.1.8/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.7",
+          "href": "Games/Infection Cleaner/Versions/v0.1.7/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.6",
+          "href": "Games/Infection Cleaner/Versions/v0.1.6/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.5",
+          "href": "Games/Infection Cleaner/Versions/v0.1.5/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.4",
+          "href": "Games/Infection Cleaner/Versions/v0.1.4/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.3",
+          "href": "Games/Infection Cleaner/Versions/v0.1.3/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.2",
+          "href": "Games/Infection Cleaner/Versions/v0.1.2/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Infection Cleaner/Versions/v0.1.1/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Infection Cleaner/Versions/v0.1.0/Infection Cleaner.html"
         }
       ]
     }
