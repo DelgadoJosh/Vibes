@@ -1364,7 +1364,11 @@
       "updated": "2026-10-11",
       "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Honk Raid Title Screenshot 2026-10-17 231606.png",
+        "Images/Honk Raid In Game 1 Screenshot 2026-10-17 231633.png",
+        "Images/Honk Raid In Game 2 Screenshot 2026-10-17 231644.png"
+      ],
       "versions": [
         {
           "version": "v0.1.6",
@@ -1404,7 +1408,10 @@
       "updated": "2026-10-11",
       "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Top Down Mech Title Screenshot 2026-10-17 231932.png",
+        "Images/Top Down Mech In Game 1 Screenshot 2026-10-17 232822.png"
+      ],
       "versions": [
         {
           "version": "v0.1.7",
@@ -1448,7 +1455,9 @@
       "updated": "2026-10-14",
       "model": "Muse Wonder",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/ForgeGrid In Game 1 Screenshot 2026-10-17 232932.png"
+      ],
       "versions": [
         {
           "version": "v0.1.1",
@@ -1468,7 +1477,12 @@
       "updated": "2026-10-15",
       "model": "Muse Wonder",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/CrowdRunner Title Screenshot 2026-10-17 233056.png",
+        "Images/CrowdRunner In Game 1 Screenshot 2026-10-17 233104.png",
+        "Images/CrowdRunner In Game 2 Screenshot 2026-10-17 233140.png",
+        "Images/CrowdRunner In Game 3 Screenshot 2026-10-17 233238.png"
+      ],
       "versions": [
         {
           "version": "v0.1.1",
