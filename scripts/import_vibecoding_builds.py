@@ -78,7 +78,8 @@ def find_project(data, cfg):
 
 
 def import_build(data, cfg, src, version, label, dry):
-    htmls = [p for p in src.rglob("*.html") if "__MACOSX" not in p.parts]
+    # Prefer the top-level build; extra variants (e.g. threaded/) live in subfolders.
+    htmls = list(src.glob("*.html")) or [p for p in src.rglob("*.html") if "__MACOSX" not in p.parts]
     if len(htmls) != 1:
         print(f"  {version}: expected one .html, found {len(htmls)}, skipping")
         return
