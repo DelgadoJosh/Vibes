@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibes Version Logs</title>
+    <meta name="description" content="Every version of every Vibes game, with its notes and a link to play it.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #121212;
+            --surface: #1e1e1e;
+            --surface-2: #262626;
+            --border: #333;
+            --text: #e0e0e0;
+            --text-strong: #fff;
+            --muted: #9a9a9a;
+            --accent: #bb86fc;
+            --accent-text: #000;
+            --teal: #03dac6;
+            --teal-hover: #018786;
+            --mark: rgba(187, 134, 252, 0.35);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --bar-h: 7.25rem;
+        }
+        @media (prefers-color-scheme: light) {
+            :root:not([data-theme="dark"]) {
+                color-scheme: light;
+                --bg: #f5f5f7;
+                --surface: #fff;
+                --surface-2: #f0edf6;
+                --border: #dddae3;
+                --text: #2a2a2e;
+                --text-strong: #111;
+                --muted: #6b6b73;
+                --accent: #7c4dcc;
+                --accent-text: #fff;
+                --teal: #00796b;
+                --teal-hover: #005b50;
+                --mark: rgba(124, 77, 204, 0.22);
+                --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            }
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            font: 400 1rem/1.55 'Roboto', system-ui, sans-serif;
+            overflow-x: hidden;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--teal); }
+        button { font: inherit; color: inherit; }
+        :focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+        .page {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 32px 16px 64px;
+        }
+        header h1 {
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--text-strong);
+            margin: 0 0 4px;
+        }
+        header p { margin: 0 0 16px; color: var(--muted); }
+        .back { font-size: 0.9rem; }
+
+        /* Toolbar: search, expand/collapse, and (on phones) the games menu. */
+        .bar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: var(--bg);
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .bar-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+        .search {
+            flex: 1 1 220px;
+            min-width: 0;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 0.45rem 1rem;
+            color: var(--text);
+            font-size: 1rem;
+        }
+        .search::placeholder { color: var(--muted); }
+        .btn {
+            border: 1px solid var(--border);
+            background: var(--surface);
+            border-radius: 999px;
+            padding: 0.4rem 0.85rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .btn:hover { border-color: var(--accent); color: var(--accent); }
+        .toc-toggle { display: none; }
+        .status { font-size: 0.8rem; color: var(--muted); flex-basis: 100%; min-height: 1.2em; }
+
+        .layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 28px; align-items: start; }
+        .toc {
+            position: sticky;
+            top: 16px;
+            max-height: calc(100vh - 32px);
+            overflow-y: auto;
+            background: var(--surface);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 8px;
+        }
+        .toc h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 6px 8px 6px; font-weight: 500; }
+        .toc ol { list-style: none; margin: 0; padding: 0; }
+        .toc a {
+            display: block;
+            padding: 6px 8px;
+            border-radius: 8px;
+            color: var(--text);
+        }
+        .toc a:hover, .toc a.current { background: var(--surface-2); color: var(--text-strong); }
+        .toc a.dim { opacity: 0.4; }
+        .toc .t-title { display: flex; justify-content: space-between; gap: 8px; font-weight: 500; }
+        .toc .t-count { color: var(--muted); font-weight: 400; font-size: 0.8rem; flex-shrink: 0; }
+        .toc .t-meta { font-size: 0.78rem; color: var(--muted); }
+
+        /* Game sections */
+        .game {
+            background: var(--surface);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-top: 16px;
+            scroll-margin-top: var(--bar-h);
+        }
+        .game > summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        summary::-webkit-details-marker { display: none; }
+        .chev {
+            flex-shrink: 0;
+            width: 1rem;
+            color: var(--muted);
+            transition: transform 0.15s;
+        }
+        details[open] > summary .chev { transform: rotate(90deg); }
+        .g-main { flex: 1; min-width: 0; }
+        .g-title { font-size: 1.2rem; font-weight: 500; color: var(--text-strong); margin: 0; }
+        .g-meta { font-size: 0.82rem; color: var(--muted); }
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--accent-text);
+            border-radius: 999px;
+            padding: 0.05rem 0.55rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .tag {
+            display: inline-block;
+            border: 1px solid var(--teal);
+            color: var(--teal);
+            border-radius: 999px;
+            padding: 0 0.5rem;
+            font-size: 0.72rem;
+            white-space: nowrap;
+        }
+        .g-body { padding: 0 16px 14px; }
+        .g-tools { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.82rem; margin: -4px 0 8px 26px; }
+        .linkbtn { background: none; border: none; padding: 0; color: var(--accent); cursor: pointer; font-size: inherit; }
+        .linkbtn:hover { color: var(--teal); }
+        .no-notes { color: var(--muted); font-size: 0.85rem; margin: 0 0 8px 26px; }
+
+        /* Versions */
+        .ver { border-top: 1px solid var(--border); scroll-margin-top: var(--bar-h); }
+        .ver > summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 9px 0;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+        .ver > summary:hover .v-title { color: var(--text-strong); }
+        .ver.plain > summary { cursor: default; }
+        .ver.plain .chev { visibility: hidden; }
+        .v-num { font: 500 0.88rem 'Roboto Mono', ui-monospace, monospace; color: var(--accent); flex-shrink: 0; min-width: 4.6rem; }
+        .v-title { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+        .v-title .tag { margin-left: 4px; }
+        .v-date { color: var(--muted); font-size: 0.8rem; white-space: nowrap; flex-shrink: 0; }
+        .play {
+            flex-shrink: 0;
+            background: var(--teal);
+            color: #000;
+            border-radius: 999px;
+            padding: 0.05rem 0.6rem;
+            font-size: 0.78rem;
+            font-weight: 500;
+        }
+        .play:hover { background: var(--teal-hover); color: #fff; }
+        .v-body {
+            padding: 0 0 12px 26px;
+            font-size: 0.93rem;
+            overflow-wrap: anywhere;
+        }
+        .v-body ul { margin: 0.3rem 0; padding-left: 1.2rem; }
+        .v-body li { margin: 0.2rem 0; }
+        .v-body p { margin: 0.4rem 0; }
+        .v-body code {
+            font: 0.85em 'Roboto Mono', ui-monospace, monospace;
+            background: var(--surface-2);
+            border-radius: 4px;
+            padding: 0 0.25em;
+        }
+        .v-foot { display: flex; gap: 14px; font-size: 0.8rem; margin-top: 6px; }
+        mark { background: var(--mark); color: inherit; border-radius: 2px; }
+        .empty { text-align: center; color: var(--muted); padding: 40px 0; }
+        .footnote { color: var(--muted); font-size: 0.82rem; text-align: center; margin-top: 40px; }
+
+        @media (max-width: 899px) {
+            .page { padding-top: 20px; }
+            header h1 { font-size: 1.6rem; }
+            .layout { display: block; }
+            .toc-toggle { display: inline-block; }
+            .toc {
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: calc(100% + 4px);
+                max-height: 65vh;
+                z-index: 30;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+                border: 1px solid var(--border);
+            }
+            .toc.open { display: block; }
+            .search { flex-basis: calc(100% - 6.5rem); }
+            .bar .btn:not(.toc-toggle) { padding: 0.25rem 0.7rem; font-size: 0.8rem; }
+            .status { flex: 1; flex-basis: auto; text-align: right; }
+            .game > summary { padding: 12px; }
+            .g-body { padding: 0 12px 12px; }
+            .g-tools, .no-notes { margin-left: 0; }
+            .v-body { padding-left: 0; }
+            .ver > summary { flex-wrap: wrap; row-gap: 2px; }
+            .v-num { min-width: 0; }
+            .v-title { order: 5; flex-basis: 100%; padding-left: 26px; }
+            .v-date { margin-left: auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <a class="back" href="index.html">&larr; Vibes</a>
+            <h1>Version logs</h1>
+            <p>What changed in every version of every game. Tap a version to read its notes.</p>
+        </header>
+        <div class="layout">
+            <div class="toc-host">
+                <nav class="toc" id="toc" aria-label="Games"></nav>
+            </div>
+            <main>
+                <div class="bar" id="bar">
+                    <div class="bar-row">
+                        <input class="search" id="search" type="search" placeholder="Search versions, e.g. save or v0.1.40" aria-label="Search version notes" autocomplete="off">
+                        <button class="btn toc-toggle" id="toc-toggle" type="button" aria-controls="toc" aria-expanded="false">Games &#9662;</button>
+                        <button class="btn" id="expand" type="button">Expand all</button>
+                        <button class="btn" id="collapse" type="button">Collapse all</button>
+                        <div class="status" id="status" aria-live="polite"></div>
+                    </div>
+                </div>
+                <div id="games"><p class="empty">Loading&hellip;</p></div>
+                <p class="footnote">Generated from each game's own version log by <code>scripts/build_version_logs.py</code>.</p>
+            </main>
+        </div>
+    </div>
+    <script>
+        // Data comes from version_logs.json (scripts/build_version_logs.py, run by publish_vibecoding_builds.sh).
+        let games = [];
+        const $ = id => document.getElementById(id);
+        const esc = s => String(s).replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+        const fmtDate = iso => /^\d{4}-\d{2}-\d{2}$/.test(iso)
+            ? new Date(iso + "T00:00:00").toLocaleDateString("en-US", {month: "short", day: "numeric", year: "numeric"}) : "";
+        const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+        const vid = (g, v) => `${g.id}-${v.version}`;
+
+        // Just enough Markdown for the logs: paragraphs, "- " lists, **bold**, `code` and links.
+        function inline(s) {
+            return esc(s)
+                .replace(/`([^`]+)`/g, "<code>$1</code>")
+                .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+                .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" rel="noopener">$1</a>');
+        }
+        function markdown(text) {
+            const out = [];
+            let list = false, para = [];
+            const flush = () => { if (para.length) out.push(`<p>${inline(para.join(" "))}</p>`); para = []; };
+            for (const raw of text.split("\n")) {
+                const line = raw.trim();
+                const item = line.match(/^[-*•]\s+(.*)/);
+                if (item) {
+                    flush();
+                    if (!list) { out.push("<ul>"); list = true; }
+                    out.push(`<li>${inline(item[1])}</li>`);
+                    continue;
+                }
+                if (list && (!line || !raw.startsWith(" "))) { out.push("</ul>"); list = false; }
+                if (!line) flush();
+                else if (list) out[out.length - 1] = out[out.length - 1].replace(/<\/li>$/, " " + inline(line) + "</li>");
+                else para.push(line);
+            }
+            flush();
+            if (list) out.push("</ul>");
+            return out.join("");
+        }
+
+        // The newer of the newest logged date and the site's "updated" date.
+        function latestDate(g) {
+            const logged = g.versions.find(v => v.date)?.date || "";
+            return (g.updated || "") > logged ? g.updated : logged;
+        }
+
+        function tocItem(g) {
+            const latest = g.versions[0];
+            const date = fmtDate(latestDate(g));
+            return `<li><a href="#${esc(g.id)}" data-game="${esc(g.id)}">
+                <span class="t-title"><span>${esc(g.title)}</span><span class="t-count">${g.versions.length}</span></span>
+                <span class="t-meta">${esc(latest.version)}${date ? " &middot; " + date : ""}</span>
+            </a></li>`;
+        }
+
+        function versionHtml(g, v) {
+            const plain = !v.notes;
+            const play = v.href ? `<a class="play" href="${esc(v.href)}" title="Play ${esc(v.version)}">Play</a>` : "";
+            const title = esc(v.title || "") + (v.label ? ` <span class="tag">${esc(v.label)}</span>` : "");
+            return `<details class="ver${plain ? " plain" : ""}" id="${esc(vid(g, v))}" data-version="${esc(v.version)}">
+                <summary${plain ? ' tabindex="-1"' : ""}>
+                    <span class="chev" aria-hidden="true">&#9656;</span>
+                    <span class="v-num">${esc(v.version)}</span>
+                    <span class="v-title">${title}</span>
+                    <span class="v-date">${fmtDate(v.date)}</span>
+                    ${play}
+                </summary>
+                <div class="v-body"></div>
+            </details>`;
+        }
+
+        function gameHtml(g) {
+            const latest = g.versions[0];
+            const date = fmtDate(latestDate(g));
+            const noted = g.versions.some(v => v.notes || v.title);
+            const expandable = g.versions.some(v => v.notes);
+            return `<details class="game" id="${esc(g.id)}">
+                <summary>
+                    <span class="chev" aria-hidden="true">&#9656;</span>
+                    <span class="g-main">
+                        <h2 class="g-title">${esc(g.title)}</h2>
+                        <span class="g-meta">${plural(g.versions.length, "version")}${date ? " &middot; updated " + date : ""}${g.kind === "app" ? " &middot; app" : ""}</span>
+                    </span>
+                    <span class="badge">${esc(latest.version)}</span>
+                </summary>
+                <div class="g-body">
+                    <div class="g-tools">
+                        ${expandable ? `<button class="linkbtn" type="button" data-open="${esc(g.id)}">Expand versions</button>
+                        <button class="linkbtn" type="button" data-close="${esc(g.id)}">Collapse versions</button>` : ""}
+                        <a href="#${esc(g.id)}">Link to ${esc(g.title)}</a>
+                    </div>
+                    ${noted ? "" : `<p class="no-notes">No version notes for this one yet, just the builds.</p>`}
+                    ${g.versions.map(v => versionHtml(g, v)).join("")}
+                </div>
+            </details>`;
+        }
+
+        // Notes are rendered the first time a version opens, so the page starts light.
+        function fill(det) {
+            const body = det.querySelector(".v-body");
+            if (body.dataset.done) return;
+            const [g, v] = lookup(det.id);
+            body.innerHTML = markdown(v.notes) +
+                `<div class="v-foot"><a href="#${esc(det.id)}">Link to this version</a>${v.href ? `<a href="${esc(v.href)}">Play ${esc(v.version)}</a>` : ""}</div>`;
+            body.dataset.done = "1";
+            highlight(body, terms());
+        }
+
+        const index = new Map();
+        function lookup(id) { return index.get(id); }
+
+        function render() {
+            games.sort((a, b) => latestDate(b).localeCompare(latestDate(a)));
+            for (const g of games) for (const v of g.versions) {
+                index.set(vid(g, v), [g, v]);
+                v.haystack = [g.title, v.version, v.label, v.title, v.notes, v.date].join(" ").toLowerCase();
+            }
+            $("toc").innerHTML = `<h2>${plural(games.length, "project")}</h2><ol>${games.map(tocItem).join("")}</ol>`;
+            $("games").innerHTML = games.map(gameHtml).join("") + `<p class="empty" id="none" hidden>No versions match.</p>`;
+            document.querySelectorAll(".ver").forEach(d => {
+                if (d.classList.contains("plain")) d.querySelector("summary").addEventListener("click", e => {
+                    if (!e.target.closest("a")) e.preventDefault();
+                });
+                d.addEventListener("toggle", () => d.open && fill(d));
+            });
+            status();
+        }
+
+        const terms = () => $("search").value.toLowerCase().split(/\s+/).filter(Boolean);
+
+        function highlight(root, words) {
+            root.querySelectorAll("mark").forEach(m => m.replaceWith(m.textContent));
+            root.normalize();
+            if (!words.length) return;
+            const re = new RegExp("(" + words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|") + ")", "gi");
+            const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+            const nodes = [];
+            while (walker.nextNode()) nodes.push(walker.currentNode);
+            for (const n of nodes) {
+                if (!re.test(n.data)) continue;
+                re.lastIndex = 0;
+                const span = document.createElement("span");
+                span.innerHTML = esc(n.data).replace(re, "<mark>$1</mark>");
+                n.replaceWith(...span.childNodes);
+            }
+        }
+
+        function status(matches) {
+            const total = games.reduce((n, g) => n + g.versions.length, 0);
+            $("status").textContent = matches === undefined
+                ? `${plural(games.length, "project")}, ${plural(total, "version")}`
+                : `${plural(matches, "version")} match in ${plural(document.querySelectorAll(".game:not([hidden])").length, "project")}`;
+        }
+
+        function search() {
+            const words = terms();
+            let matches = 0;
+            for (const gEl of document.querySelectorAll(".game")) {
+                let shown = 0;
+                for (const d of gEl.querySelectorAll(".ver")) {
+                    const v = lookup(d.id)[1];
+                    const hit = words.every(w => v.haystack.includes(w));
+                    d.hidden = !hit;
+                    if (hit) shown++;
+                    highlight(d.querySelector("summary"), words);
+                    if (d.querySelector(".v-body").dataset.done) highlight(d.querySelector(".v-body"), words);
+                }
+                gEl.hidden = !shown;
+                if (words.length && shown) gEl.open = true;
+                $("toc").querySelector(`[data-game="${gEl.id}"]`).classList.toggle("dim", !shown);
+                matches += shown;
+            }
+            // Open the matching notes when there are few enough to read.
+            if (words.length && matches <= 12) {
+                document.querySelectorAll(".ver:not([hidden]):not(.plain)").forEach(d => d.open = true);
+            }
+            if (!words.length) document.querySelectorAll(".game").forEach(g => g.open = false);
+            $("none").hidden = matches > 0;
+            status(words.length ? matches : undefined);
+        }
+
+        function setAll(open, scope = document) {
+            if (scope === document) document.querySelectorAll(".game:not([hidden])").forEach(g => g.open = open);
+            scope.querySelectorAll(".ver:not([hidden]):not(.plain)").forEach(d => d.open = open);
+        }
+
+        // #game opens that game; #game-v1.2.3 opens the version inside it too.
+        function goToHash() {
+            const id = decodeURIComponent(location.hash.slice(1));
+            const el = id && document.getElementById(id);
+            if (!el || !el.matches(".game, .ver")) return;
+            if (el.hidden || el.closest(".game").hidden) { $("search").value = ""; search(); }
+            el.closest(".game").open = true;
+            el.open = true;
+            closeToc();
+            sizeBar();
+            el.scrollIntoView({block: "start", behavior: "instant"});
+            document.querySelectorAll(".toc a.current").forEach(a => a.classList.remove("current"));
+            $("toc").querySelector(`[data-game="${el.closest(".game").id}"]`)?.classList.add("current");
+        }
+
+        function closeToc() {
+            $("toc").classList.remove("open");
+            $("toc-toggle").setAttribute("aria-expanded", "false");
+        }
+
+        // On phones the TOC is a dropdown under the sticky bar, so move it there.
+        const phone = matchMedia("(max-width: 899px)");
+        function placeToc() {
+            (phone.matches ? $("bar") : document.querySelector(".toc-host")).appendChild($("toc"));
+            closeToc();
+        }
+        phone.addEventListener("change", placeToc);
+        placeToc();
+        // Deep-linked sections stop just below the sticky bar, whatever height it wraps to.
+        const sizeBar = () => document.documentElement.style.setProperty("--bar-h", $("bar").offsetHeight + 8 + "px");
+        new ResizeObserver(sizeBar).observe($("bar"));
+
+        $("toc-toggle").addEventListener("click", () => {
+            const open = $("toc").classList.toggle("open");
+            $("toc-toggle").setAttribute("aria-expanded", open);
+        });
+        document.addEventListener("click", e => {
+            if (!e.target.closest("#toc, #toc-toggle")) closeToc();
+            const o = e.target.closest("[data-open], [data-close]");
+            if (o) setAll(!!o.dataset.open, $(o.dataset.open || o.dataset.close));
+            // Re-clicking the current deep link should still jump there.
+            const a = e.target.closest('a[href^="#"]');
+            if (a && a.getAttribute("href") === location.hash) { e.preventDefault(); goToHash(); }
+        });
+        document.addEventListener("keydown", e => {
+            if (e.key === "Escape") closeToc();
+            if (e.key === "/" && document.activeElement !== $("search")) { e.preventDefault(); $("search").focus(); }
+        });
+        $("expand").addEventListener("click", () => setAll(true));
+        $("collapse").addEventListener("click", () => setAll(false));
+        let timer;
+        $("search").addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(search, 120); });
+        addEventListener("hashchange", goToHash);
+
+        fetch("version_logs.json")
+            .then(r => r.json())
+            .then(data => { games = data.games; render(); goToHash(); })
+            .catch(() => {
+                $("games").innerHTML = '<p class="empty">Couldn\'t load version_logs.json. If you opened this file directly, serve the folder instead: <code>python3 -m http.server</code></p>';
+            });
+    </script>
+</body>
+</html>

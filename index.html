@@ -199,6 +199,7 @@
                 <button type="button" class="btn btn-outline-secondary" data-sort="updated">Recently updated</button>
             </div>
         </div>
+        <p class="text-center mt-3 mb-0"><a href="versions.html" class="link-accent">Version logs for every game</a></p>
         <section>
             <h2>Games</h2>
             <div class="row" id="games"></div>
@@ -216,6 +217,8 @@
         let projects = [];
 
         const esc = s => String(s).replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+        // Same ids as scripts/build_version_logs.py, so cards can deep-link into versions.html.
+        const slug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
         const fmtDate = iso => new Date(iso + "T00:00:00").toLocaleDateString("en-US", {month: "short", day: "numeric", year: "numeric"});
 
         function playControl(p) {
@@ -282,7 +285,7 @@
                         </div>` : ""}
                         <div class="mt-auto pt-3">
                             ${playControl(p)}
-                            ${p.historyPage ? `<a href="${esc(p.historyPage)}" class="d-block text-center mt-3 link-accent">Version history</a>` : ""}
+                            <a href="${esc(p.historyPage || "versions.html#" + slug(p.title))}" class="d-block text-center mt-3 link-accent">Version history</a>
                         </div>
                     </div>
                 </div>

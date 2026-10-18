@@ -6,8 +6,9 @@ cd "$(dirname "$0")/.."
 
 git pull -q --rebase origin main
 python3 -I scripts/import_vibecoding_builds.py "$@"
+python3 -I scripts/build_version_logs.py
 
-git add games.json Games Engines
+git add games.json Games Engines version_logs.json
 if git diff --cached --quiet; then
     echo "Nothing new to publish."
     exit 0
@@ -26,9 +27,10 @@ parts = []
 for game, vs in found.items():
     vs = sorted(vs, key=key)
     parts.append(f"{game} {vs[0]}" + (f"-{vs[-1]}" if len(vs) > 1 else ""))
-print(", ".join(parts) or "games.json")
+print(", ".join(parts))
 ')
 
-git commit -q -m "Add $summary builds"
+if [ -n "$summary" ]; then msg="Add $summary builds"; else msg="Update games.json and version logs"; summary="games.json and version logs"; fi
+git commit -q -m "$msg"
 git push -q origin main
 echo "Published: $summary"
