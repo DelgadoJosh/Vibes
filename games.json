@@ -172,7 +172,7 @@
       "kind": "game",
       "folder": "Games/Deadblock 3D 2 - Ashfall",
       "description": "Ashfall. An endless voxel survival world under constant falling ash. Mine and place every block.",
-      "updated": "2026-10-11",
+      "updated": "2026-10-17",
       "model": "Opus 5.5",
       "context": "Made to test Opus 5.5's 3D abilities.",
       "images": [
@@ -185,6 +185,110 @@
         "Images/Deadblock 3D 2 In Game 6 Screenshot 2026-10-08 184202.png"
       ],
       "versions": [
+        {
+          "version": "v0.13.6",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.6/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.13.5",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.5/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.13.4",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.4/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.13.3",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.3/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.13.2",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.2/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.13.1",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.1/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.13.0",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.0/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.12.11",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.12.11/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.12.10",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.12.10/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.12.9",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.12.9/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.12.8",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.12.8/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.12.7",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.12.7/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.12.6",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.12.6/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.12.5",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.12.5/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.12.4",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.12.4/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.12.3",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.12.3/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.12.2",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.12.2/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.12.1",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.12.1/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.12.0",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.12.0/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.11.3",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.11.3/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.11.2",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.11.2/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.11.1",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.11.1/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.11.0",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.11.0/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.10.4",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.10.4/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.10.3",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.10.3/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
+          "version": "v0.10.2",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.10.2/Deadblock 3D 2 — Ashfall.html"
+        },
         {
           "version": "v0.10.1",
           "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.10.1/Deadblock 3D 2 — Ashfall.html"
