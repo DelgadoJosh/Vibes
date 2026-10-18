@@ -1,2 +1,5 @@
 # macOS Finder metadata
 .DS_Store
+
+# Python bytecode from the import scripts
+__pycache__/
