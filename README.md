@@ -13,7 +13,14 @@ All card content lives in [`games.json`](games.json); `index.html` renders it. E
 - `images` – screenshots shown in the card gallery, first one is the cover (e.g. `Images/Time Keeper Title Screenshot.png`); empty uses the placeholder
 - `updated`, `historyPage` (optional), `versions` (newest first; optional `label` per version)
 
-`scripts/import_godot_build.py` adds new versions and games to `games.json` automatically.
+## Importing builds
+
+Both importers copy builds into `Games/<game>/Versions/<version>/`, add them to `games.json`, and run `scripts/share_engines.py`. Read the docstring at the top of each script for usage.
+
+- `scripts/publish_vibecoding_builds.sh` – imports from `../VibeCoding` (read-only; never edit or pull it), then commits and pushes. Run `python3 -I scripts/import_vibecoding_builds.py -n` for a dry run.
+- `python3 -I scripts/import_godot_build.py` – imports from `../VibeCoding-2-Extra-Vibes`. It doesn't commit. Commit the new export folder in VC2 too: VC2 commits often contain only the text files of an export, and the importer fills in the binaries from the zip.
+- Unknown export folders are only reported. If one has its own `project.godot` and matches no existing game, add it to `SOURCES`. If it's a renamed game, map it to that game's `vibes_dir`. New games get placeholder `description`/`model`/`context`/`images`. Fill those in by hand.
+- GitHub Pages limits a deploy to 1 GB. After importing, `find Games -name '*.wasm'` should print nothing. A new `Engines/<hash>/` folder should only appear for a new Godot version. The site was about 820 MB in Oct 2026. Most of that is `.pck` files. Each build also keeps its own ~280 KB engine `.js` (about 100 MB in total).
 
 To preview locally, serve the folder (opening `index.html` directly can't load the JSON):
 
