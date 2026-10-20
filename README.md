@@ -12,6 +12,7 @@ All card content lives in [`games.json`](games.json); `index.html` renders it. E
 - `model` – what made it (shown as a tag), `context` – why it was made (shown under "Why I made this")
 - `images` – screenshots shown in the card gallery, first one is the cover (e.g. `Images/Time Keeper Title Screenshot.png`); empty uses the placeholder
 - `updated`, `historyPage` (optional), `versions` (newest first; optional `label` per version)
+- `hidden: true` (optional) – leaves the card off the home page and the version logs, but its files are still deployed
 
 ## Version logs
 
@@ -25,7 +26,11 @@ Both importers copy builds into `Games/<game>/Versions/<version>/`, add them to 
 - Other agents export into `../VibeCoding` while you import. A version skipped with "expected one .html, found 0" is usually still being written. Once it's complete, rerun with `GAME VERSION`.
 - `python3 -I scripts/import_godot_build.py` – imports from `../VibeCoding-2-Extra-Vibes`. It doesn't commit. Commit the new export folder in VC2 too: VC2 commits often contain only the text files of an export, and the importer fills in the binaries from the zip.
 - Unknown export folders are only reported. If one has its own `project.godot` and matches no existing game, add it to `SOURCES`. If it's a renamed game, map it to that game's `vibes_dir`. New games get placeholder `description`/`model`/`context`/`images`. Fill those in by hand.
-- GitHub Pages limits a deploy to 1 GB. `share_engines.py` shares each engine's `.wasm`, `.js` and audio worklets in `Engines/<hash>/`. It only removes a build's copy when it's byte-identical to the shared one; the engine loads its worklets from next to `executable`. After importing, `find Games -name '*.wasm' -o -name '*.js'` should print nothing. A new `Engines/<hash>/` folder should only appear for a new Godot version. The site was about 770 MB on 2026-10-19, after sharing the `.js` files (about 143 MB) and deleting the hidden duplicate Puyos Revenge builds (221 MB; the originals are in VibeCoding). Most of what's left is `.pck` files, which can't be shared.
+- **Size budget.** GitHub Pages limits a deploy to 1 GB, and this repo deploys the whole `main` branch (Settings > Pages: deploy from branch, `/`), so every file counts, including hidden cards. Measure before pushing: `echo $(( ($(du -sk . | cut -f1) - $(du -sk .git | cut -f1)) / 1024 )) MB`. Over about 980 MB, don't push; make room first.
+  - `share_engines.py` shares each engine's `.wasm`, `.js` and audio worklets in `Engines/<hash>/`. It only removes a build's copy when it's byte-identical to the shared one; the engine loads its worklets from next to `executable`. After importing, `find Games -name '*.wasm' -o -name '*.js'` should print nothing. A new `Engines/<hash>/` folder should only appear for a new Godot version.
+  - What's left is mostly each build's own `.pck`, which can't be shared. A busy import round has added up to about 220 MB (176 builds). The site was about 770 MB on 2026-10-19, after sharing the `.js` (saved about 143 MB) and deleting the hidden duplicate Puyos Revenge builds (saved 221 MB).
+  - Ways to make more room, which need the owner's OK: remove older builds of the biggest games, or switch Pages to a GitHub Actions workflow that deploys only the site files.
+  - Before deleting builds, note that the Vibes copies aren't backups. Their engine files were moved out and their HTML rewritten. The complete originals live in the source repo (`../VibeCoding/Exports/<Game>/` or the VC2 export zips), so check they're there instead of copying the Vibes folder back.
 
 To preview locally, serve the folder (opening `index.html` directly can't load the JSON):
 
