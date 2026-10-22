@@ -146,7 +146,7 @@ def slug(title):
 def main():
     data = json.loads(vc1.DATA.read_text())
     sources = {**vc1_sources(), **vc2_sources()}
-    sources["Puyo's Revenge"] = sources["Puyos Revenge"] = (PUYO_PAGE.name, puyo_entries())
+    sources["Puyo's Revenge"] = (PUYO_PAGE.name, puyo_entries())
 
     games, missing, ids = [], [], set()
     for p in data["projects"]:
