@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Type Replay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">type<span>replay</span></div>
+  <nav id="modes">
+    <div class="group" data-mode="time">
+      <button class="mode-kind" data-kind="time">time</button>
+      <button data-amount="15">15</button>
+      <button data-amount="30">30</button>
+      <button data-amount="60">60</button>
+    </div>
+    <div class="sep"></div>
+    <div class="group" data-mode="words">
+      <button class="mode-kind" data-kind="words">words</button>
+      <button data-amount="10">10</button>
+      <button data-amount="25">25</button>
+      <button data-amount="50">50</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section id="stage">
+    <div id="live">
+      <span id="live-progress"></span>
+      <span id="live-wpm"></span>
+      <span id="replay-tag" hidden>replay</span>
+    </div>
+    <div id="words-box" tabindex="0">
+      <div id="words"><div id="wl"></div><div id="caret"></div></div>
+      <div id="focus-hint" hidden>click here or press any key to focus</div>
+    </div>
+
+    <div id="replay-bar" hidden>
+      <button id="rp-play" title="play / pause (space)">pause</button>
+      <input id="rp-scrub" type="range" min="0" max="1000" value="0" step="1">
+      <span id="rp-time">0.0s</span>
+      <div id="rp-speeds">
+        <button data-speed="0.5">0.5x</button>
+        <button data-speed="1" class="on">1x</button>
+        <button data-speed="2">2x</button>
+        <button data-speed="4">4x</button>
+      </div>
+      <button id="rp-close" title="back to results (esc)">results</button>
+    </div>
+
+    <div id="keyboard"></div>
+
+    <p class="hint"><kbd>tab</kbd> new test <span id="hint-replay" hidden>· <kbd>space</kbd> play / pause · <kbd>esc</kbd> results</span></p>
+  </section>
+
+  <section id="results" hidden>
+    <div class="big">
+      <div><label>wpm</label><b id="r-wpm">0</b></div>
+      <div><label>acc</label><b id="r-acc">0%</b></div>
+    </div>
+    <div id="chart"></div>
+    <div class="small">
+      <div><label>test</label><span id="r-mode"></span></div>
+      <div><label>raw</label><span id="r-raw"></span></div>
+      <div><label title="correct / incorrect / extra / missed">characters</label><span id="r-chars"></span></div>
+      <div><label>time</label><span id="r-time"></span></div>
+      <div><label>best</label><span id="r-best"></span></div>
+    </div>
+    <div class="actions">
+      <button id="btn-replay" class="primary">watch replay</button>
+      <button id="btn-next">next test</button>
+    </div>
+  </section>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
