@@ -1443,6 +1443,24 @@
       ]
     },
     {
+      "title": "DnD Party Manager",
+      "kind": "app",
+      "folder": "Apps/Dnd Party Manager",
+      "description": "D&D 5e character sheets, HP and inventory for the whole party, like D&D Beyond. DM, player and party-screen views of the same data, live over peer-to-peer, saved as plain YAML you can edit by hand.",
+      "updated": "2026-10-26",
+      "model": "Claude Opus 5.5",
+      "context": "Wanted the Initiative Tracker's DM and player views for the rest of the game: stats, HP and loot, in a file format that isn't locked in.",
+      "images": [
+        "Images/Dnd Party Manager Title Screenshot 2026-10-26.png"
+      ],
+      "versions": [
+        {
+          "version": "v0.1.0",
+          "href": "Apps/Dnd Party Manager/v0.1.0/index.html"
+        }
+      ]
+    },
+    {
       "title": "BeltAndSteam",
       "kind": "game",
       "folder": "Games/BeltAndSteam",
