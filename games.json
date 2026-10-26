@@ -3781,7 +3781,7 @@
       "title": "Type Replay",
       "kind": "app",
       "folder": "Apps/Type Replay",
-      "description": "A Monkeytype-style typing test with a live keyboard that lights up every key you press, and a replay that plays back your typing and keystrokes at real speed.",
+      "description": "A Monkeytype-style typing test with a live keyboard that lights up every key you press, a replay of your typing and keystrokes at real speed, and on-device stats with a personal leaderboard you can replay.",
       "updated": "2026-10-25",
       "model": "Claude Opus 5.5",
       "context": "Wanted to see not just how fast I type, but which keys I hit and when.",
@@ -3789,6 +3789,10 @@
         "Images/Type Replay Title Screenshot 2026-10-25.png"
       ],
       "versions": [
+        {
+          "version": "v1.1.0",
+          "href": "Apps/Type Replay/v1.1.0/index.html"
+        },
         {
           "version": "v1.0.0",
           "href": "Apps/Type Replay/v1.0.0/index.html"
