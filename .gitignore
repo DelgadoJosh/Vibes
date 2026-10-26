@@ -3,3 +3,6 @@
 
 # Python bytecode from the import scripts
 __pycache__/
+
+# Local R2 credentials, if ever used instead of the Keychain
+.env*
