@@ -1519,7 +1519,7 @@
       "kind": "game",
       "folder": "Games/Bloomworks",
       "description": "Bring a dead valley back to life, one belt at a time",
-      "updated": "2026-10-24",
+      "updated": "2026-10-25",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -1528,44 +1528,148 @@
       ],
       "versions": [
         {
+          "version": "v0.1.257",
+          "href": "Games/Bloomworks/Versions/v0.1.257/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.256",
+          "href": "Games/Bloomworks/Versions/v0.1.256/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.255",
+          "href": "Games/Bloomworks/Versions/v0.1.255/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.254",
+          "href": "Games/Bloomworks/Versions/v0.1.254/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.253",
+          "href": "Games/Bloomworks/Versions/v0.1.253/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.252",
+          "href": "Games/Bloomworks/Versions/v0.1.252/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.251",
+          "href": "Games/Bloomworks/Versions/v0.1.251/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.250",
+          "href": "Games/Bloomworks/Versions/v0.1.250/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.249",
+          "href": "Games/Bloomworks/Versions/v0.1.249/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.248",
+          "href": "Games/Bloomworks/Versions/v0.1.248/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.247",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.247/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.246",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.246/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.245",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.245/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.244",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.244/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.243",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.243/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.242",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.242/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.241",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.241/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.240",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.240/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.239",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.239/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.238",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.238/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.237",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.237/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.236",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.236/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.235",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.235/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.234",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.234/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.233",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.233/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.232",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.232/Bloomworks.html"
+        },
+        {
           "version": "v0.1.231",
-          "href": "Games/Bloomworks/Versions/v0.1.231/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.231/Bloomworks.html"
         },
         {
           "version": "v0.1.230",
-          "href": "Games/Bloomworks/Versions/v0.1.230/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.230/Bloomworks.html"
         },
         {
           "version": "v0.1.229",
-          "href": "Games/Bloomworks/Versions/v0.1.229/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.229/Bloomworks.html"
         },
         {
           "version": "v0.1.228",
-          "href": "Games/Bloomworks/Versions/v0.1.228/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.228/Bloomworks.html"
         },
         {
           "version": "v0.1.227",
-          "href": "Games/Bloomworks/Versions/v0.1.227/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.227/Bloomworks.html"
         },
         {
           "version": "v0.1.226",
-          "href": "Games/Bloomworks/Versions/v0.1.226/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.226/Bloomworks.html"
         },
         {
           "version": "v0.1.225",
-          "href": "Games/Bloomworks/Versions/v0.1.225/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.225/Bloomworks.html"
         },
         {
           "version": "v0.1.224",
-          "href": "Games/Bloomworks/Versions/v0.1.224/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.224/Bloomworks.html"
         },
         {
           "version": "v0.1.223",
-          "href": "Games/Bloomworks/Versions/v0.1.223/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.223/Bloomworks.html"
         },
         {
           "version": "v0.1.222",
-          "href": "Games/Bloomworks/Versions/v0.1.222/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.222/Bloomworks.html"
         },
         {
           "version": "v0.1.221",
