@@ -66,8 +66,20 @@ body {
 	image-rendering: pixelated;
 }
 
-#status-progress, #status-notice {
+#status-progress, #status-notice, #status-line {
 	display: none;
+}
+
+#status-line {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: calc(10% + 1.6rem);
+	text-align: center;
+	color: #e8d9c8;
+	font-family: 'Noto Sans', 'Droid Sans', Arial, sans-serif;
+	font-size: 0.95rem;
+	letter-spacing: 0.02em;
 }
 
 #status-progress {
@@ -105,13 +117,14 @@ body {
 
 		<div id="status">
 			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="Deadblock 3D 2 — Ashfall.png" alt="">
+			<div id="status-line">Loading...</div>
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
 		</div>
 
 		<script src="../../../../Engines/fc74679e3b97f768/godot.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"../../../../Engines/fc74679e3b97f768/godot","experimentalVK":false,"fileSizes":{"Deadblock 3D 2 — Ashfall.pck":2272388,"../../../../Engines/fc74679e3b97f768/godot.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"mainPack":"Deadblock 3D 2 — Ashfall.pck"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"../../../../Engines/fc74679e3b97f768/godot","experimentalVK":false,"fileSizes":{"Deadblock 3D 2 — Ashfall.pck":2421448,"../../../../Engines/fc74679e3b97f768/godot.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"mainPack":"Deadblock 3D 2 — Ashfall.pck"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -119,6 +132,28 @@ const engine = new Engine(GODOT_CONFIG);
 	const statusOverlay = document.getElementById('status');
 	const statusProgress = document.getElementById('status-progress');
 	const statusNotice = document.getElementById('status-notice');
+	const statusLine = document.getElementById('status-line');
+	// Ashfall's staged progress line: the engine (.wasm) is most of the wait, then the
+	// game data (.pck), then a moment while the engine starts.
+	const sizes = GODOT_CONFIG['fileSizes'] || {};
+	let engineBytes = 0;
+	for (const name in sizes) {
+		if (name.endsWith('.wasm')) {
+			engineBytes += sizes[name];
+		}
+	}
+	const mb = (bytes) => (bytes / 1048576).toFixed(0);
+	function setStatusLine(current, total) {
+		if (total <= 0) {
+			statusLine.textContent = 'Loading...';
+		} else if (current >= total) {
+			statusLine.textContent = 'Starting...';
+		} else if (engineBytes > 0 && current < engineBytes) {
+			statusLine.textContent = 'Engine ' + mb(current) + ' / ' + mb(engineBytes) + ' MB';
+		} else {
+			statusLine.textContent = 'Game data ' + mb(current - engineBytes) + ' / ' + mb(total - engineBytes) + ' MB';
+		}
+	}
 
 	let initializing = true;
 	let statusMode = '';
@@ -134,6 +169,7 @@ const engine = new Engine(GODOT_CONFIG);
 		}
 		statusOverlay.style.visibility = 'visible';
 		statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
+		statusLine.style.display = mode === 'progress' ? 'block' : 'none';
 		statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
 		statusMode = mode;
 	}
@@ -201,6 +237,7 @@ const engine = new Engine(GODOT_CONFIG);
 		setStatusMode('progress');
 		engine.startGame({
 			'onProgress': function (current, total) {
+				setStatusLine(current, total);
 				if (current > 0 && total > 0) {
 					statusProgress.value = current;
 					statusProgress.max = total;
