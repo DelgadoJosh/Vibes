@@ -43,6 +43,12 @@ SOURCES = {
     "Top Down Mech": {},
     "Kenshilike": {},
     "Infection Cleaner": {},
+    # Imported 2026-10-27 from VibeCoding-2-Extra-Vibes; already on the site, folder names match.
+    "BeltAndSteam": {},
+    "CrowdRunner": {},
+    "Dead City Survival": {},
+    "Dead City Survival 2D": {},
+    "ForgeGrid": {},
     "WebRTC Zombies": {"vibes_dir": "Multiplayer Tech Demo", "title": "Multiplayer Tech Demo",
                        "description": "Testing to see if we can have Multiplayer in Godot Web exports"},
     "Delivery Driver": {"skip": True},  # single flat build, already on the site as Dangerous Delivery Driver
