@@ -3821,9 +3821,9 @@
       "title": "Hookpin Heist",
       "kind": "game",
       "folder": "Games/Hookpin Heist",
-      "description": "Hookpin Heist, made in Godot.",
+      "description": "Pull-the-pin puzzles: free the gold, cool the lava, pay the thief. Plays on phone and desktop.",
       "updated": "2026-10-31",
-      "model": "",
+      "model": "Opus 5.5",
       "context": "",
       "images": [],
       "versions": [
