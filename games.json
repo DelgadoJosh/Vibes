@@ -3816,6 +3816,22 @@
           "href": "Apps/Type Replay/v1.0.0/index.html"
         }
       ]
+    },
+    {
+      "title": "Hookpin Heist",
+      "kind": "game",
+      "folder": "Games/Hookpin Heist",
+      "description": "Hookpin Heist, made in Godot.",
+      "updated": "2026-10-31",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.0",
+          "href": "Games/Hookpin Heist/Versions/v0.1.0/Hookpin Heist.html"
+        }
+      ]
     }
   ]
 }
