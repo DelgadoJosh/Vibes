@@ -51,6 +51,7 @@ SOURCES = {
     "ForgeGrid": {},
     "WebRTC Zombies": {"vibes_dir": "Multiplayer Tech Demo", "title": "Multiplayer Tech Demo",
                        "description": "Testing to see if we can have Multiplayer in Godot Web exports"},
+    "Hookpin Heist": {},
     "Delivery Driver": {"skip": True},  # single flat build, already on the site as Dangerous Delivery Driver
 }
 SKIP_FILES = {".DS_Store", "README.md"}
