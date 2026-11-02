@@ -1348,7 +1348,7 @@
       "kind": "game",
       "folder": "Games/Potion Maker",
       "description": "A duck alchemist (with a cute hat) brews potions to sell.",
-      "updated": "2026-10-05",
+      "updated": "2026-11-01",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -1356,6 +1356,38 @@
         "Images/Potion Maker In Game Screenshot 2026-10-08 184436.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.16",
+          "href": "Games/Potion Maker/Versions/v0.1.16/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.15",
+          "href": "Games/Potion Maker/Versions/v0.1.15/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.14",
+          "href": "Games/Potion Maker/Versions/v0.1.14/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.13",
+          "href": "Games/Potion Maker/Versions/v0.1.13/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.12",
+          "href": "Games/Potion Maker/Versions/v0.1.12/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.11",
+          "href": "Games/Potion Maker/Versions/v0.1.11/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.10",
+          "href": "Games/Potion Maker/Versions/v0.1.10/Potion Maker.html"
+        },
+        {
+          "version": "v0.1.9",
+          "href": "Games/Potion Maker/Versions/v0.1.9/Potion Maker.html"
+        },
         {
           "version": "v0.1.8",
           "href": "Games/Potion Maker/Versions/v0.1.8/Potion Maker.html"
@@ -1366,31 +1398,31 @@
         },
         {
           "version": "v0.1.6",
-          "href": "Games/Potion Maker/Versions/v0.1.6/Potion Maker.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Potion%20Maker/Versions/v0.1.6/Potion%20Maker.html"
         },
         {
           "version": "v0.1.5",
-          "href": "Games/Potion Maker/Versions/v0.1.5/Potion Maker.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Potion%20Maker/Versions/v0.1.5/Potion%20Maker.html"
         },
         {
           "version": "v0.1.4",
-          "href": "Games/Potion Maker/Versions/v0.1.4/Potion Maker.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Potion%20Maker/Versions/v0.1.4/Potion%20Maker.html"
         },
         {
           "version": "v0.1.3",
-          "href": "Games/Potion Maker/Versions/v0.1.3/Potion Maker.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Potion%20Maker/Versions/v0.1.3/Potion%20Maker.html"
         },
         {
           "version": "v0.1.2",
-          "href": "Games/Potion Maker/Versions/v0.1.2/Potion Maker.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Potion%20Maker/Versions/v0.1.2/Potion%20Maker.html"
         },
         {
           "version": "v0.1.1",
-          "href": "Games/Potion Maker/Versions/v0.1.1/Potion Maker.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Potion%20Maker/Versions/v0.1.1/Potion%20Maker.html"
         },
         {
           "version": "v0.1.0",
-          "href": "Games/Potion Maker/Versions/v0.1.0/Potion Maker.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Potion%20Maker/Versions/v0.1.0/Potion%20Maker.html"
         }
       ]
     },
