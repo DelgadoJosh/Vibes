@@ -3874,11 +3874,15 @@
       "kind": "game",
       "folder": "Games/Hookpin Heist",
       "description": "Pull-the-pin puzzles: free the gold, cool the lava, pay the thief. Plays on phone and desktop.",
-      "updated": "2026-11-01",
+      "updated": "2026-11-02",
       "model": "Opus 5.5",
       "context": "",
       "images": [],
       "versions": [
+        {
+          "version": "v0.1.12",
+          "href": "Games/Hookpin Heist/Versions/v0.1.12/Hookpin Heist.html"
+        },
         {
           "version": "v0.1.11",
           "href": "Games/Hookpin Heist/Versions/v0.1.11/Hookpin Heist.html"
@@ -3917,7 +3921,7 @@
         },
         {
           "version": "v0.1.2",
-          "href": "Games/Hookpin Heist/Versions/v0.1.2/Hookpin Heist.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Hookpin%20Heist/Versions/v0.1.2/Hookpin%20Heist.html"
         },
         {
           "version": "v0.1.1",
