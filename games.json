@@ -3035,7 +3035,10 @@
       "updated": "2026-10-24",
       "model": "",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Infection Cleaner Title Screenshot 2026-11-06 081919.png",
+        "Images/Infection Cleaner In Game Screenshot 2026-11-06 082003.png"
+      ],
       "versions": [
         {
           "version": "v0.1.171",
@@ -3735,7 +3738,10 @@
       "updated": "2026-10-23",
       "model": "",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Kenshilike Title Screenshot 2026-11-06 082023.png",
+        "Images/Kenshilike In Game Screenshot 2026-11-06 082039.png"
+      ],
       "versions": [
         {
           "version": "v0.1.26",
@@ -3881,7 +3887,11 @@
       "updated": "2026-11-02",
       "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Hookpin Heist Title Screenshot 2026-11-06 082103.png",
+        "Images/Hookpin Heist In Game 1 Screenshot 2026-11-06 082138.png",
+        "Images/Hookpin Heist In Game 2 Screenshot 2026-11-06 082129.png"
+      ],
       "versions": [
         {
           "version": "v0.1.12",
