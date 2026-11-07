@@ -1589,7 +1589,7 @@
       "kind": "game",
       "folder": "Games/Bloomworks",
       "description": "Bring a dead valley back to life, one belt at a time",
-      "updated": "2026-10-25",
+      "updated": "2026-11-05",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -1598,44 +1598,112 @@
       ],
       "versions": [
         {
+          "version": "v0.1.274",
+          "href": "Games/Bloomworks/Versions/v0.1.274/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.273",
+          "href": "Games/Bloomworks/Versions/v0.1.273/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.272",
+          "href": "Games/Bloomworks/Versions/v0.1.272/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.271",
+          "href": "Games/Bloomworks/Versions/v0.1.271/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.270",
+          "href": "Games/Bloomworks/Versions/v0.1.270/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.269",
+          "href": "Games/Bloomworks/Versions/v0.1.269/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.268",
+          "href": "Games/Bloomworks/Versions/v0.1.268/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.267",
+          "href": "Games/Bloomworks/Versions/v0.1.267/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.266",
+          "href": "Games/Bloomworks/Versions/v0.1.266/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.265",
+          "href": "Games/Bloomworks/Versions/v0.1.265/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.264",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.264/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.263",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.263/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.262",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.262/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.261",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.261/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.260",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.260/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.259",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.259/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.258",
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.258/Bloomworks.html"
+        },
+        {
           "version": "v0.1.257",
-          "href": "Games/Bloomworks/Versions/v0.1.257/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.257/Bloomworks.html"
         },
         {
           "version": "v0.1.256",
-          "href": "Games/Bloomworks/Versions/v0.1.256/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.256/Bloomworks.html"
         },
         {
           "version": "v0.1.255",
-          "href": "Games/Bloomworks/Versions/v0.1.255/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.255/Bloomworks.html"
         },
         {
           "version": "v0.1.254",
-          "href": "Games/Bloomworks/Versions/v0.1.254/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.254/Bloomworks.html"
         },
         {
           "version": "v0.1.253",
-          "href": "Games/Bloomworks/Versions/v0.1.253/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.253/Bloomworks.html"
         },
         {
           "version": "v0.1.252",
-          "href": "Games/Bloomworks/Versions/v0.1.252/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.252/Bloomworks.html"
         },
         {
           "version": "v0.1.251",
-          "href": "Games/Bloomworks/Versions/v0.1.251/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.251/Bloomworks.html"
         },
         {
           "version": "v0.1.250",
-          "href": "Games/Bloomworks/Versions/v0.1.250/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.250/Bloomworks.html"
         },
         {
           "version": "v0.1.249",
-          "href": "Games/Bloomworks/Versions/v0.1.249/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.249/Bloomworks.html"
         },
         {
           "version": "v0.1.248",
-          "href": "Games/Bloomworks/Versions/v0.1.248/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.248/Bloomworks.html"
         },
         {
           "version": "v0.1.247",
@@ -2662,7 +2730,7 @@
       "kind": "game",
       "folder": "Games/Honk Raid",
       "description": "Honk Raid, made in Godot.",
-      "updated": "2026-10-18",
+      "updated": "2026-11-06",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -2672,44 +2740,212 @@
       ],
       "versions": [
         {
+          "version": "v0.1.81",
+          "href": "Games/Honk Raid/Versions/v0.1.81/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.80",
+          "href": "Games/Honk Raid/Versions/v0.1.80/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.79",
+          "href": "Games/Honk Raid/Versions/v0.1.79/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.78",
+          "href": "Games/Honk Raid/Versions/v0.1.78/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.77",
+          "href": "Games/Honk Raid/Versions/v0.1.77/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.76",
+          "href": "Games/Honk Raid/Versions/v0.1.76/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.75",
+          "href": "Games/Honk Raid/Versions/v0.1.75/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.74",
+          "href": "Games/Honk Raid/Versions/v0.1.74/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.73",
+          "href": "Games/Honk Raid/Versions/v0.1.73/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.72",
+          "href": "Games/Honk Raid/Versions/v0.1.72/Honk Raid.html"
+        },
+        {
+          "version": "v0.1.71",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.71/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.70",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.70/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.69",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.69/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.68",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.68/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.67",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.67/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.66",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.66/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.65",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.65/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.64",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.64/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.63",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.63/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.62",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.62/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.61",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.61/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.60",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.60/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.59",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.59/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.58",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.58/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.57",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.57/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.56",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.56/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.55",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.55/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.54",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.54/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.53",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.53/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.52",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.52/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.51",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.51/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.50",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.50/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.49",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.49/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.48",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.48/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.47",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.47/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.46",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.46/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.45",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.45/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.44",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.44/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.43",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.43/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.42",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.42/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.41",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.41/Honk%20Raid.html"
+        },
+        {
+          "version": "v0.1.40",
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.40/Honk%20Raid.html"
+        },
+        {
           "version": "v0.1.39",
-          "href": "Games/Honk Raid/Versions/v0.1.39/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.39/Honk%20Raid.html"
         },
         {
           "version": "v0.1.38",
-          "href": "Games/Honk Raid/Versions/v0.1.38/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.38/Honk%20Raid.html"
         },
         {
           "version": "v0.1.37",
-          "href": "Games/Honk Raid/Versions/v0.1.37/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.37/Honk%20Raid.html"
         },
         {
           "version": "v0.1.36",
-          "href": "Games/Honk Raid/Versions/v0.1.36/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.36/Honk%20Raid.html"
         },
         {
           "version": "v0.1.35",
-          "href": "Games/Honk Raid/Versions/v0.1.35/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.35/Honk%20Raid.html"
         },
         {
           "version": "v0.1.34",
-          "href": "Games/Honk Raid/Versions/v0.1.34/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.34/Honk%20Raid.html"
         },
         {
           "version": "v0.1.33",
-          "href": "Games/Honk Raid/Versions/v0.1.33/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.33/Honk%20Raid.html"
         },
         {
           "version": "v0.1.32",
-          "href": "Games/Honk Raid/Versions/v0.1.32/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.32/Honk%20Raid.html"
         },
         {
           "version": "v0.1.31",
-          "href": "Games/Honk Raid/Versions/v0.1.31/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.31/Honk%20Raid.html"
         },
         {
           "version": "v0.1.30",
-          "href": "Games/Honk Raid/Versions/v0.1.30/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.30/Honk%20Raid.html"
         },
         {
           "version": "v0.1.29",
@@ -2838,7 +3074,7 @@
       "kind": "game",
       "folder": "Games/Top Down Mech",
       "description": "Top Down Mech, made in Godot.",
-      "updated": "2026-10-19",
+      "updated": "2026-11-06",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -2847,44 +3083,140 @@
       ],
       "versions": [
         {
+          "version": "v0.1.55",
+          "href": "Games/Top Down Mech/Versions/v0.1.55/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.54",
+          "href": "Games/Top Down Mech/Versions/v0.1.54/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.53",
+          "href": "Games/Top Down Mech/Versions/v0.1.53/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.52",
+          "href": "Games/Top Down Mech/Versions/v0.1.52/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.51",
+          "href": "Games/Top Down Mech/Versions/v0.1.51/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.50",
+          "href": "Games/Top Down Mech/Versions/v0.1.50/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.49",
+          "href": "Games/Top Down Mech/Versions/v0.1.49/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.48",
+          "href": "Games/Top Down Mech/Versions/v0.1.48/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.47",
+          "href": "Games/Top Down Mech/Versions/v0.1.47/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.46",
+          "href": "Games/Top Down Mech/Versions/v0.1.46/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.45",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.45/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.44",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.44/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.43",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.43/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.42",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.42/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.41",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.41/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.40",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.40/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.39",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.39/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.38",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.38/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.37",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.37/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.36",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.36/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.35",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.35/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.34",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.34/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.33",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.33/Top%20Down%20Mech.html"
+        },
+        {
+          "version": "v0.1.32",
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.32/Top%20Down%20Mech.html"
+        },
+        {
           "version": "v0.1.31",
-          "href": "Games/Top Down Mech/Versions/v0.1.31/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.31/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.30",
-          "href": "Games/Top Down Mech/Versions/v0.1.30/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.30/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.29",
-          "href": "Games/Top Down Mech/Versions/v0.1.29/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.29/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.28",
-          "href": "Games/Top Down Mech/Versions/v0.1.28/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.28/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.27",
-          "href": "Games/Top Down Mech/Versions/v0.1.27/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.27/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.26",
-          "href": "Games/Top Down Mech/Versions/v0.1.26/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.26/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.25",
-          "href": "Games/Top Down Mech/Versions/v0.1.25/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.25/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.24",
-          "href": "Games/Top Down Mech/Versions/v0.1.24/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.24/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.23",
-          "href": "Games/Top Down Mech/Versions/v0.1.23/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.23/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.22",
-          "href": "Games/Top Down Mech/Versions/v0.1.22/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.22/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.21",
@@ -3032,7 +3364,7 @@
       "kind": "game",
       "folder": "Games/Infection Cleaner",
       "description": "Infection Cleaner, made in Godot.",
-      "updated": "2026-10-24",
+      "updated": "2026-11-06",
       "model": "",
       "context": "",
       "images": [
@@ -3040,6 +3372,22 @@
         "Images/Infection Cleaner In Game Screenshot 2026-11-06 082003.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.175",
+          "href": "Games/Infection Cleaner/Versions/v0.1.175/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.174",
+          "href": "Games/Infection Cleaner/Versions/v0.1.174/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.173",
+          "href": "Games/Infection Cleaner/Versions/v0.1.173/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.172",
+          "href": "Games/Infection Cleaner/Versions/v0.1.172/Infection Cleaner.html"
+        },
         {
           "version": "v0.1.171",
           "href": "Games/Infection Cleaner/Versions/v0.1.171/Infection Cleaner.html"
@@ -3066,19 +3414,19 @@
         },
         {
           "version": "v0.1.165",
-          "href": "Games/Infection Cleaner/Versions/v0.1.165/Infection Cleaner.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Infection%20Cleaner/Versions/v0.1.165/Infection%20Cleaner.html"
         },
         {
           "version": "v0.1.164",
-          "href": "Games/Infection Cleaner/Versions/v0.1.164/Infection Cleaner.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Infection%20Cleaner/Versions/v0.1.164/Infection%20Cleaner.html"
         },
         {
           "version": "v0.1.163",
-          "href": "Games/Infection Cleaner/Versions/v0.1.163/Infection Cleaner.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Infection%20Cleaner/Versions/v0.1.163/Infection%20Cleaner.html"
         },
         {
           "version": "v0.1.162",
-          "href": "Games/Infection Cleaner/Versions/v0.1.162/Infection Cleaner.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Infection%20Cleaner/Versions/v0.1.162/Infection%20Cleaner.html"
         },
         {
           "version": "v0.1.161",
