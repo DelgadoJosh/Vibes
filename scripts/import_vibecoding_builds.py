@@ -91,11 +91,18 @@ def find_project(data, cfg):
     return next((p for p in data["projects"] if p["folder"] == f"Games/{cfg['vibes_dir']}"), None)
 
 
+SKIPPED = []  # repeated at the end of the run so a skip can't scroll past unnoticed
+
+
 def import_build(data, cfg, src, version, label, dry):
     # Prefer the top-level build; extra variants (e.g. threaded/) live in subfolders.
-    htmls = list(src.glob("*.html")) or [p for p in src.rglob("*.html") if "__MACOSX" not in p.parts]
+    # Installable (PWA) exports add a <name>.offline.html fallback page; it's copied, but isn't the build's page.
+    page = lambda p: not p.name.endswith(".offline.html")
+    htmls = [p for p in src.glob("*.html") if page(p)] or \
+        [p for p in src.rglob("*.html") if "__MACOSX" not in p.parts and page(p)]
     if len(htmls) != 1:
         print(f"  {version}: expected one .html, found {len(htmls)}, skipping")
+        SKIPPED.append(f"{cfg['title']} {version} ({len(htmls)} .html)")
         return
     html = htmls[0]
     vdir = version + (f" {label}" if label else "")
@@ -159,6 +166,8 @@ def main():
         if not found:
             print("  up to date")
 
+    if SKIPPED:
+        print(f"SKIPPED {len(SKIPPED)} build(s), not imported: " + ", ".join(SKIPPED))
     if unlisted and not args:
         print(f"Not imported, unknown export folders: {unlisted}. Add them to SOURCES or pass one as GAME.")
     if not dry:

@@ -83,7 +83,8 @@ def download_and_extract(url, sha, workdir):
             if not target.is_relative_to(out.resolve()):
                 raise SystemExit(f"  Unsafe path in zip: {name}")
         z.extractall(out)
-    htmls = [p for p in out.rglob("*.html") if "__MACOSX" not in p.parts]
+    # Installable (PWA) exports add a <name>.offline.html fallback page; it isn't the build's page.
+    htmls = [p for p in out.rglob("*.html") if "__MACOSX" not in p.parts and not p.name.endswith(".offline.html")]
     if len(htmls) != 1:
         raise SystemExit(f"  Expected one .html in zip, found {[str(p) for p in htmls]}")
     return htmls[0].parent
@@ -141,7 +142,7 @@ def import_version(game, cfg, version):
             print(f"  FAILED: {reason}")
             FAILED.append((game, version, zip_info[0], reason))
             return
-        html_name = next(src.glob("*.html")).name
+        html_name = next(p for p in src.glob("*.html") if not p.name.endswith(".offline.html")).name
         copy_files(src, EXPORTS / game / version)
         copy_files(src, VIBES / "Games" / cfg["vibes_dir"] / "Versions" / version)
         print(f"  copied {sum(1 for f in src.iterdir() if f.is_file())} files to both repos")

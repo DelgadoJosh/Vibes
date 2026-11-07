@@ -9,7 +9,9 @@ GitHub Pages deploy (1 GB limit). This keeps one copy per engine and points each
 at it ("executable" = shared path, "mainPack" = the build's own .pck). Then the ~280 KB engine .js is
 shared too: the page's <script src> points at Engines/<hash>/godot.js, and the build's .js and audio
 worklets (which the engine already loads from next to "executable") are removed, but only when they are
-byte-identical to the shared copies. Safe to rerun; the importers call it after every import.
+byte-identical to the shared copies. Installable (PWA) exports also ship a service worker whose
+pre-cache list names those files; it's pointed at the shared copies too, or its install would fail on a
+404. Safe to rerun; the importers call it after every import.
 """
 import hashlib
 import json
@@ -89,6 +91,26 @@ def share_scripts(html):
     return True
 
 
+def share_service_worker(html):
+    """Point a PWA export's service worker cache lists at the shared engine files the build no longer has."""
+    m = CONFIG.search(html.read_text())
+    if not m:
+        return False
+    cfg = json.loads(m.group(2))
+    exe, stem, sw_name = cfg.get("executable", ""), cfg.get("mainPack", "")[:-len(".pck")], cfg.get("serviceWorker")
+    sw = html.parent / sw_name if sw_name else None
+    if "/" not in exe or not stem or not sw or not sw.is_file():
+        return False
+    text = new = sw.read_text()
+    for suffix in ENGINE_SUFFIXES:
+        if not (html.parent / f"{stem}{suffix}").exists():
+            new = new.replace(f'"{stem}{suffix}"', json.dumps(f"{exe}{suffix}", ensure_ascii=False))
+    if new == text:
+        return False
+    sw.write_text(new)
+    return True
+
+
 def share_engines():
     root = VIBES / "Games"
     moved = sum(share_build(h) for h in sorted(root.rglob("*.html")))
@@ -97,6 +119,9 @@ def share_engines():
     scripts = sum(share_scripts(h) for h in sorted(root.rglob("*.html")))
     if scripts:
         print(f"Shared engine .js for {scripts} build(s)")
+    workers = sum(share_service_worker(h) for h in sorted(root.rglob("*.html")))
+    if workers:
+        print(f"Pointed {workers} service worker(s) at the shared engine")
     return moved
 
 
