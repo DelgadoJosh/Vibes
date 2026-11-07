@@ -3975,6 +3975,30 @@
           "href": "Games/Chomp Tower/Versions/v0.1.0/Chomp Tower.html"
         }
       ]
+    },
+    {
+      "title": "Pour Decisions",
+      "kind": "game",
+      "folder": "Games/Pour Decisions",
+      "description": "Tap a test tube, pour the sand. Sort every color into its own tube across endless levels that keep getting harder.",
+      "updated": "2026-11-06",
+      "model": "Opus 5.5",
+      "context": "",
+      "images": [
+        "Images/Pour Decisions Title Screenshot 2026-11-06 190040.png",
+        "Images/Pour Decisions In Game 1 Screenshot 2026-11-06 190110.png",
+        "Images/Pour Decisions In Game 2 Screenshot 2026-11-06 190126.png"
+      ],
+      "versions": [
+        {
+          "version": "v0.1.1",
+          "href": "Games/Pour Decisions/Versions/v0.1.1/Pour Decisions.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Pour Decisions/Versions/v0.1.0/Pour Decisions.html"
+        }
+      ]
     }
   ]
 }

@@ -53,6 +53,7 @@ SOURCES = {
                        "description": "Testing to see if we can have Multiplayer in Godot Web exports"},
     "Hookpin Heist": {},
     "Chomp Tower": {"description": "Tap smaller numbers, chomp them, get BIG, eat the boss. A silly fake-ad tower game for phones."},
+    "Pour Decisions": {"description": "Tap a test tube, pour the sand. Sort every color into its own tube across endless levels that keep getting harder."},
     "Delivery Driver": {"skip": True},  # single flat build, already on the site as Dangerous Delivery Driver
 }
 SKIP_FILES = {".DS_Store", "README.md"}
