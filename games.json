@@ -3954,6 +3954,27 @@
           "href": "https://builds.joshdelgado.fyi/Games/Hookpin%20Heist/Versions/v0.1.0/Hookpin%20Heist.html"
         }
       ]
+    },
+    {
+      "title": "Chomp Tower",
+      "kind": "game",
+      "folder": "Games/Chomp Tower",
+      "description": "Tap smaller numbers, chomp them, get BIG, eat the boss. A silly fake-ad tower game for phones.",
+      "updated": "2026-11-06",
+      "model": "Opus 5.5",
+      "context": "",
+      "images": [
+        "Images/Chomp Tower Title Screenshot 2026-11-06 185128.png",
+        "Images/Chomp Tower In Game 1 Screenshot 2026-11-06 185141.png",
+        "Images/Chomp Tower In Game 3 Screenshot 2026-11-06 185217.png",
+        "Images/Chomp Tower In Game 2 Screenshot 2026-11-06 185146.png"
+      ],
+      "versions": [
+        {
+          "version": "v0.1.0",
+          "href": "Games/Chomp Tower/Versions/v0.1.0/Chomp Tower.html"
+        }
+      ]
     }
   ]
 }
