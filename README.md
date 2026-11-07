@@ -14,6 +14,17 @@ All card content lives in [`games.json`](games.json); `index.html` renders it. E
 - `updated`, `historyPage` (optional), `versions` (newest first; optional `label` per version)
 - `hidden: true` (optional) – leaves the card off the home page and the version logs, but its files are still deployed
 
+## Screenshots
+
+Claude can take them in the desktop app's browser pane. Every game should have a title shot plus one to three gameplay shots, named `<Game> Title Screenshot YYYY-MM-DD HHMMSS.png` and `<Game> In Game [N] Screenshot YYYY-MM-DD HHMMSS.png` (`N` only when there's more than one).
+
+1. Start the `vibes` preview (`.claude/launch.json`, port 8765) and set the viewport to 1280×800, which gives 2560×1600 canvas captures.
+2. Run `python3 -I scripts/screenshot_receiver.py` in the background. It saves into `Images/`.
+3. Open the newest build, e.g. `http://localhost:8765/Games/<Game>/Versions/<v>/<Game>.html`, wait for it to load, and paste the snippet the receiver prints with the JavaScript tool. Then `await __save('<Game> Title')`.
+4. Play into a representative moment. Click through menus, use `await __hold('w', 1500)` to hold movement keys (short key taps often don't move a Godot character), then `await __save('<Game> In Game 1')`. Read each PNG back to check it isn't blank or stuck on a loading screen.
+5. Stop the receiver, reset the viewport, and add the paths to the game's `images` in `games.json`, title first. If the home page still shows the placeholder, it's a cached `games.json`; load it with `?v=2`.
+6. Commit only `games.json` and the new `Images/` files.
+
 ## Version logs
 
 [`versions.html`](https://delgadojosh.github.io/Vibes/versions.html) shows every game's version notes, with a link to play each build. It reads `version_logs.json`, which `python3 -I scripts/build_version_logs.py` writes from the games' own logs: `scripts/version_log.gd` in `../VibeCoding`, `VERSION_LOG.md` in `../VibeCoding-2-Extra-Vibes`, and `puyos_revenge_versions.html`. `publish_vibecoding_builds.sh` reruns it on every publish; after `import_godot_build.py`, run it yourself and commit the JSON. It lists the projects it found no log for (their builds still show, without notes). "Logs with no project in games.json" means a log maps to a folder no card uses. After deleting or renaming a game, update the mapping in `build_version_logs.py`; the hand-written Puyo's Revenge notes are mapped there by folder name. Deep links: `versions.html#bloomworks`, `versions.html#bloomworks-v0.1.40`.
