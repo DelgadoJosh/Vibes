@@ -4,6 +4,21 @@
 set -e
 cd "$(dirname "$0")/.."
 
+# One publish at a time: VibeCoding full-send sessions run this on their own, and Vibes is one checkout,
+# so two at once would commit each other's half-imported files. Waits up to 10 minutes for the lock.
+LOCK=.publish.lock
+tries=0
+until mkdir "$LOCK" 2>/dev/null; do
+    tries=$((tries + 1))
+    if [ "$tries" -ge 120 ]; then
+        echo "Another publish has held $LOCK for 10 minutes; giving up (remove it if no publish is running)." >&2
+        exit 1
+    fi
+    [ "$tries" -eq 1 ] && echo "Waiting for another publish to finish..."
+    sleep 5
+done
+trap 'rmdir "$LOCK"' EXIT INT TERM
+
 git pull -q --rebase origin main
 python3 -I scripts/import_vibecoding_builds.py "$@"
 python3 -I scripts/build_version_logs.py
@@ -15,6 +30,7 @@ fi
 git add -A games.json Games Engines version_logs.json
 if git diff --cached --quiet; then
     echo "Nothing new to publish."
+    python3 -I scripts/import_vibecoding_builds.py --check || true
     exit 0
 fi
 
@@ -42,3 +58,7 @@ print(msg)
 git commit -q -m "$msg"
 git push -q origin main
 echo "Published: $msg"
+
+# Report anything still missing: builds skipped mid-export, unknown export folders, cards without
+# screenshots or a real description (a new game isn't done until it has them; see README#screenshots).
+python3 -I scripts/import_vibecoding_builds.py --check || true

@@ -5,6 +5,7 @@ Usage:
     python3 -I scripts/import_vibecoding_builds.py [-n]                   # new builds of every game
     python3 -I scripts/import_vibecoding_builds.py [-n] GAME [VERSION ...]  # force specific versions
     python3 -I scripts/import_vibecoding_builds.py --check                # is every game complete? (exit 1 if not)
+                                                                          # also lists cards missing screenshots/description/model
 
 VibeCoding/Exports/<Game>/<version>/ holds the unzipped export. "New" means newer than the newest
 version games.json lists for that project (older ones were left out on purpose), or every version
@@ -155,6 +156,15 @@ def check(data):
         ok = False
         print(f"Unknown export folders: {unlisted}")
     print("Every game is complete." if ok else "Not complete.")
+    # Card details aren't builds, so they don't fail the check, but a new game isn't done without them.
+    for p in data["projects"]:
+        if p.get("hidden"):
+            continue
+        gaps = [g for g, bad in (("no screenshots", not p.get("images")),
+                                 ("placeholder description", p.get("description", "").endswith(", made in Godot.")),
+                                 ("no model", not p.get("model"))) if bad]
+        if gaps:
+            print(f"Card needs details: {p['title']} ({', '.join(gaps)}); see README#screenshots")
     return ok
 
 

@@ -9,3 +9,6 @@ __pycache__/
 
 # Local Claude Code config (launch.json for the preview server); never publish it
 .claude/
+
+# Lock held while publish_vibecoding_builds.sh runs
+.publish.lock/
