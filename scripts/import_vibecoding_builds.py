@@ -59,6 +59,8 @@ SOURCES = {
     "Gridlock Getaway": {},
     "Senpai Alert": {},
     "Valet Shuffle": {},
+    "Iron Orders": {},
+    "Siege Lines": {},
     "Delivery Driver": {"skip": True},  # single flat build, already on the site as Dangerous Delivery Driver
 }
 SKIP_FILES = {".DS_Store", "README.md"}
