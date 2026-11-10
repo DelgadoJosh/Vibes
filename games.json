@@ -4756,7 +4756,10 @@
       "updated": "2026-11-08",
       "model": "",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Gridlock Getaway Title Screenshot 2026-11-09 225216.png",
+        "Images/Gridlock Getaway In Game 1 Screenshot 2026-11-09 225228.png"
+      ],
       "versions": [
         {
           "version": "v0.1.4",
@@ -4788,7 +4791,10 @@
       "updated": "2026-11-09",
       "model": "",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Senpai Alert Title Screenshot 2026-11-09 225346.png",
+        "Images/Senpai Alert In Game 1 Screenshot 2026-11-09 225600.png"
+      ],
       "versions": [
         {
           "version": "v0.1.19",
@@ -4880,7 +4886,10 @@
       "updated": "2026-11-08",
       "model": "",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Valet Shuffle Title Screenshot 2026-11-09 225257.png",
+        "Images/Valet Shuffle In Game 1 Screenshot 2026-11-09 225325.png"
+      ],
       "versions": [
         {
           "version": "v0.1.4",
@@ -4912,7 +4921,10 @@
       "updated": "2026-11-09",
       "model": "",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Iron Orders Title Screenshot 2026-11-09 225629.png",
+        "Images/Iron Orders In Game 1 Screenshot 2026-11-09 225700.png"
+      ],
       "versions": [
         {
           "version": "v0.1.5",
@@ -4948,7 +4960,10 @@
       "updated": "2026-11-09",
       "model": "",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Siege Lines Title Screenshot 2026-11-09 225723.png",
+        "Images/Siege Lines In Game 1 Screenshot 2026-11-09 225803.png"
+      ],
       "versions": [
         {
           "version": "v0.1.2",
