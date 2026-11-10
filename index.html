@@ -178,6 +178,49 @@
             border-color: #bb86fc;
             color: #000;
         }
+        .model-filter {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+        }
+        .model-chip {
+            border: 1px solid #444;
+            background: none;
+            color: #b0b0b0;
+            border-radius: 999px;
+            padding: 0.15rem 0.7rem;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            max-width: 100%;
+            overflow-wrap: anywhere;
+            transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+        }
+        .model-chip:hover {
+            border-color: #03dac6;
+            color: #03dac6;
+        }
+        .model-chip[aria-pressed="true"] {
+            background-color: rgba(3, 218, 198, 0.15);
+            border-color: #03dac6;
+            color: #03dac6;
+        }
+        .model-chip[aria-pressed="false"] {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+        .model-chip.all-chip[aria-pressed="false"] {
+            text-decoration: none;
+        }
+        .model-chip:focus-visible,
+        .sort-toggle .btn:focus-visible {
+            outline: 2px solid #bb86fc;
+            outline-offset: 2px;
+        }
+        .no-match {
+            color: #808080;
+        }
         .version-menu {
             max-height: 260px;
             overflow-y: auto;
@@ -199,6 +242,7 @@
                 <button type="button" class="btn btn-outline-secondary" data-sort="updated">Recently updated</button>
             </div>
         </div>
+        <div class="model-filter" id="model-filter" role="group" aria-label="Filter by model"></div>
         <p class="text-center mt-3 mb-0"><a href="versions.html" class="link-accent">Version logs for every game</a></p>
         <section>
             <h2>Games</h2>
@@ -292,14 +336,52 @@
             </div>`;
         }
 
+        // Model filter. Groups "Claude Opus 5.5" with "Opus 5.5"; an empty model is "Unknown".
+        // Stores the models that are OFF, so models added to games.json later show by default.
+        const modelKey = p => (p.model || "").trim().replace(/^Claude\s+/i, "") || "Unknown";
+        let modelsOff = new Set();
+        try { modelsOff = new Set(JSON.parse(localStorage.getItem("vibes-models-off")) || []); } catch { modelsOff = new Set(); }
+        function saveModelsOff() {
+            try { localStorage.setItem("vibes-models-off", JSON.stringify([...modelsOff])); } catch {}
+        }
+
+        function renderFilter() {
+            const counts = new Map();
+            projects.filter(p => !p.hidden).forEach(p => counts.set(modelKey(p), (counts.get(modelKey(p)) || 0) + 1));
+            const models = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+            const allOn = models.every(([m]) => !modelsOff.has(m));
+            document.getElementById("model-filter").innerHTML =
+                `<button type="button" class="model-chip all-chip" data-model-all aria-pressed="${allOn}">All</button>` +
+                models.map(([m, n]) => `<button type="button" class="model-chip" data-model="${esc(m)}" aria-pressed="${!modelsOff.has(m)}">${esc(m)} (${n})</button>`).join("");
+        }
+
+        document.getElementById("model-filter").addEventListener("click", e => {
+            const btn = e.target.closest(".model-chip");
+            if (!btn) return;
+            if (btn.hasAttribute("data-model-all")) modelsOff.clear();
+            else if (modelsOff.has(btn.dataset.model)) modelsOff.delete(btn.dataset.model);
+            else modelsOff.add(btn.dataset.model);
+            saveModelsOff();
+            render(currentSort);
+            const again = btn.hasAttribute("data-model-all")
+                ? document.querySelector("[data-model-all]")
+                : [...document.querySelectorAll("[data-model]")].find(b => b.dataset.model === btn.dataset.model);
+            if (again) again.focus();
+        });
+
+        let currentSort = "default";
         function render(sort) {
+            currentSort = sort;
+            renderFilter();
             const list = projects.map((p, i) => ({p, i}));
             if (sort === "updated") {
                 list.sort((a, b) => (b.p.updated || "").localeCompare(a.p.updated || "") || a.i - b.i);
             }
             for (const kind of ["game", "app"]) {
-                document.getElementById(kind + "s").innerHTML =
-                    list.filter(({p}) => p.kind === kind && !p.hidden).map(({p, i}) => card(p, i)).join("");
+                const shown = list.filter(({p}) => p.kind === kind && !p.hidden && !modelsOff.has(modelKey(p)));
+                document.getElementById(kind + "s").innerHTML = shown.length
+                    ? shown.map(({p, i}) => card(p, i)).join("")
+                    : '<p class="no-match mt-4 mb-0">No projects match the selected models.</p>';
             }
             document.querySelectorAll("[data-sort]").forEach(b => {
                 b.classList.toggle("active", b.dataset.sort === sort);

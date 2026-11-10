@@ -14,6 +14,8 @@ All card content lives in [`games.json`](games.json); `index.html` renders it. E
 - `updated`, `historyPage` (optional), `versions` (newest first; optional `label` per version)
 - `hidden: true` (optional) – leaves the card off the home page and the version logs, but its files are still deployed
 
+The home page's model filter builds one toggle per distinct `model` string at load time (a leading "Claude " is ignored, so "Claude Opus 5.5" and "Opus 5.5" share a toggle; an empty model shows as "Unknown"). Each viewer's turned-off models are saved in localStorage under `vibes-models-off`, so new models show by default.
+
 ## Screenshots
 
 Claude can take them in the desktop app's browser pane. Every game should have a title shot plus one to three gameplay shots, named `<Game> Title Screenshot YYYY-MM-DD HHMMSS.png` and `<Game> In Game [N] Screenshot YYYY-MM-DD HHMMSS.png` (`N` only when there's more than one).
