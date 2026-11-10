@@ -4,6 +4,7 @@
 Usage:
     python3 -I scripts/import_vibecoding_builds.py [-n]                   # new builds of every game
     python3 -I scripts/import_vibecoding_builds.py [-n] GAME [VERSION ...]  # force specific versions
+    python3 -I scripts/import_vibecoding_builds.py --check                # is every game complete? (exit 1 if not)
 
 VibeCoding/Exports/<Game>/<version>/ holds the unzipped export. "New" means newer than the newest
 version games.json lists for that project (older ones were left out on purpose), or every version
@@ -134,8 +135,33 @@ def import_build(data, cfg, src, version, label, dry):
         project["updated"] = build_date(src)
 
 
+def check(data):
+    """Report export versions missing from games.json and unknown export folders; True if complete."""
+    site = {p["folder"]: [v["version"] for v in p["versions"]] for p in data["projects"]}
+    ok = True
+    for name in SOURCES:
+        cfg = config(name)
+        if cfg["skip"] or not (EXPORTS / name).is_dir():
+            continue
+        have = site.get(f"Games/{cfg['vibes_dir']}", [])
+        newest = max(map(version_key, have), default=())
+        missing = [v for _, v, _ in builds(name, cfg) if v not in have and version_key(v) > newest]
+        if missing:
+            ok = False
+            print(f"{name}: {len(missing)} missing ({missing[0]} - {missing[-1]})")
+    unlisted = sorted(d.name for d in EXPORTS.iterdir()
+                      if d.is_dir() and d.name not in SOURCES and not VERSION_DIR.match(d.name))
+    if unlisted:
+        ok = False
+        print(f"Unknown export folders: {unlisted}")
+    print("Every game is complete." if ok else "Not complete.")
+    return ok
+
+
 def main():
     args = sys.argv[1:]
+    if "--check" in args:
+        sys.exit(0 if check(json.loads(DATA.read_text())) else 1)
     dry = "-n" in args
     args = [a for a in args if a != "-n"]
     data = json.loads(DATA.read_text())
