@@ -111,6 +111,14 @@ def import_build(data, cfg, src, version, label, dry):
         print(f"  {version}: expected one .html, found {len(htmls)}, skipping")
         SKIPPED.append(f"{cfg['title']} {version} ({len(htmls)} .html)")
         return
+    # A round commits a chunk's export only once it's tested; an uncommitted or modified export
+    # folder is still mid-chunk, so leave it for the next run.
+    dirty = subprocess.run(["git", "-C", str(VC), "status", "--porcelain", "--untracked-files=all", "--", str(src)],
+                           capture_output=True, text=True).stdout.strip()
+    if dirty:
+        print(f"  {version}: export not committed in VibeCoding yet, skipping")
+        SKIPPED.append(f"{cfg['title']} {version} (not committed yet)")
+        return
     html = htmls[0]
     vdir = version + (f" {label}" if label else "")
     dest = VIBES / "Games" / cfg["vibes_dir"] / "Versions" / vdir
