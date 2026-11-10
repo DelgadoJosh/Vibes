@@ -4791,6 +4791,10 @@
       "images": [],
       "versions": [
         {
+          "version": "v0.1.19",
+          "href": "Games/Senpai Alert/Versions/v0.1.19/Senpai Alert.html"
+        },
+        {
           "version": "v0.1.18",
           "href": "Games/Senpai Alert/Versions/v0.1.18/Senpai Alert.html"
         },
@@ -4828,7 +4832,7 @@
         },
         {
           "version": "v0.1.9",
-          "href": "Games/Senpai Alert/Versions/v0.1.9/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.9/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.8",
