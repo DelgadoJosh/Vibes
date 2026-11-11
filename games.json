@@ -5039,11 +5039,14 @@
       "title": "Kawaii Annihilation",
       "kind": "game",
       "folder": "Games/Kawaii Annihilation",
-      "description": "Kawaii Annihilation, made in Godot.",
+      "description": "A real-time strategy game in the spirit of Beyond All Reason, played for laughs: a magical-girl Commander builds a flowing Sparkle and Moe economy and floods the field with chibi bots, cat tanks and idol flyers that pop into confetti and hearts. Skirmish AI, fog of war, two maps.",
       "updated": "2026-11-10",
-      "model": "",
+      "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Kawaii Annihilation Title Screenshot 2026-11-10 225034.png",
+        "Images/Kawaii Annihilation In Game Screenshot 2026-11-10 225054.png"
+      ],
       "versions": [
         {
           "version": "v0.1.9",
