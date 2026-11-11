@@ -5015,11 +5015,11 @@
       "title": "Purrfect Snip",
       "kind": "game",
       "folder": "Games/Purrfect Snip",
-      "description": "Purrfect Snip, made in Godot.",
+      "description": "Swipe to snip the ropes so a ball of yarn swings and drops into the paws of Mochi, a sleepy kitten. Grab the three fish treats on the way for stars.",
       "updated": "2026-11-10",
-      "model": "",
+      "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": ["Images/Purrfect Snip Title Screenshot 2026-11-10 225913.png", "Images/Purrfect Snip In Game Screenshot 2026-11-10 225925.png"],
       "versions": [
         {
           "version": "v0.1.5",
