@@ -61,6 +61,7 @@ SOURCES = {
     "Valet Shuffle": {},
     "Iron Orders": {"description": "Give your orders in secret, then watch every player's moves play out one at a time. Take regions with armies and commanders against AI or friends online, on built-in maps or ones you make."},
     "Siege Lines": {},
+    "Purrfect Snip": {},
     "Delivery Driver": {"skip": True},  # single flat build, already on the site as Dangerous Delivery Driver
 }
 SKIP_FILES = {".DS_Store", "README.md"}
