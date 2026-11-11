@@ -5019,7 +5019,10 @@
       "updated": "2026-11-10",
       "model": "Opus 5.5",
       "context": "",
-      "images": ["Images/Purrfect Snip Title Screenshot 2026-11-10 225913.png", "Images/Purrfect Snip In Game Screenshot 2026-11-10 225925.png"],
+      "images": [
+        "Images/Purrfect Snip Title Screenshot 2026-11-10 225913.png",
+        "Images/Purrfect Snip In Game Screenshot 2026-11-10 225925.png"
+      ],
       "versions": [
         {
           "version": "v0.1.5",
@@ -5099,6 +5102,30 @@
         {
           "version": "v0.1.0",
           "href": "Games/Kawaii Annihilation/Versions/v0.1.0/Kawaii Annihilation.html"
+        }
+      ]
+    },
+    {
+      "title": "Pillow Fort Panic",
+      "kind": "game",
+      "folder": "Games/Pillow Fort Panic",
+      "description": "Pillow Fort Panic, made in Godot.",
+      "updated": "2026-11-10",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.2",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.2/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.1/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.0/Pillow Fort Panic.html"
         }
       ]
     }
