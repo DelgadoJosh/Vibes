@@ -63,6 +63,7 @@ SOURCES = {
     "Siege Lines": {},
     "Purrfect Snip": {},
     "Kawaii Annihilation": {},
+    "Pillow Fort Panic": {},
     "Delivery Driver": {"skip": True},  # single flat build, already on the site as Dangerous Delivery Driver
 }
 SKIP_FILES = {".DS_Store", "README.md"}
