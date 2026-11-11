@@ -5010,6 +5010,30 @@
           "href": "Games/Siege Lines/Versions/v0.1.0/Siege Lines.html"
         }
       ]
+    },
+    {
+      "title": "Purrfect Snip",
+      "kind": "game",
+      "folder": "Games/Purrfect Snip",
+      "description": "Purrfect Snip, made in Godot.",
+      "updated": "2026-11-10",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.2",
+          "href": "Games/Purrfect Snip/Versions/v0.1.2/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Purrfect Snip/Versions/v0.1.1/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Purrfect Snip/Versions/v0.1.0/Purrfect Snip.html"
+        }
+      ]
     }
   ]
 }
