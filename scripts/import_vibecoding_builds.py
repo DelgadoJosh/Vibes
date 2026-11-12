@@ -64,6 +64,7 @@ SOURCES = {
     "Purrfect Snip": {},
     "Kawaii Annihilation": {},
     "Pillow Fort Panic": {},
+    "Gravy Boat": {"description": "A dig-and-flow physics puzzle: swipe through mashed potato to route warm gravy into the pirate peas' gravy boat, grabbing croutons for stars. Melt butter, dodge hot sauce, boil gravy into steam, ring bells and turn valves, then take on a dessert course of custard and caramel."},
     "Delivery Driver": {"skip": True},  # single flat build, already on the site as Dangerous Delivery Driver
 }
 SKIP_FILES = {".DS_Store", "README.md"}
