@@ -5099,7 +5099,7 @@
       "kind": "game",
       "folder": "Games/Kawaii Annihilation",
       "description": "A real-time strategy game in the spirit of Beyond All Reason, played for laughs: a magical-girl Commander builds a flowing Sparkle and Moe economy and floods the field with chibi bots, cat tanks and idol flyers that pop into confetti and hearts. Skirmish AI, fog of war, two maps.",
-      "updated": "2026-11-10",
+      "updated": "2026-11-11",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -5107,6 +5107,38 @@
         "Images/Kawaii Annihilation In Game Screenshot 2026-11-10 225054.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.24",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.24/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.23",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.23/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.22",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.22/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.21",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.21/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.20",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.20/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.19",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.19/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.18",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.18/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.17",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.17/Kawaii Annihilation.html"
+        },
         {
           "version": "v0.1.16",
           "href": "Games/Kawaii Annihilation/Versions/v0.1.16/Kawaii Annihilation.html"
@@ -5117,35 +5149,35 @@
         },
         {
           "version": "v0.1.14",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.14/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.14/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.13",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.13/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.13/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.12",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.12/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.12/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.11",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.11/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.11/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.10",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.10/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.10/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.9",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.9/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.9/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.8",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.8/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.8/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.7",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.7/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.7/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.6",
