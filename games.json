@@ -4788,7 +4788,7 @@
       "kind": "game",
       "folder": "Games/Senpai Alert",
       "description": "Senpai Alert, made in Godot.",
-      "updated": "2026-11-09",
+      "updated": "2026-11-11",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -4797,44 +4797,112 @@
       ],
       "versions": [
         {
+          "version": "v0.1.36",
+          "href": "Games/Senpai Alert/Versions/v0.1.36/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.35",
+          "href": "Games/Senpai Alert/Versions/v0.1.35/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.34",
+          "href": "Games/Senpai Alert/Versions/v0.1.34/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.33",
+          "href": "Games/Senpai Alert/Versions/v0.1.33/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.32",
+          "href": "Games/Senpai Alert/Versions/v0.1.32/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.31",
+          "href": "Games/Senpai Alert/Versions/v0.1.31/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.30",
+          "href": "Games/Senpai Alert/Versions/v0.1.30/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.29",
+          "href": "Games/Senpai Alert/Versions/v0.1.29/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.28",
+          "href": "Games/Senpai Alert/Versions/v0.1.28/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.27",
+          "href": "Games/Senpai Alert/Versions/v0.1.27/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.26",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.26/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.25",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.25/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.24",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.24/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.23",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.23/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.22",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.22/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.21",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.21/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.20",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.20/Senpai%20Alert.html"
+        },
+        {
           "version": "v0.1.19",
-          "href": "Games/Senpai Alert/Versions/v0.1.19/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.19/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.18",
-          "href": "Games/Senpai Alert/Versions/v0.1.18/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.18/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.17",
-          "href": "Games/Senpai Alert/Versions/v0.1.17/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.17/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.16",
-          "href": "Games/Senpai Alert/Versions/v0.1.16/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.16/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.15",
-          "href": "Games/Senpai Alert/Versions/v0.1.15/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.15/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.14",
-          "href": "Games/Senpai Alert/Versions/v0.1.14/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.14/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.13",
-          "href": "Games/Senpai Alert/Versions/v0.1.13/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.13/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.12",
-          "href": "Games/Senpai Alert/Versions/v0.1.12/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.12/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.11",
-          "href": "Games/Senpai Alert/Versions/v0.1.11/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.11/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.10",
-          "href": "Games/Senpai Alert/Versions/v0.1.10/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.10/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.9",
@@ -5025,6 +5093,14 @@
       ],
       "versions": [
         {
+          "version": "v0.1.30",
+          "href": "Games/Purrfect Snip/Versions/v0.1.30/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.29",
+          "href": "Games/Purrfect Snip/Versions/v0.1.29/Purrfect Snip.html"
+        },
+        {
           "version": "v0.1.28",
           "href": "Games/Purrfect Snip/Versions/v0.1.28/Purrfect Snip.html"
         },
@@ -5058,11 +5134,11 @@
         },
         {
           "version": "v0.1.20",
-          "href": "Games/Purrfect Snip/Versions/v0.1.20/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.20/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.19",
-          "href": "Games/Purrfect Snip/Versions/v0.1.19/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.19/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.18",
@@ -5156,6 +5232,18 @@
       ],
       "versions": [
         {
+          "version": "v0.1.27",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.27/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.26",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.26/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.25",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.25/Kawaii Annihilation.html"
+        },
+        {
           "version": "v0.1.24",
           "href": "Games/Kawaii Annihilation/Versions/v0.1.24/Kawaii Annihilation.html"
         },
@@ -5185,15 +5273,15 @@
         },
         {
           "version": "v0.1.17",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.17/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.17/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.16",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.16/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.16/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.15",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.15/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.15/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.14",
@@ -5262,7 +5350,7 @@
       "kind": "game",
       "folder": "Games/Pillow Fort Panic",
       "description": "A silly bedtime tower defense: toys on the couch cushions hold the pillow fort against dust bunnies, lost socks, moths, alarm clocks and two giant bosses. 14 nights across two worlds, an endless Insomnia mode, star upgrades, and a Call Mom! panic button.",
-      "updated": "2026-11-10",
+      "updated": "2026-11-11",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -5272,44 +5360,80 @@
       ],
       "versions": [
         {
+          "version": "v0.1.20",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.20/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.19",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.19/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.18",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.18/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.17",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.17/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.16",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.16/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.15",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.15/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.14",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.14/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.13",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.13/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.12",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.12/Pillow Fort Panic.html"
+        },
+        {
           "version": "v0.1.11",
           "href": "Games/Pillow Fort Panic/Versions/v0.1.11/Pillow Fort Panic.html"
         },
         {
           "version": "v0.1.10",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.10/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.10/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.9",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.9/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.9/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.8",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.8/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.8/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.7",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.7/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.7/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.6",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.6/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.6/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.5",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.5/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.5/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.4",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.4/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.4/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.3",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.3/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.3/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.2",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.2/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.2/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.1",
