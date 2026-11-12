@@ -5320,6 +5320,50 @@
           "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.0/Pillow%20Fort%20Panic.html"
         }
       ]
+    },
+    {
+      "title": "Gravy Boat",
+      "kind": "game",
+      "folder": "Games/Gravy Boat",
+      "description": "A dig-and-flow physics puzzle: swipe through mashed potato to route warm gravy into the pirate peas' gravy boat, grabbing croutons for stars. Melt butter, dodge hot sauce, boil gravy into steam, ring bells and turn valves, then take on a dessert course of custard and caramel.",
+      "updated": "2026-11-11",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.7",
+          "href": "Games/Gravy Boat/Versions/v0.1.7/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.6",
+          "href": "Games/Gravy Boat/Versions/v0.1.6/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.5",
+          "href": "Games/Gravy Boat/Versions/v0.1.5/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.4",
+          "href": "Games/Gravy Boat/Versions/v0.1.4/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.3",
+          "href": "Games/Gravy Boat/Versions/v0.1.3/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.2",
+          "href": "Games/Gravy Boat/Versions/v0.1.2/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Gravy Boat/Versions/v0.1.1/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Gravy Boat/Versions/v0.1.0/Gravy Boat.html"
+        }
+      ]
     }
   ]
 }
