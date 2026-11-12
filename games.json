@@ -5339,7 +5339,7 @@
       "kind": "game",
       "folder": "Games/Kawaii Annihilation",
       "description": "A real-time strategy game in the spirit of Beyond All Reason, played for laughs: a magical-girl Commander builds a flowing Sparkle and Moe economy and floods the field with chibi bots, cat tanks and idol flyers that pop into confetti and hearts. Skirmish AI, fog of war, two maps.",
-      "updated": "2026-11-11",
+      "updated": "2026-11-12",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -5348,44 +5348,80 @@
       ],
       "versions": [
         {
+          "version": "v0.1.39",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.39/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.38",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.38/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.37",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.37/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.36",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.36/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.35",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.35/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.34",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.34/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.33",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.33/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.32",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.32/Kawaii Annihilation.html"
+        },
+        {
+          "version": "v0.1.31",
+          "href": "Games/Kawaii Annihilation/Versions/v0.1.31/Kawaii Annihilation.html"
+        },
+        {
           "version": "v0.1.30",
           "href": "Games/Kawaii Annihilation/Versions/v0.1.30/Kawaii Annihilation.html"
         },
         {
           "version": "v0.1.29",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.29/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.29/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.28",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.28/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.28/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.27",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.27/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.27/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.26",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.26/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.26/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.25",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.25/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.25/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.24",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.24/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.24/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.23",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.23/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.23/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.22",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.22/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.22/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.21",
-          "href": "Games/Kawaii Annihilation/Versions/v0.1.21/Kawaii Annihilation.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Kawaii%20Annihilation/Versions/v0.1.21/Kawaii%20Annihilation.html"
         },
         {
           "version": "v0.1.20",
