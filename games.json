@@ -4824,7 +4824,7 @@
       "kind": "game",
       "folder": "Games/Senpai Alert",
       "description": "Senpai Alert, made in Godot.",
-      "updated": "2026-11-11",
+      "updated": "2026-11-12",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -4833,44 +4833,80 @@
       ],
       "versions": [
         {
+          "version": "v0.1.45",
+          "href": "Games/Senpai Alert/Versions/v0.1.45/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.44",
+          "href": "Games/Senpai Alert/Versions/v0.1.44/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.43",
+          "href": "Games/Senpai Alert/Versions/v0.1.43/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.42",
+          "href": "Games/Senpai Alert/Versions/v0.1.42/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.41",
+          "href": "Games/Senpai Alert/Versions/v0.1.41/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.40",
+          "href": "Games/Senpai Alert/Versions/v0.1.40/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.39",
+          "href": "Games/Senpai Alert/Versions/v0.1.39/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.38",
+          "href": "Games/Senpai Alert/Versions/v0.1.38/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.37",
+          "href": "Games/Senpai Alert/Versions/v0.1.37/Senpai Alert.html"
+        },
+        {
           "version": "v0.1.36",
           "href": "Games/Senpai Alert/Versions/v0.1.36/Senpai Alert.html"
         },
         {
           "version": "v0.1.35",
-          "href": "Games/Senpai Alert/Versions/v0.1.35/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.35/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.34",
-          "href": "Games/Senpai Alert/Versions/v0.1.34/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.34/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.33",
-          "href": "Games/Senpai Alert/Versions/v0.1.33/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.33/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.32",
-          "href": "Games/Senpai Alert/Versions/v0.1.32/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.32/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.31",
-          "href": "Games/Senpai Alert/Versions/v0.1.31/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.31/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.30",
-          "href": "Games/Senpai Alert/Versions/v0.1.30/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.30/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.29",
-          "href": "Games/Senpai Alert/Versions/v0.1.29/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.29/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.28",
-          "href": "Games/Senpai Alert/Versions/v0.1.28/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.28/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.27",
-          "href": "Games/Senpai Alert/Versions/v0.1.27/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.27/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.26",
