@@ -31,6 +31,7 @@ Driving Godot games in the browser pane (learned 2026-11-09):
 - **Clicks land where the mouse was a step earlier.** Hover twice at the target (two nearby points), then click, and expect to click again if nothing happens. A "lost" click often fires on the next event instead, so check the screen before clicking anything else.
 - **Escape usually opens the pause menu.** It doesn't cancel a menu or placement mode. Most games use right-click to cancel.
 - **RTS-style building placement maps poorly onto the canvas.** Settle for a clean shot of the base and HUD rather than fighting it, and park the mouse over the HUD before saving so no hover tooltip shows.
+- **When pane clicks don't land at all** (Gravy Boat, 2026-11-11: three real clicks on Play did nothing, and the screenshot frame didn't match the 1280×800 viewport), dispatch `pointermove/down/up` plus the matching `mouse*` events on the canvas from the JavaScript tool at fractions of `canvas.getBoundingClientRect()`. Godot takes those; a drag is the same with a run of `pointermove`s 16 ms apart.
 - **Puzzle games:** pick a later unlocked level from the level select for a busier board.
 - Not every game needs three shots. A title shot plus one clear gameplay shot is fine.
 

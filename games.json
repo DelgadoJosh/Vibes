@@ -5327,9 +5327,12 @@
       "folder": "Games/Gravy Boat",
       "description": "A dig-and-flow physics puzzle: swipe through mashed potato to route warm gravy into the pirate peas' gravy boat, grabbing croutons for stars. Melt butter, dodge hot sauce, boil gravy into steam, ring bells and turn valves, then take on a dessert course of custard and caramel.",
       "updated": "2026-11-11",
-      "model": "",
+      "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Gravy Boat Title Screenshot 2026-11-11 214742.png",
+        "Images/Gravy Boat In Game Screenshot 2026-11-11 214846.png"
+      ],
       "versions": [
         {
           "version": "v0.1.7",
