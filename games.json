@@ -4717,7 +4717,7 @@
       "kind": "game",
       "folder": "Games/Pour Decisions",
       "description": "Tap a test tube, pour the sand. Sort every color into its own tube across endless levels that keep getting harder.",
-      "updated": "2026-11-06",
+      "updated": "2026-11-11",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -4727,24 +4727,60 @@
       ],
       "versions": [
         {
+          "version": "v0.1.13",
+          "href": "Games/Pour Decisions/Versions/v0.1.13/Pour Decisions.html"
+        },
+        {
+          "version": "v0.1.12",
+          "href": "Games/Pour Decisions/Versions/v0.1.12/Pour Decisions.html"
+        },
+        {
+          "version": "v0.1.11",
+          "href": "Games/Pour Decisions/Versions/v0.1.11/Pour Decisions.html"
+        },
+        {
+          "version": "v0.1.10",
+          "href": "Games/Pour Decisions/Versions/v0.1.10/Pour Decisions.html"
+        },
+        {
+          "version": "v0.1.9",
+          "href": "Games/Pour Decisions/Versions/v0.1.9/Pour Decisions.html"
+        },
+        {
+          "version": "v0.1.8",
+          "href": "Games/Pour Decisions/Versions/v0.1.8/Pour Decisions.html"
+        },
+        {
+          "version": "v0.1.7",
+          "href": "Games/Pour Decisions/Versions/v0.1.7/Pour Decisions.html"
+        },
+        {
+          "version": "v0.1.6",
+          "href": "Games/Pour Decisions/Versions/v0.1.6/Pour Decisions.html"
+        },
+        {
+          "version": "v0.1.5",
+          "href": "Games/Pour Decisions/Versions/v0.1.5/Pour Decisions.html"
+        },
+        {
           "version": "v0.1.4",
           "href": "Games/Pour Decisions/Versions/v0.1.4/Pour Decisions.html"
         },
         {
           "version": "v0.1.3",
-          "href": "Games/Pour Decisions/Versions/v0.1.3/Pour Decisions.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pour%20Decisions/Versions/v0.1.3/Pour%20Decisions.html"
         },
         {
           "version": "v0.1.2",
-          "href": "Games/Pour Decisions/Versions/v0.1.2/Pour Decisions.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pour%20Decisions/Versions/v0.1.2/Pour%20Decisions.html"
         },
         {
           "version": "v0.1.1",
-          "href": "Games/Pour Decisions/Versions/v0.1.1/Pour Decisions.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pour%20Decisions/Versions/v0.1.1/Pour%20Decisions.html"
         },
         {
           "version": "v0.1.0",
-          "href": "Games/Pour Decisions/Versions/v0.1.0/Pour Decisions.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pour%20Decisions/Versions/v0.1.0/Pour%20Decisions.html"
         }
       ]
     },
