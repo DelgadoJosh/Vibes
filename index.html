@@ -210,7 +210,8 @@
             text-decoration: line-through;
             opacity: 0.7;
         }
-        .model-chip.all-chip[aria-pressed="false"] {
+        .model-chip.all-chip[aria-pressed="false"],
+        .model-chip.none-chip[aria-pressed="false"] {
             text-decoration: none;
         }
         .model-chip:focus-visible,
@@ -338,6 +339,7 @@
 
         // Model filter. Groups "Claude Opus 5.5" with "Opus 5.5"; an empty model is "Unknown".
         // Stores the models that are OFF, so models added to games.json later show by default.
+        // From the All state, tapping a model isolates it; after that, taps toggle additively.
         const modelKey = p => (p.model || "").trim().replace(/^Claude\s+/i, "") || "Unknown";
         let modelsOff = new Set();
         try { modelsOff = new Set(JSON.parse(localStorage.getItem("vibes-models-off")) || []); } catch { modelsOff = new Set(); }
@@ -345,27 +347,34 @@
             try { localStorage.setItem("vibes-models-off", JSON.stringify([...modelsOff])); } catch {}
         }
 
+        let filterModels = [];
         function renderFilter() {
             const counts = new Map();
             projects.filter(p => !p.hidden).forEach(p => counts.set(modelKey(p), (counts.get(modelKey(p)) || 0) + 1));
             const models = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-            const allOn = models.every(([m]) => !modelsOff.has(m));
+            filterModels = models.map(([m]) => m);
+            const allOn = filterModels.every(m => !modelsOff.has(m));
+            const noneOn = filterModels.every(m => modelsOff.has(m));
             document.getElementById("model-filter").innerHTML =
                 `<button type="button" class="model-chip all-chip" data-model-all aria-pressed="${allOn}">All</button>` +
+                `<button type="button" class="model-chip none-chip" data-model-none aria-pressed="${noneOn}">None</button>` +
                 models.map(([m, n]) => `<button type="button" class="model-chip" data-model="${esc(m)}" aria-pressed="${!modelsOff.has(m)}">${esc(m)} (${n})</button>`).join("");
         }
 
         document.getElementById("model-filter").addEventListener("click", e => {
             const btn = e.target.closest(".model-chip");
             if (!btn) return;
+            const m = btn.dataset.model;
             if (btn.hasAttribute("data-model-all")) modelsOff.clear();
-            else if (modelsOff.has(btn.dataset.model)) modelsOff.delete(btn.dataset.model);
-            else modelsOff.add(btn.dataset.model);
+            else if (btn.hasAttribute("data-model-none")) filterModels.forEach(x => modelsOff.add(x));
+            else if (filterModels.every(x => !modelsOff.has(x))) modelsOff = new Set(filterModels.filter(x => x !== m));
+            else if (modelsOff.has(m)) modelsOff.delete(m);
+            else modelsOff.add(m);
             saveModelsOff();
             render(currentSort);
-            const again = btn.hasAttribute("data-model-all")
-                ? document.querySelector("[data-model-all]")
-                : [...document.querySelectorAll("[data-model]")].find(b => b.dataset.model === btn.dataset.model);
+            const again = btn.hasAttribute("data-model-all") ? document.querySelector("[data-model-all]")
+                : btn.hasAttribute("data-model-none") ? document.querySelector("[data-model-none]")
+                : [...document.querySelectorAll("[data-model]")].find(b => b.dataset.model === m);
             if (again) again.focus();
         });
 
