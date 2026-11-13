@@ -5646,7 +5646,7 @@
       "kind": "game",
       "folder": "Games/Gravy Boat",
       "description": "A dig-and-flow physics puzzle: swipe through mashed potato to route warm gravy into the pirate peas' gravy boat, grabbing croutons for stars. Melt butter, dodge hot sauce, boil gravy into steam, ring bells and turn valves, then take on a dessert course of custard and caramel.",
-      "updated": "2026-11-11",
+      "updated": "2026-11-12",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -5654,6 +5654,34 @@
         "Images/Gravy Boat In Game Screenshot 2026-11-11 214846.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.14",
+          "href": "Games/Gravy Boat/Versions/v0.1.14/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.13",
+          "href": "Games/Gravy Boat/Versions/v0.1.13/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.12",
+          "href": "Games/Gravy Boat/Versions/v0.1.12/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.11",
+          "href": "Games/Gravy Boat/Versions/v0.1.11/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.10",
+          "href": "Games/Gravy Boat/Versions/v0.1.10/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.9",
+          "href": "Games/Gravy Boat/Versions/v0.1.9/Gravy Boat.html"
+        },
+        {
+          "version": "v0.1.8",
+          "href": "Games/Gravy Boat/Versions/v0.1.8/Gravy Boat.html"
+        },
         {
           "version": "v0.1.7",
           "href": "Games/Gravy Boat/Versions/v0.1.7/Gravy Boat.html"
@@ -5668,23 +5696,23 @@
         },
         {
           "version": "v0.1.4",
-          "href": "Games/Gravy Boat/Versions/v0.1.4/Gravy Boat.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Gravy%20Boat/Versions/v0.1.4/Gravy%20Boat.html"
         },
         {
           "version": "v0.1.3",
-          "href": "Games/Gravy Boat/Versions/v0.1.3/Gravy Boat.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Gravy%20Boat/Versions/v0.1.3/Gravy%20Boat.html"
         },
         {
           "version": "v0.1.2",
-          "href": "Games/Gravy Boat/Versions/v0.1.2/Gravy Boat.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Gravy%20Boat/Versions/v0.1.2/Gravy%20Boat.html"
         },
         {
           "version": "v0.1.1",
-          "href": "Games/Gravy Boat/Versions/v0.1.1/Gravy Boat.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Gravy%20Boat/Versions/v0.1.1/Gravy%20Boat.html"
         },
         {
           "version": "v0.1.0",
-          "href": "Games/Gravy Boat/Versions/v0.1.0/Gravy Boat.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Gravy%20Boat/Versions/v0.1.0/Gravy%20Boat.html"
         }
       ]
     },
