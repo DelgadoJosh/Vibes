@@ -54,7 +54,7 @@
       "folder": "Games/Time Keeper",
       "description": "Keep time on your side.",
       "updated": "2026-07-28",
-      "model": "Gemini 3.1 Pro or Opus 4.8",
+      "model": "Opus 5",
       "context": "",
       "images": [
         "Images/Time Keeper Title Screenshot 2026-10-08 182840.png",
@@ -4825,7 +4825,7 @@
       "folder": "Games/Senpai Alert",
       "description": "A goofy anime real-time strategy game in the spirit of Red Alert 3: build a base, harvest, and send chibi idols, school-council mecha or shrine spirits against a rival AI. Three factions with their own gimmicks, fog of war, aimed superweapons, transports, walls, and save and load.",
       "updated": "2026-11-12",
-      "model": "Opus 5.5",
+      "model": "Fable 5.1 (v0.1.0–v0.1.35); Opus 5.5 (v0.1.36+)",
       "context": "",
       "images": [
         "Images/Senpai Alert Title Screenshot 2026-11-09 225346.png",
