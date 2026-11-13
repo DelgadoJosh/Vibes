@@ -5220,7 +5220,7 @@
       "kind": "game",
       "folder": "Games/Purrfect Snip",
       "description": "Swipe to snip the ropes so a ball of yarn swings and drops into the paws of Mochi, a sleepy kitten. Grab the three fish treats on the way for stars.",
-      "updated": "2026-11-11",
+      "updated": "2026-11-13",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -5229,44 +5229,104 @@
       ],
       "versions": [
         {
+          "version": "v0.1.56",
+          "href": "Games/Purrfect Snip/Versions/v0.1.56/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.55",
+          "href": "Games/Purrfect Snip/Versions/v0.1.55/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.54",
+          "href": "Games/Purrfect Snip/Versions/v0.1.54/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.53",
+          "href": "Games/Purrfect Snip/Versions/v0.1.53/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.52",
+          "href": "Games/Purrfect Snip/Versions/v0.1.52/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.51",
+          "href": "Games/Purrfect Snip/Versions/v0.1.51/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.50",
+          "href": "Games/Purrfect Snip/Versions/v0.1.50/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.49",
+          "href": "Games/Purrfect Snip/Versions/v0.1.49/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.48",
+          "href": "Games/Purrfect Snip/Versions/v0.1.48/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.47",
+          "href": "Games/Purrfect Snip/Versions/v0.1.47/Purrfect Snip.html"
+        },
+        {
+          "version": "v0.1.46",
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.46/Purrfect%20Snip.html"
+        },
+        {
+          "version": "v0.1.45",
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.45/Purrfect%20Snip.html"
+        },
+        {
+          "version": "v0.1.44",
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.44/Purrfect%20Snip.html"
+        },
+        {
+          "version": "v0.1.43",
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.43/Purrfect%20Snip.html"
+        },
+        {
+          "version": "v0.1.42",
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.42/Purrfect%20Snip.html"
+        },
+        {
           "version": "v0.1.41",
-          "href": "Games/Purrfect Snip/Versions/v0.1.41/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.41/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.40",
-          "href": "Games/Purrfect Snip/Versions/v0.1.40/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.40/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.39",
-          "href": "Games/Purrfect Snip/Versions/v0.1.39/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.39/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.38",
-          "href": "Games/Purrfect Snip/Versions/v0.1.38/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.38/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.37",
-          "href": "Games/Purrfect Snip/Versions/v0.1.37/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.37/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.36",
-          "href": "Games/Purrfect Snip/Versions/v0.1.36/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.36/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.35",
-          "href": "Games/Purrfect Snip/Versions/v0.1.35/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.35/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.34",
-          "href": "Games/Purrfect Snip/Versions/v0.1.34/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.34/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.33",
-          "href": "Games/Purrfect Snip/Versions/v0.1.33/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.33/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.32",
-          "href": "Games/Purrfect Snip/Versions/v0.1.32/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.32/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.31",
