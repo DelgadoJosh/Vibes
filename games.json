@@ -5913,7 +5913,7 @@
       "kind": "game",
       "folder": "Games/Fire Mission",
       "description": "You command a big fixed gun above a river valley: plot the grid on the map table, read bearing and range off the scales, look up the elevation, load the shell by hand and fire. Nobody tells you what you're shelling; the town plan, recon photos and papers on the desk do, if you look, and you choose where the gun really fires.",
-      "updated": "2026-11-12",
+      "updated": "2026-11-13",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -5922,6 +5922,14 @@
         "Images/Fire Mission In Game 2 Screenshot 2026-11-11 233750.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.20",
+          "href": "Games/Fire Mission/Versions/v0.1.20/Fire Mission.html"
+        },
+        {
+          "version": "v0.1.19",
+          "href": "Games/Fire Mission/Versions/v0.1.19/Fire Mission.html"
+        },
         {
           "version": "v0.1.18",
           "href": "Games/Fire Mission/Versions/v0.1.18/Fire Mission.html"
@@ -5956,11 +5964,11 @@
         },
         {
           "version": "v0.1.10",
-          "href": "Games/Fire Mission/Versions/v0.1.10/Fire Mission.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Fire%20Mission/Versions/v0.1.10/Fire%20Mission.html"
         },
         {
           "version": "v0.1.9",
-          "href": "Games/Fire Mission/Versions/v0.1.9/Fire Mission.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Fire%20Mission/Versions/v0.1.9/Fire%20Mission.html"
         },
         {
           "version": "v0.1.8",
