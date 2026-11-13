@@ -5556,6 +5556,10 @@
       ],
       "versions": [
         {
+          "version": "v0.1.36",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.36/Pillow Fort Panic.html"
+        },
+        {
           "version": "v0.1.35",
           "href": "Games/Pillow Fort Panic/Versions/v0.1.35/Pillow Fort Panic.html"
         },
@@ -5593,7 +5597,7 @@
         },
         {
           "version": "v0.1.26",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.26/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.26/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.25",
