@@ -63,11 +63,12 @@ def folder_bytes(path):
 
 
 def site_bytes():
-    """What Pages publishes: everything but .git and scripts/."""
+    """What Pages publishes: everything but .git, scripts/ and the git-ignored .claude/ (local
+    Claude worktrees live there and once added 455 MB of false size, 2026-11-13)."""
     total = 0
     for root, dirs, files in os.walk(VIBES):
         if root == str(VIBES):
-            dirs[:] = [d for d in dirs if d not in (".git", "scripts")]
+            dirs[:] = [d for d in dirs if d not in (".git", "scripts", ".claude")]
         total += sum(os.path.getsize(os.path.join(root, f)) for f in files)
     return total
 
