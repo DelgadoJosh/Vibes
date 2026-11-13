@@ -5911,6 +5911,14 @@
       ],
       "versions": [
         {
+          "version": "v0.1.18",
+          "href": "Games/Fire Mission/Versions/v0.1.18/Fire Mission.html"
+        },
+        {
+          "version": "v0.1.17",
+          "href": "Games/Fire Mission/Versions/v0.1.17/Fire Mission.html"
+        },
+        {
           "version": "v0.1.16",
           "href": "Games/Fire Mission/Versions/v0.1.16/Fire Mission.html"
         },
@@ -5944,11 +5952,11 @@
         },
         {
           "version": "v0.1.8",
-          "href": "Games/Fire Mission/Versions/v0.1.8/Fire Mission.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Fire%20Mission/Versions/v0.1.8/Fire%20Mission.html"
         },
         {
           "version": "v0.1.7",
-          "href": "Games/Fire Mission/Versions/v0.1.7/Fire Mission.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Fire%20Mission/Versions/v0.1.7/Fire%20Mission.html"
         },
         {
           "version": "v0.1.6",
