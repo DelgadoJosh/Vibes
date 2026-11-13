@@ -5249,6 +5249,10 @@
       ],
       "versions": [
         {
+          "version": "v0.1.60",
+          "href": "Games/Purrfect Snip/Versions/v0.1.60/Purrfect Snip.html"
+        },
+        {
           "version": "v0.1.59",
           "href": "Games/Purrfect Snip/Versions/v0.1.59/Purrfect Snip.html"
         },
@@ -5286,7 +5290,7 @@
         },
         {
           "version": "v0.1.50",
-          "href": "Games/Purrfect Snip/Versions/v0.1.50/Purrfect Snip.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Purrfect%20Snip/Versions/v0.1.50/Purrfect%20Snip.html"
         },
         {
           "version": "v0.1.49",
