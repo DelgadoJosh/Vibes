@@ -5058,7 +5058,7 @@
       "kind": "game",
       "folder": "Games/Iron Orders",
       "description": "Give your orders in secret, then watch every player's moves play out one at a time. Take regions with armies and commanders against AI or friends online, on built-in maps or ones you make.",
-      "updated": "2026-11-13",
+      "updated": "2026-11-14",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -5066,6 +5066,10 @@
         "Images/Iron Orders In Game 1 Screenshot 2026-11-09 225700.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.35",
+          "href": "Games/Iron Orders/Versions/v0.1.35/Iron Orders.html"
+        },
         {
           "version": "v0.1.34",
           "href": "Games/Iron Orders/Versions/v0.1.34/Iron Orders.html"
@@ -5104,7 +5108,7 @@
         },
         {
           "version": "v0.1.25",
-          "href": "Games/Iron Orders/Versions/v0.1.25/Iron Orders.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Iron%20Orders/Versions/v0.1.25/Iron%20Orders.html"
         },
         {
           "version": "v0.1.24",
