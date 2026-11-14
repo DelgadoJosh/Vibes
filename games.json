@@ -5244,7 +5244,7 @@
       "title": "Siege Lines",
       "kind": "game",
       "folder": "Games/Siege Lines",
-      "description": "Siege Lines, made in Godot.",
+      "description": "Real-time strategy on a board of towns joined by roads: send armies to capture neutral nodes, grow your income and overrun rival capitals. Towers, barracks, airfields, fog of war, random maps, a map editor and two campaigns.",
       "updated": "2026-11-14",
       "model": "Opus 5.5",
       "context": "",
