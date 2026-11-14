@@ -5067,6 +5067,14 @@
       ],
       "versions": [
         {
+          "version": "v0.1.38",
+          "href": "Games/Iron Orders/Versions/v0.1.38/Iron Orders.html"
+        },
+        {
+          "version": "v0.1.37",
+          "href": "Games/Iron Orders/Versions/v0.1.37/Iron Orders.html"
+        },
+        {
           "version": "v0.1.36",
           "href": "Games/Iron Orders/Versions/v0.1.36/Iron Orders.html"
         },
@@ -5100,11 +5108,11 @@
         },
         {
           "version": "v0.1.28",
-          "href": "Games/Iron Orders/Versions/v0.1.28/Iron Orders.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Iron%20Orders/Versions/v0.1.28/Iron%20Orders.html"
         },
         {
           "version": "v0.1.27",
-          "href": "Games/Iron Orders/Versions/v0.1.27/Iron Orders.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Iron%20Orders/Versions/v0.1.27/Iron%20Orders.html"
         },
         {
           "version": "v0.1.26",
