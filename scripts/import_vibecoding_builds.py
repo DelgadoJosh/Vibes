@@ -66,6 +66,7 @@ SOURCES = {
     "Pillow Fort Panic": {},
     "Gravy Boat": {"description": "A dig-and-flow physics puzzle: swipe through mashed potato to route warm gravy into the pirate peas' gravy boat, grabbing croutons for stars. Melt butter, dodge hot sauce, boil gravy into steam, ring bells and turn valves, then take on a dessert course of custard and caramel."},
     "Fire Mission": {},
+    "Dead Aim": {"description": "A 2D zombie side-scroller: run, jump and aim down a ruined night street with eight guns, from a pistol that never runs dry and a one-round-at-a-time revolver to a sniper, shotgun and flamethrower. Gun down walkers, brutes, spitters, zombie dogs and crows, then the Abomination at the end of the road."},
     "Bunny Patch": {"description": "A cozy logic garden: put one bunny in every row, column and flower bed, with no two touching. A new Daily Garden every day with a streak, hints that explain the next step, three garden packs and endless puzzles."},
     "Starline Command": {"description": "A space RTS of big fleet battles: mine asteroid fields, build fighter and bomber squadrons, frigates, cruisers and long-range siege ships, guard your stations with turrets, mines and shield platforms, then break the enemy fleet and its flagship."},
     "Delivery Driver": {"skip": True},  # single flat build, already on the site as Dangerous Delivery Driver
