@@ -6106,7 +6106,7 @@
       "kind": "game",
       "folder": "Games/Pillow Fort Panic",
       "description": "A silly bedtime tower defense: toys on the couch cushions hold the pillow fort against dust bunnies, socks, moths, snack goblins, a grumpy cat and three giant bosses. 20 nights across a map of the house, endless and daily Insomnia, a pillow-throwing Brave Kid, achievements, star upgrades and toy skins.",
-      "updated": "2026-11-14",
+      "updated": "2026-11-15",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -6116,44 +6116,80 @@
       ],
       "versions": [
         {
+          "version": "v0.1.88",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.88/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.87",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.87/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.86",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.86/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.85",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.85/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.84",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.84/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.83",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.83/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.82",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.82/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.81",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.81/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.80",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.80/Pillow Fort Panic.html"
+        },
+        {
           "version": "v0.1.79",
           "href": "Games/Pillow Fort Panic/Versions/v0.1.79/Pillow Fort Panic.html"
         },
         {
           "version": "v0.1.78",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.78/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.78/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.77",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.77/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.77/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.76",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.76/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.76/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.75",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.75/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.75/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.74",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.74/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.74/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.73",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.73/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.73/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.72",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.72/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.72/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.71",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.71/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.71/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.70",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.70/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.70/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.69",
