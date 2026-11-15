@@ -6861,6 +6861,10 @@
       ],
       "versions": [
         {
+          "version": "v0.1.17",
+          "href": "Games/Starline Command/Versions/v0.1.17/Starline Command.html"
+        },
+        {
           "version": "v0.1.16",
           "href": "Games/Starline Command/Versions/v0.1.16/Starline Command.html"
         },
@@ -6898,7 +6902,7 @@
         },
         {
           "version": "v0.1.7",
-          "href": "Games/Starline Command/Versions/v0.1.7/Starline Command.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Starline%20Command/Versions/v0.1.7/Starline%20Command.html"
         },
         {
           "version": "v0.1.6",
