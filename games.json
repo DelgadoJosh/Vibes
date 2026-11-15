@@ -6662,6 +6662,34 @@
           "href": "Games/Starline Command/Versions/v0.1.0/Starline Command.html"
         }
       ]
+    },
+    {
+      "title": "Dead Aim",
+      "kind": "game",
+      "folder": "Games/Dead Aim",
+      "description": "A 2D zombie side-scroller: run, jump and aim down a ruined night street with eight guns, from a pistol that never runs dry and a one-round-at-a-time revolver to a sniper, shotgun and flamethrower. Gun down walkers, brutes, spitters, zombie dogs and crows, then the Abomination at the end of the road.",
+      "updated": "2026-11-14",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.3",
+          "href": "Games/Dead Aim/Versions/v0.1.3/Dead Aim.html"
+        },
+        {
+          "version": "v0.1.2",
+          "href": "Games/Dead Aim/Versions/v0.1.2/Dead Aim.html"
+        },
+        {
+          "version": "v0.1.1",
+          "href": "Games/Dead Aim/Versions/v0.1.1/Dead Aim.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Dead Aim/Versions/v0.1.0/Dead Aim.html"
+        }
+      ]
     }
   ]
 }
