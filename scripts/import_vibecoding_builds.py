@@ -59,6 +59,7 @@ SOURCES = {
     "Gridlock Getaway": {},
     "Senpai Alert": {},
     "Valet Shuffle": {},
+    "Hex Rails": {"description": "A hex-grid train puzzle: lay straight, gentle and sharp track to join the start station to the end, route it through towns for extra stars, then run the train and see if your line holds. Eight hand-made levels with par and three stars each."},
     "Iron Orders": {"description": "Give your orders in secret, then watch every player's moves play out one at a time. Take regions with armies and commanders against AI or friends online, on built-in maps or ones you make."},
     "Siege Lines": {},
     "Purrfect Snip": {},
