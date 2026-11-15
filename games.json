@@ -6547,6 +6547,26 @@
           "href": "https://builds.joshdelgado.fyi/Games/Fire%20Mission/Versions/v0.1.0/Fire%20Mission.html"
         }
       ]
+    },
+    {
+      "title": "Bunny Patch",
+      "kind": "game",
+      "folder": "Games/Bunny Patch",
+      "description": "A cozy logic garden: put one bunny in every row, column and flower bed, with no two touching. A new Daily Garden every day with a streak, hints that explain the next step, three garden packs and endless puzzles.",
+      "updated": "2026-11-14",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.1",
+          "href": "Games/Bunny Patch/Versions/v0.1.1/Bunny Patch.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Bunny Patch/Versions/v0.1.0/Bunny Patch.html"
+        }
+      ]
     }
   ]
 }
