@@ -6062,7 +6062,7 @@
       "kind": "game",
       "folder": "Games/Pillow Fort Panic",
       "description": "A silly bedtime tower defense: toys on the couch cushions hold the pillow fort against dust bunnies, socks, moths, snack goblins, a grumpy cat and three giant bosses. 20 nights across a map of the house, endless and daily Insomnia, a pillow-throwing Brave Kid, achievements, star upgrades and toy skins.",
-      "updated": "2026-11-13",
+      "updated": "2026-11-14",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -6071,6 +6071,38 @@
         "Images/Pillow Fort Panic In Game 2 Screenshot 2026-11-10 230428.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.79",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.79/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.78",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.78/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.77",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.77/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.76",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.76/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.75",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.75/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.74",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.74/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.73",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.73/Pillow Fort Panic.html"
+        },
+        {
+          "version": "v0.1.72",
+          "href": "Games/Pillow Fort Panic/Versions/v0.1.72/Pillow Fort Panic.html"
+        },
         {
           "version": "v0.1.71",
           "href": "Games/Pillow Fort Panic/Versions/v0.1.71/Pillow Fort Panic.html"
@@ -6081,35 +6113,35 @@
         },
         {
           "version": "v0.1.69",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.69/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.69/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.68",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.68/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.68/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.67",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.67/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.67/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.66",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.66/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.66/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.65",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.65/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.65/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.64",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.64/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.64/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.63",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.63/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.63/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.62",
-          "href": "Games/Pillow Fort Panic/Versions/v0.1.62/Pillow Fort Panic.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Pillow%20Fort%20Panic/Versions/v0.1.62/Pillow%20Fort%20Panic.html"
         },
         {
           "version": "v0.1.61",
