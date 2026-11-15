@@ -5027,7 +5027,7 @@
       "kind": "game",
       "folder": "Games/Valet Shuffle",
       "description": "Valet Shuffle, made in Godot.",
-      "updated": "2026-11-08",
+      "updated": "2026-11-15",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -5035,6 +5035,38 @@
         "Images/Valet Shuffle In Game 1 Screenshot 2026-11-09 225325.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.12",
+          "href": "Games/Valet Shuffle/Versions/v0.1.12/Valet Shuffle.html"
+        },
+        {
+          "version": "v0.1.11",
+          "href": "Games/Valet Shuffle/Versions/v0.1.11/Valet Shuffle.html"
+        },
+        {
+          "version": "v0.1.10",
+          "href": "Games/Valet Shuffle/Versions/v0.1.10/Valet Shuffle.html"
+        },
+        {
+          "version": "v0.1.9",
+          "href": "Games/Valet Shuffle/Versions/v0.1.9/Valet Shuffle.html"
+        },
+        {
+          "version": "v0.1.8",
+          "href": "Games/Valet Shuffle/Versions/v0.1.8/Valet Shuffle.html"
+        },
+        {
+          "version": "v0.1.7",
+          "href": "Games/Valet Shuffle/Versions/v0.1.7/Valet Shuffle.html"
+        },
+        {
+          "version": "v0.1.6",
+          "href": "Games/Valet Shuffle/Versions/v0.1.6/Valet Shuffle.html"
+        },
+        {
+          "version": "v0.1.5",
+          "href": "Games/Valet Shuffle/Versions/v0.1.5/Valet Shuffle.html"
+        },
         {
           "version": "v0.1.4",
           "href": "Games/Valet Shuffle/Versions/v0.1.4/Valet Shuffle.html"
@@ -5045,15 +5077,15 @@
         },
         {
           "version": "v0.1.2",
-          "href": "Games/Valet Shuffle/Versions/v0.1.2/Valet Shuffle.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Valet%20Shuffle/Versions/v0.1.2/Valet%20Shuffle.html"
         },
         {
           "version": "v0.1.1",
-          "href": "Games/Valet Shuffle/Versions/v0.1.1/Valet Shuffle.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Valet%20Shuffle/Versions/v0.1.1/Valet%20Shuffle.html"
         },
         {
           "version": "v0.1.0",
-          "href": "Games/Valet Shuffle/Versions/v0.1.0/Valet Shuffle.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Valet%20Shuffle/Versions/v0.1.0/Valet%20Shuffle.html"
         }
       ]
     },
