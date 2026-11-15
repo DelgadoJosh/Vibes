@@ -5026,7 +5026,7 @@
       "title": "Valet Shuffle",
       "kind": "game",
       "folder": "Games/Valet Shuffle",
-      "description": "Valet Shuffle, made in Godot.",
+      "description": "A sliding-block parking puzzle: slide the cars, buses and tow trucks along their lanes to clear a path and drive your car out of the lot in as few moves as you can. Solver-checked lots, a daily lot, rush mode and a lot editor.",
       "updated": "2026-11-15",
       "model": "Opus 5.5",
       "context": "",
