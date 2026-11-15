@@ -6755,7 +6755,7 @@
       "kind": "game",
       "folder": "Games/Dead Aim",
       "description": "A 2D zombie side-scroller: run, jump and aim down a ruined night street with eight guns, from a pistol that never runs dry and a one-round-at-a-time revolver to a sniper, shotgun and flamethrower. Gun down walkers, brutes, spitters, zombie dogs and crows, then the Abomination at the end of the road.",
-      "updated": "2026-11-14",
+      "updated": "2026-11-15",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -6763,6 +6763,38 @@
         "Images/Dead Aim In Game 1 Screenshot 2026-11-14 224225.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.11",
+          "href": "Games/Dead Aim/Versions/v0.1.11/Dead Aim.html"
+        },
+        {
+          "version": "v0.1.10",
+          "href": "Games/Dead Aim/Versions/v0.1.10/Dead Aim.html"
+        },
+        {
+          "version": "v0.1.9",
+          "href": "Games/Dead Aim/Versions/v0.1.9/Dead Aim.html"
+        },
+        {
+          "version": "v0.1.8",
+          "href": "Games/Dead Aim/Versions/v0.1.8/Dead Aim.html"
+        },
+        {
+          "version": "v0.1.7",
+          "href": "Games/Dead Aim/Versions/v0.1.7/Dead Aim.html"
+        },
+        {
+          "version": "v0.1.6",
+          "href": "Games/Dead Aim/Versions/v0.1.6/Dead Aim.html"
+        },
+        {
+          "version": "v0.1.5",
+          "href": "Games/Dead Aim/Versions/v0.1.5/Dead Aim.html"
+        },
+        {
+          "version": "v0.1.4",
+          "href": "Games/Dead Aim/Versions/v0.1.4/Dead Aim.html"
+        },
         {
           "version": "v0.1.3",
           "href": "Games/Dead Aim/Versions/v0.1.3/Dead Aim.html"
@@ -6773,11 +6805,11 @@
         },
         {
           "version": "v0.1.1",
-          "href": "Games/Dead Aim/Versions/v0.1.1/Dead Aim.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Dead%20Aim/Versions/v0.1.1/Dead%20Aim.html"
         },
         {
           "version": "v0.1.0",
-          "href": "Games/Dead Aim/Versions/v0.1.0/Dead Aim.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Dead%20Aim/Versions/v0.1.0/Dead%20Aim.html"
         }
       ]
     }
