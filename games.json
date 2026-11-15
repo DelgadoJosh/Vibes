@@ -6846,11 +6846,14 @@
       "title": "Bondwright",
       "kind": "game",
       "folder": "Games/Bondwright",
-      "description": "Bondwright, made in Godot.",
+      "description": "A hex-grid engineering puzzle: place cranes, fusers, splitters and tinters, program each crane with a looping tape, and build the target cluster of orbs in the mold. Then shave cycles, cost and area.",
       "updated": "2026-11-15",
-      "model": "",
+      "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Bondwright Title Screenshot 2026-11-15 121619.png",
+        "Images/Bondwright In Game Screenshot 2026-11-15 121705.png"
+      ],
       "versions": [
         {
           "version": "v0.1.4",
