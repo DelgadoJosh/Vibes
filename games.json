@@ -6554,9 +6554,12 @@
       "folder": "Games/Bunny Patch",
       "description": "A cozy logic garden: put one bunny in every row, column and flower bed, with no two touching. A new Daily Garden every day with a streak, hints that explain the next step, three garden packs and endless puzzles.",
       "updated": "2026-11-14",
-      "model": "",
+      "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Bunny Patch Title Screenshot 2026-11-14 212008.png",
+        "Images/Bunny Patch In Game Screenshot 2026-11-14 212033.png"
+      ],
       "versions": [
         {
           "version": "v0.1.1",
