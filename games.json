@@ -6672,9 +6672,12 @@
       "folder": "Games/Dead Aim",
       "description": "A 2D zombie side-scroller: run, jump and aim down a ruined night street with eight guns, from a pistol that never runs dry and a one-round-at-a-time revolver to a sniper, shotgun and flamethrower. Gun down walkers, brutes, spitters, zombie dogs and crows, then the Abomination at the end of the road.",
       "updated": "2026-11-14",
-      "model": "",
+      "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Dead Aim Title Screenshot 2026-11-14 224115.png",
+        "Images/Dead Aim In Game 1 Screenshot 2026-11-14 224225.png"
+      ],
       "versions": [
         {
           "version": "v0.1.3",
