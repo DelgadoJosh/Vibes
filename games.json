@@ -6427,6 +6427,10 @@
       ],
       "versions": [
         {
+          "version": "v0.1.29",
+          "href": "Games/Fire Mission/Versions/v0.1.29/Fire Mission.html"
+        },
+        {
           "version": "v0.1.28",
           "href": "Games/Fire Mission/Versions/v0.1.28/Fire Mission.html"
         },
@@ -6464,7 +6468,7 @@
         },
         {
           "version": "v0.1.19",
-          "href": "Games/Fire Mission/Versions/v0.1.19/Fire Mission.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Fire%20Mission/Versions/v0.1.19/Fire%20Mission.html"
         },
         {
           "version": "v0.1.18",
