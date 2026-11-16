@@ -348,7 +348,7 @@
 // ---------- the date ----------
 // Midnight at the start of Nov 17, 2026 in New York (US Eastern), whatever the viewer's own timezone.
 const NAME = "Jacop";
-const VERSION = "v1.2.0"; // bump on every publish; shown in the ?debug panel
+const VERSION = "v1.2.1"; // bump on every publish; shown in the ?debug panel
 function nyMidnight(y, month, day) {
   const fmt = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hourCycle: "h23", year: "numeric", month: "numeric", day: "numeric", hour: "numeric" });
   for (const offsetHours of [5, 4]) { // EST, then EDT
@@ -480,6 +480,8 @@ function playSong(start) {
 // v1.2.0 dropped the two party-horn "blurrs" that opened the celebration (Josh: just quacks, then the song).
 // Set OPENING_HORN = true to bring them back (horns at 0 s and 0.15 s, quacks from 0.9 s, song from 2.1 s).
 const OPENING_HORN = false;
+// v1.2.1 also dropped the horn 0.7 s after the song; CLOSING_HORN = true brings it back.
+const CLOSING_HORN = false;
 function celebrateSound() {
   if (muted || !audio()) return;
   let t = ctx.currentTime + 0.05;
@@ -487,7 +489,7 @@ function celebrateSound() {
   [0, .2, .35, .6, .75].forEach((d, i) => quack(t + d, i % 2 ? 1.25 : 1));
   const end = playSong(t + 1.2);
   [0, .15, .3].forEach((d, i) => quack(end + 0.2 + d, 1 + i * 0.15));
-  partyHorn(end + 0.7);
+  if (CLOSING_HORN) partyHorn(end + 0.7);
 }
 function tickSound(n) {
   if (muted || !ctx || ctx.state !== "running") return;
