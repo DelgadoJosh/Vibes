@@ -18,7 +18,7 @@
     font-family: "Trebuchet MS", "Avenir Next", system-ui, sans-serif;
     color: var(--ink);
     background: linear-gradient(180deg, var(--sky1), var(--sky2) 70%);
-    min-height: 100vh; overflow-x: hidden;
+    min-height: 100vh; overflow-x: hidden; background-attachment: fixed;
     display: flex; flex-direction: column; align-items: center;
   }
   body.party { background: linear-gradient(180deg, #ffd6ec, #fff6c9 70%); transition: background 1.5s; }
@@ -61,6 +61,25 @@
   #partyButtons { display: none; }
   .party #partyButtons { display: flex; }
 
+  #videoBox { width: 100%; max-width: 720px; margin-top: 6px; }
+  #videoBox[hidden] { display: none; }
+  .videoCard {
+    width: 100%; aspect-ratio: var(--video-aspect, 16 / 9); border-radius: 22px;
+    background: linear-gradient(135deg, #ffd6ec, #d4bcff 55%, #bfe9ff);
+    color: var(--ink); box-shadow: 0 8px 0 #0000000f, 0 12px 30px #6d5a7d33;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+    font-size: clamp(16px, 4vw, 22px);
+  }
+  .videoCard .play {
+    width: 84px; height: 84px; border-radius: 50%; background: #fff; color: var(--accent);
+    display: flex; align-items: center; justify-content: center; font-size: 38px; padding-left: 6px;
+    box-shadow: 0 5px 0 #c94d7b55; animation: bob 1.6s ease-in-out infinite;
+  }
+  .videoCard:active { transform: translateY(3px); }
+  .videoCard[hidden] { display: none; }
+  #videoFrame { width: 100%; aspect-ratio: var(--video-aspect, 16 / 9); border-radius: 22px; overflow: hidden; background: #000; box-shadow: 0 12px 30px #6d5a7d33; }
+  #videoFrame[hidden] { display: none; }
+  #videoFrame iframe, #videoFrame video { width: 100%; height: 100%; border: 0; display: block; }
   #mute { position: fixed; top: 10px; right: 12px; z-index: 30; padding: 8px 12px; background: #ffffffcc; color: var(--ink); box-shadow: 0 3px 0 #0001; }
 
   #big {
@@ -301,7 +320,7 @@
       <g transform="translate(712 300)">
         <g class="hop">
           <use href="#duck" width="62" height="62" transform="translate(62 0) scale(-1 1)"/>
-          <use href="#hat" x="8" y="-14" width="18" height="24" transform="rotate(-14 17 -2)"/>
+          <use href="#hat" x="10" y="-8" width="18" height="24" transform="rotate(14 19 14)"/>
         </g>
       </g>
 
@@ -335,6 +354,10 @@
     <button id="again">🎶 Play the song</button>
     <button id="more" class="alt">🎊 More confetti</button>
   </div>
+  <section id="videoBox" hidden>
+    <button id="videoPlay" class="videoCard"><span class="play">▶</span><span id="videoLabel">A birthday video for you</span></button>
+    <div id="videoFrame" hidden></div>
+  </section>
 </main>
 
 <div id="debug">
@@ -348,7 +371,7 @@
 // ---------- the date ----------
 // Midnight at the start of Nov 17, 2026 in New York (US Eastern), whatever the viewer's own timezone.
 const NAME = "Jacop";
-const VERSION = "v1.2.1"; // bump on every publish; shown in the ?debug panel
+const VERSION = "v1.3.0"; // bump on every publish; shown in the ?debug panel
 function nyMidnight(y, month, day) {
   const fmt = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hourCycle: "h23", year: "numeric", month: "numeric", day: "numeric", hour: "numeric" });
   for (const offsetHours of [5, 4]) { // EST, then EDT
@@ -608,6 +631,48 @@ function update() {
 $("status").textContent = "The ducks are " + PREP[0].toLowerCase();
 setInterval(update, 200);
 update();
+
+// ---------- the video at the bottom ----------
+// Fill in ONE source; leave kind "" to hide the video section entirely.
+//   kind "youtube": src = the video id (the part after watch?v= or youtu.be/), best on phones; use an Unlisted video
+//   kind "drive":   src = the Google Drive file id (drive.google.com/file/d/<ID>/view), shared "Anyone with the link"
+//   kind "file":    src = an .mp4 URL or a path next to this page (e.g. "video.mp4")
+// aspect: "16 / 9" for landscape, "9 / 16" for a phone video held upright.
+// Try a link before committing it: ?debug&video=youtube:<id> (or drive:<id>, file:<url>).
+const VIDEO = { kind: "", src: "", aspect: "16 / 9", label: "A birthday video for you" };
+(function setupVideo() {
+  const q = new URLSearchParams(location.search);
+  const v = { ...VIDEO };
+  if (q.has("debug") && q.get("video")) {
+    const raw = q.get("video"), i = raw.indexOf(":");
+    v.kind = raw.slice(0, i); v.src = raw.slice(i + 1);
+    if (q.get("aspect")) v.aspect = q.get("aspect").replace(":", " / ");
+  }
+  if (!["youtube", "drive", "file"].includes(v.kind) || !v.src) return;
+  const box = $("videoBox"), frame = $("videoFrame");
+  box.style.setProperty("--video-aspect", v.aspect);
+  $("videoLabel").textContent = v.label;
+  box.hidden = false;
+  $("videoPlay").onclick = () => {
+    if (ctx && ctx.state === "running") ctx.suspend(); // pause the duck song so they don't play over each other
+    let el;
+    if (v.kind === "file") {
+      el = document.createElement("video");
+      el.src = v.src; el.controls = true; el.autoplay = true; el.playsInline = true;
+    } else {
+      el = document.createElement("iframe");
+      el.src = v.kind === "youtube"
+        ? `https://www.youtube-nocookie.com/embed/${encodeURIComponent(v.src)}?autoplay=1&rel=0&playsinline=1`
+        : `https://drive.google.com/file/d/${encodeURIComponent(v.src)}/preview`;
+      el.allow = "autoplay; fullscreen; encrypted-media; picture-in-picture";
+      el.allowFullscreen = true;
+      el.title = v.label;
+    }
+    frame.appendChild(el);
+    $("videoPlay").hidden = true;
+    frame.hidden = false;
+  };
+})();
 
 // ---------- debug: add ?debug to the URL ----------
 if (new URLSearchParams(location.search).has("debug")) {
