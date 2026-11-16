@@ -71,6 +71,7 @@ SOURCES = {
     "Bunny Patch": {"description": "A cozy logic garden: put one bunny in every row, column and flower bed, with no two touching. A new Daily Garden every day with a streak, hints that explain the next step, three garden packs and endless puzzles."},
     "Starline Command": {"description": "A space RTS of big fleet battles: mine asteroid fields, build fighter and bomber squadrons, frigates, cruisers and long-range siege ships, guard your stations with turrets, mines and shield platforms, then break the enemy fleet and its flagship."},
     "Bondwright": {},
+    "Sprinkle Siege": {"description": "A bright, silly lane tower defense: kitchen critters guard a giant birthday cake from marching candies that pop down one layer at a time. Toothpick hamsters, sprinkle-shaking squirrels, toast-lobbing turtles and freezer penguins, each with goofy upgrades, against 15 rounds of the Sugar Rush and the Mega Marshmallow Blimp."},
     "Delivery Driver": {"skip": True},  # single flat build, already on the site as Dangerous Delivery Driver
 }
 SKIP_FILES = {".DS_Store", "README.md"}
