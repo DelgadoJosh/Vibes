@@ -6949,7 +6949,7 @@
       "kind": "game",
       "folder": "Games/Starline Command",
       "description": "A space RTS of big fleet battles: mine asteroid fields, build fighter and bomber squadrons, frigates, cruisers and long-range siege ships, guard your stations with turrets, mines and shield platforms, then break the enemy fleet and its flagship.",
-      "updated": "2026-11-15",
+      "updated": "2026-11-16",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -6957,6 +6957,18 @@
         "Images/Starline Command In Game Screenshot 2026-11-14 224220.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.32",
+          "href": "Games/Starline Command/Versions/v0.1.32/Starline Command.html"
+        },
+        {
+          "version": "v0.1.31",
+          "href": "Games/Starline Command/Versions/v0.1.31/Starline Command.html"
+        },
+        {
+          "version": "v0.1.30",
+          "href": "Games/Starline Command/Versions/v0.1.30/Starline Command.html"
+        },
         {
           "version": "v0.1.29",
           "href": "Games/Starline Command/Versions/v0.1.29/Starline Command.html"
@@ -6987,15 +6999,15 @@
         },
         {
           "version": "v0.1.22",
-          "href": "Games/Starline Command/Versions/v0.1.22/Starline Command.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Starline%20Command/Versions/v0.1.22/Starline%20Command.html"
         },
         {
           "version": "v0.1.21",
-          "href": "Games/Starline Command/Versions/v0.1.21/Starline Command.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Starline%20Command/Versions/v0.1.21/Starline%20Command.html"
         },
         {
           "version": "v0.1.20",
-          "href": "Games/Starline Command/Versions/v0.1.20/Starline Command.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Starline%20Command/Versions/v0.1.20/Starline%20Command.html"
         },
         {
           "version": "v0.1.19",
