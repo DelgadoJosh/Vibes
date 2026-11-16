@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Jacup's 21st Birfday</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎉</text></svg>">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #101827;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 16px 40px;
+    min-height: 100vh;
+  }
+  .countdown-title {
+    text-align: center;
+    font-size: clamp(24px, 6vw, 32px);
+    margin: 50px 0 10px;
+    color: #ffffff;
+  }
+  .countdown-subtitle {
+    text-align: center;
+    color: #aab7c8;
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+  .timer-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .timer-box {
+    background: #25344d;
+    border-radius: 15px;
+    padding: 25px 15px;
+    min-width: 115px;
+    text-align: center;
+  }
+  .timer-number {
+    font-size: 45px;
+    font-weight: bold;
+    color: #2563EB;
+    font-variant-numeric: tabular-nums;
+  }
+  .timer-label { color: #b9c7d9; font-size: 15px; }
+  .status {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 35px;
+    color: #60A5FA;
+    white-space: pre-line;
+  }
+  .sound { text-align: center; margin-top: 20px; }
+  button {
+    font: inherit; font-size: 15px;
+    color: #333; background: #fff;
+    border: 1px solid #ccc; border-radius: 4px;
+    padding: 6px 12px; cursor: pointer;
+  }
+  button:disabled { opacity: .7; cursor: default; }
+  #debug { display: none; text-align: center; margin-top: 30px; color: #aab7c8; font-size: 13px; }
+  #debug.on { display: block; }
+  @media (max-width: 520px) {
+    .timer-container { gap: 8px; }
+    .timer-box { min-width: 0; width: calc(25% - 6px); padding: 16px 4px; }
+    .timer-number { font-size: 30px; }
+    .timer-label { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+  <h1 class="countdown-title">JACUP'S 21ST BIRFDAY</h1>
+  <div class="countdown-subtitle">Tuesday, November 17, 2026 at MIDNIGHT</div>
+
+  <div class="timer-container">
+    <div class="timer-box"><div class="timer-number" id="days">00</div><div class="timer-label">Days</div></div>
+    <div class="timer-box"><div class="timer-number" id="hours">00</div><div class="timer-label">Hours</div></div>
+    <div class="timer-box"><div class="timer-number" id="minutes">00</div><div class="timer-label">Minutes</div></div>
+    <div class="timer-box"><div class="timer-number" id="seconds">00</div><div class="timer-label">Seconds</div></div>
+  </div>
+
+  <div class="status" id="status"></div>
+
+  <div class="sound"><button id="enable_audio">🔊 Enable celebration sound</button></div>
+
+  <div id="debug">debug: <button id="dbg10">Finish in 10 s</button> <button id="dbgReset">Back to real time</button></div>
+
+<script>
+// Midnight on Nov 17, 2026 in New York, as a UTC timestamp (EST is UTC-5 then).
+function nyMidnight(y, month, day) {
+  const fmt = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hourCycle: "h23", year: "numeric", month: "numeric", day: "numeric", hour: "numeric" });
+  for (const offsetHours of [5, 4]) {
+    const t = Date.UTC(y, month - 1, day, offsetHours);
+    const p = Object.fromEntries(fmt.formatToParts(t).map(x => [x.type, x.value]));
+    if (+p.day === day && +p.hour === 0) return t;
+  }
+  return Date.UTC(y, month - 1, day, 5);
+}
+const REAL_TARGET = nyMidnight(2026, 11, 17);
+let target = REAL_TARGET;
+const $ = id => document.getElementById(id);
+const pad = n => String(n).padStart(2, "0");
+
+// ---------- sound (made with Web Audio; no sound files needed) ----------
+let ctx = null, enabled = false, played = false;
+function audio() {
+  if (!ctx) { try { ctx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return null; } }
+  if (ctx.state === "suspended") ctx.resume();
+  return ctx;
+}
+function brass(freq, start, dur, vol = 0.18) {
+  const o1 = ctx.createOscillator(), o2 = ctx.createOscillator(), g = ctx.createGain(), f = ctx.createBiquadFilter();
+  o1.type = "sawtooth"; o2.type = "square";
+  o1.frequency.value = freq; o2.frequency.value = freq * 1.003;
+  f.type = "lowpass"; f.frequency.setValueAtTime(freq * 2, start); f.frequency.linearRampToValueAtTime(freq * 6, start + 0.06);
+  g.gain.setValueAtTime(0, start);
+  g.gain.linearRampToValueAtTime(vol, start + 0.04);
+  g.gain.setValueAtTime(vol * 0.85, start + Math.max(0.05, dur - 0.08));
+  g.gain.linearRampToValueAtTime(0, start + dur);
+  o1.connect(f); o2.connect(f); f.connect(g); g.connect(ctx.destination);
+  o1.start(start); o2.start(start); o1.stop(start + dur + 0.05); o2.stop(start + dur + 0.05);
+}
+function fanfare(t0) {
+  // G C E G . E G (classic "ta-da-da-DAAA")
+  const n = { G4: 392, C5: 523.25, E5: 659.25, G5: 783.99, C6: 1046.5 };
+  const seq = [["G4", 0, .14], ["G4", .16, .14], ["G4", .32, .14], ["C5", .48, .5], ["G4", 1.02, .22], ["C5", 1.26, .22], ["E5", 1.5, .22], ["G5", 1.74, .9]];
+  for (const [k, at, d] of seq) { brass(n[k], t0 + at, d); brass(n[k] / 2, t0 + at, d, 0.09); }
+  brass(n.C5, t0 + 1.74, .9, 0.1); brass(n.E5, t0 + 1.74, .9, 0.1); brass(n.C6, t0 + 1.74, .9, 0.06);
+  return 2.75;
+}
+function applause(t0, dur = 6) {
+  // lots of short filtered noise bursts = clapping crowd
+  const len = Math.floor(ctx.sampleRate * 0.03), buf = ctx.createBuffer(1, len, ctx.sampleRate), d = buf.getChannelData(0);
+  for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3);
+  const master = ctx.createGain(); master.connect(ctx.destination);
+  master.gain.setValueAtTime(0, t0); master.gain.linearRampToValueAtTime(0.5, t0 + 0.6);
+  master.gain.setValueAtTime(0.5, t0 + dur - 2); master.gain.linearRampToValueAtTime(0, t0 + dur);
+  const claps = Math.floor(dur * 90);
+  for (let i = 0; i < claps; i++) {
+    const s = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+    s.buffer = buf; f.type = "bandpass"; f.frequency.value = 900 + Math.random() * 2200; f.Q.value = 0.8;
+    g.gain.value = 0.3 + Math.random() * 0.7;
+    s.connect(f); f.connect(g); g.connect(master);
+    s.start(t0 + Math.random() * dur);
+  }
+  // a few "woo!" cheers
+  for (let i = 0; i < 5; i++) {
+    const at = t0 + 0.3 + Math.random() * (dur - 2), o = ctx.createOscillator(), g = ctx.createGain(), base = 500 + Math.random() * 400;
+    o.type = "triangle";
+    o.frequency.setValueAtTime(base, at); o.frequency.linearRampToValueAtTime(base * 1.6, at + 0.25); o.frequency.linearRampToValueAtTime(base * 1.3, at + 0.6);
+    g.gain.setValueAtTime(0, at); g.gain.linearRampToValueAtTime(0.05, at + 0.05); g.gain.linearRampToValueAtTime(0, at + 0.6);
+    o.connect(g); g.connect(ctx.destination); o.start(at); o.stop(at + 0.7);
+  }
+}
+function playSounds() {
+  if (!audio()) return;
+  const t0 = ctx.currentTime + 0.05;
+  applause(t0 + fanfare(t0));
+}
+$("enable_audio").onclick = () => {
+  if (!audio()) return;
+  enabled = true;
+  const b = $("enable_audio"); b.textContent = "🔊 Celebration sound is on"; b.disabled = true;
+  if (target - Date.now() <= 0 && !played) { played = true; playSounds(); }
+};
+
+// ---------- countdown ----------
+function update() {
+  const remaining = Math.max(0, Math.floor((target - Date.now()) / 1000));
+  $("days").textContent = pad(Math.floor(remaining / 86400));
+  $("hours").textContent = pad(Math.floor((remaining % 86400) / 3600));
+  $("minutes").textContent = pad(Math.floor((remaining % 3600) / 60));
+  $("seconds").textContent = pad(remaining % 60);
+  const finished = remaining === 0;
+  $("status").textContent = finished
+    ? "HAPPY BIRTHDAY JACUP!! 🎉"
+    : "If the timer stops, then mommy's computer fell asleep.\nChances are, Mommy's asleep too. 😴";
+  if (finished && enabled && !played) { played = true; playSounds(); }
+}
+update();
+setInterval(update, 250);
+
+// ---------- debug: add ?debug to the URL ----------
+if (new URLSearchParams(location.search).has("debug")) {
+  $("debug").classList.add("on");
+  $("dbg10").onclick = () => { target = Date.now() + 10000; played = false; update(); };
+  $("dbgReset").onclick = () => { target = REAL_TARGET; played = false; update(); };
+}
+</script>
+</body>
+</html>
