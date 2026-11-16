@@ -97,8 +97,8 @@
   .walk { transform-box: fill-box; transform-origin: 50% 50%; animation: walk 9s linear infinite; }
   @keyframes walk {
     0%   { transform: translateX(0) scaleX(1); }
-    48%  { transform: translateX(180px) scaleX(1); }
-    50%  { transform: translateX(180px) scaleX(-1); }
+    48%  { transform: translateX(150px) scaleX(1); }
+    50%  { transform: translateX(150px) scaleX(-1); }
     98%  { transform: translateX(0) scaleX(-1); }
     100% { transform: translateX(0) scaleX(1); }
   }
@@ -187,6 +187,26 @@
           <circle cx="72.2" cy="30.8" r="1.1" fill="#fff"/>
           <ellipse cx="70" cy="44" rx="5" ry="3" fill="#ff9fb8" opacity=".7"/>
         </symbol>
+        <!-- accessories drawn in the duck's 100x100 frame: use them with the same size/transform as the duck -->
+        <symbol id="beanie" viewBox="0 0 100 100" overflow="visible">
+          <g transform="rotate(-14 66 26)">
+            <path d="M48 28 Q49 5 66 5 Q83 5 84 28 Z" fill="#4fb3a9"/>
+            <path d="M56 26 Q57 12 60 8 M66 26 L66 6 M76 26 Q75 12 72 8" stroke="#3d958c" stroke-width="2" fill="none"/>
+            <rect x="45" y="23" width="42" height="9" rx="4.5" fill="#3d958c"/>
+            <circle cx="66" cy="3" r="5.5" fill="#ff7aa8"/>
+          </g>
+        </symbol>
+        <symbol id="glasses" viewBox="0 0 100 100" overflow="visible">
+          <path d="M64.6 31 L50 28" stroke="#3b2c4a" stroke-width="2" stroke-linecap="round"/>
+          <path d="M77.4 32 L81 33" stroke="#3b2c4a" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="71" cy="32" r="6.5" fill="#ffffff44" stroke="#3b2c4a" stroke-width="2"/>
+        </symbol>
+        <symbol id="bow" viewBox="0 0 100 100" overflow="visible">
+          <path d="M69 28.5 L67 24.5 M72 27.8 L72.4 23.6 M74.8 28.8 L77 25.4" stroke="#3b2c4a" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M56 19 Q42 8 43 21 Q45 29 56 19 Z" fill="#ff5e9c"/>
+          <path d="M56 19 Q64 4 70 15 Q69 25 56 19 Z" fill="#ff5e9c"/>
+          <circle cx="56" cy="19" r="4" fill="#e8326f"/>
+        </symbol>
         <symbol id="hat" viewBox="0 0 30 40" overflow="visible">
           <path d="M2 38 L15 2 L28 38 Z" fill="#7ac8ff"/>
           <path d="M6 28 L24 28 M9 18 L21 18" stroke="#fff" stroke-width="3"/>
@@ -218,9 +238,9 @@
         <use href="#balloon" class="floatUp b4" x="690" y="160" width="40" height="90" style="color:#ffcf3f"/>
       </g>
 
-      <g transform="translate(400 345) scale(1.12) translate(-400 -345)">
+      <g transform="translate(400 345) scale(1.04) translate(-400 -345)">
       <!-- Duck 1: blowing up a balloon -->
-      <g transform="translate(66 230)">
+      <g transform="translate(24 230)">
         <g class="jump">
           <g class="bob">
             <use href="#duck" width="110" height="110"/>
@@ -236,7 +256,7 @@
       </g>
 
       <!-- Duck 2: carrying the cake back and forth -->
-      <g transform="translate(220 250)" class="prepOnly">
+      <g transform="translate(196 250)" class="prepOnly">
         <g class="walk">
           <g class="waddle">
             <use href="#duck" width="96" height="96"/>
@@ -250,24 +270,35 @@
         </g>
       </g>
 
-      <!-- Duck 3: wrapping a present -->
-      <g transform="translate(560 248)">
+      <!-- Duck 3: wrapping a present, in a beanie and round glasses -->
+      <g transform="translate(500 248)">
         <g class="jump late">
           <g class="bob">
             <use href="#duck" width="100" height="100" transform="translate(100 0) scale(-1 1)"/>
+            <use href="#glasses" width="100" height="100" transform="translate(100 0) scale(-1 1)"/>
+            <use href="#beanie" width="100" height="100" transform="translate(100 0) scale(-1 1)"/>
             <g class="prepOnly" transform="translate(-36 54)"><g class="shake">
               <rect x="0" y="12" width="44" height="34" rx="4" fill="#b07cff"/>
               <rect x="18" y="12" width="8" height="34" fill="#ffcf3f"/>
               <rect x="-3" y="6" width="50" height="10" rx="3" fill="#c69cff"/>
               <path d="M22 6 Q10 -6 8 4 Q12 8 22 6 Q34 -6 36 4 Q32 8 22 6" fill="#ffcf3f"/>
             </g></g>
-            <use href="#hat" class="partyOnly" x="10" y="-6" width="26" height="34" transform="rotate(-12 23 11)"/>
           </g>
         </g>
       </g>
 
-      <!-- Duckling with a party hat, hopping -->
-      <g transform="translate(682 300)">
+      <!-- Mommy duck with a bow -->
+      <g transform="translate(616 222)">
+        <g class="jump">
+          <g class="bob" style="animation-delay:.5s">
+            <use href="#duck" width="120" height="120" transform="translate(120 0) scale(-1 1)"/>
+            <use href="#bow" width="120" height="120" transform="translate(120 0) scale(-1 1)"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- Duckling with a party hat, hopping beside mommy -->
+      <g transform="translate(712 300)">
         <g class="hop">
           <use href="#duck" width="62" height="62" transform="translate(62 0) scale(-1 1)"/>
           <use href="#hat" x="8" y="-14" width="18" height="24" transform="rotate(-14 17 -2)"/>
@@ -279,7 +310,7 @@
         <rect x="20" y="118" width="160" height="10" rx="5" fill="#c9b8d6"/>
         <rect x="30" y="70" width="140" height="50" rx="10" fill="#fff"/>
         <path d="M30 84 Q47 98 64 84 Q81 98 98 84 Q115 98 132 84 Q149 98 170 84 L170 76 Q170 70 160 70 L40 70 Q30 70 30 78 Z" fill="#ff9fb8"/>
-        <rect x="50" y="22" width="100" height="50" rx="10" fill="#fff6d6"/>
+        <rect x="50" y="22" width="100" height="50" rx="10" fill="#d4bcff"/>
         <path d="M50 34 Q62 46 75 34 Q88 46 100 34 Q112 46 125 34 Q138 46 150 34 L150 30 Q150 22 142 22 L58 22 Q50 22 50 30 Z" fill="#7ac8ff"/>
         <text x="100" y="112" text-anchor="middle" font-size="26" font-weight="bold" fill="#ff5e9c" font-family="Trebuchet MS, sans-serif">21</text>
         <g>
@@ -370,7 +401,40 @@ function tone(freq, t, dur, { type = "sine", vol = 0.25, attack = 0.01 } = {}) {
   g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
   o.connect(g); g.connect(master); o.start(t); o.stop(t + dur + 0.05);
 }
+// New quack (2026-11-15): a buzzy low voice through two moving "nasal" formants, with a fast wobble.
 function quack(t, pitch = 1) {
+  if (USE_CLASSIC_QUACK) return quackClassic(t, pitch);
+  const dur = 0.3;
+  const out = ctx.createGain();
+  out.gain.setValueAtTime(0.0001, t);
+  out.gain.exponentialRampToValueAtTime(0.9, t + 0.015);
+  out.gain.exponentialRampToValueAtTime(0.55, t + 0.12);
+  out.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+  const wob = ctx.createGain(); wob.gain.value = 0.75;
+  const lfo = ctx.createOscillator(), lfoAmt = ctx.createGain();
+  lfo.frequency.value = 38; lfoAmt.gain.value = 0.25; lfo.connect(lfoAmt); lfoAmt.connect(wob.gain);
+  const oscs = [["sawtooth", 1], ["square", 1.012]].map(([type, det]) => {
+    const o = ctx.createOscillator(); o.type = type;
+    o.frequency.setValueAtTime(230 * pitch * det, t);
+    o.frequency.linearRampToValueAtTime(320 * pitch * det, t + 0.05);
+    o.frequency.exponentialRampToValueAtTime(190 * pitch * det, t + dur);
+    o.connect(wob); return o;
+  });
+  for (const [f0, f1, f2, q, g] of [[800, 1250, 900, 6, 1], [2200, 2900, 2400, 9, 0.55]]) {
+    const f = ctx.createBiquadFilter(), fg = ctx.createGain();
+    f.type = "bandpass"; f.Q.value = q; fg.gain.value = g;
+    f.frequency.setValueAtTime(f0 * pitch, t);
+    f.frequency.linearRampToValueAtTime(f1 * pitch, t + 0.06);
+    f.frequency.exponentialRampToValueAtTime(f2 * pitch, t + dur);
+    wob.connect(f); f.connect(fg); fg.connect(out);
+  }
+  out.connect(master);
+  for (const o of [...oscs, lfo]) { o.start(t); o.stop(t + dur + 0.05); }
+}
+// Original quack (v1, 2026-11-15): one sawtooth sliding 520 -> 300 Hz through a single bandpass.
+// Set USE_CLASSIC_QUACK = true to go back to it.
+const USE_CLASSIC_QUACK = false;
+function quackClassic(t, pitch = 1) {
   const o = ctx.createOscillator(), f = ctx.createBiquadFilter(), g = ctx.createGain();
   o.type = "sawtooth";
   o.frequency.setValueAtTime(520 * pitch, t);
@@ -434,7 +498,7 @@ $("mute").onclick = () => {
 $("enter").onclick = () => {
   $("gate").style.display = "none";
   if (partied) { celebrateSound(); confetti(); }
-  else if (audio()) quack(ctx.currentTime + 0.05, 1.2);
+  else if (audio()) { quack(ctx.currentTime + 0.05, 1.1); quack(ctx.currentTime + 0.33, 1.25); }
 };
 
 // ---------- confetti ----------
