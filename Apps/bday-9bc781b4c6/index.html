@@ -371,7 +371,7 @@
 // ---------- the date ----------
 // Midnight at the start of Nov 17, 2026 in New York (US Eastern), whatever the viewer's own timezone.
 const NAME = "Jacop";
-const VERSION = "v1.4.0"; // bump on every publish; shown in the ?debug panel
+const VERSION = "v1.4.1"; // bump on every publish; shown in the ?debug panel
 function nyMidnight(y, month, day) {
   const fmt = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hourCycle: "h23", year: "numeric", month: "numeric", day: "numeric", hour: "numeric" });
   for (const offsetHours of [5, 4]) { // EST, then EDT
@@ -645,7 +645,7 @@ update();
 // also youtube:<id> or file:<url>, and &aspect=9:16 / &aspect2=9:16.
 // (var, not const: startParty() can run before this part of the script has.)
 var VIDEO_BEFORE = { kind: "drive", src: "1pzsNkVmiuFgdXO1PPAS32HuU0RmSbix4", aspect: "16 / 9", label: "A birthday video for you" };
-var VIDEO_AFTER = { kind: "", src: "", aspect: "16 / 9", label: "A birthday surprise for you 🎉" };
+var VIDEO_AFTER = { kind: "drive", src: "1vNZARL7q7vno8FnU4tXOjkj9dOCrPosn", aspect: "16 / 9", label: "A birthday surprise for you 🎉" };
 var videoShown = null;
 function videoFrom(base, param, aspectParam) {
   const q = new URLSearchParams(location.search), v = { ...base };
