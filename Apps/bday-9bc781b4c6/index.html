@@ -338,7 +338,7 @@
 </main>
 
 <div id="debug">
-  <b style="align-self:center">Debug</b>
+  <b style="align-self:center">Debug <span id="ver" style="font-weight:normal;color:#6d5a7d"></span></b>
   <button id="dbg10">Party in 10 s</button>
   <button id="dbgReset" class="alt">Back to real time</button>
 </div>
@@ -348,6 +348,7 @@
 // ---------- the date ----------
 // Midnight at the start of Nov 17, 2026 in New York (US Eastern), whatever the viewer's own timezone.
 const NAME = "Jacop";
+const VERSION = "v1.1.1"; // bump on every publish; shown in the ?debug panel
 function nyMidnight(y, month, day) {
   const fmt = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hourCycle: "h23", year: "numeric", month: "numeric", day: "numeric", hour: "numeric" });
   for (const offsetHours of [5, 4]) { // EST, then EDT
@@ -606,6 +607,7 @@ update();
 // ---------- debug: add ?debug to the URL ----------
 if (new URLSearchParams(location.search).has("debug")) {
   $("debug").classList.add("on");
+  $("ver").textContent = VERSION;
   $("dbg10").onclick = () => { audio(); target = Date.now() + 10000; lastSec = null; update(); };
   $("dbgReset").onclick = () => { target = REAL_TARGET; lastSec = null; update(); };
 }
