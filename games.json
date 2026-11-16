@@ -6197,14 +6197,15 @@
       "title": "Pillow Fort Panic",
       "kind": "game",
       "folder": "Games/Pillow Fort Panic",
-      "description": "A silly bedtime tower defense: toys on the couch cushions hold the pillow fort against dust bunnies, socks, moths, snack goblins, a grumpy cat and three giant bosses. 20 nights across a map of the house, endless and daily Insomnia, a pillow-throwing Brave Kid, achievements, star upgrades and toy skins.",
+      "description": "A silly bedtime tower defense: toys on the couch cushions hold the pillow fort against the things under the bed. 50 nights in 8 worlds, from the living room to a backyard campout and a night-time road trip, each with its own boss, plus the Nightmare King, Remix, Insomnia in every room, Puzzle Nights and Nightmare Night, where you send the nightmares.",
       "updated": "2026-11-15",
       "model": "Opus 5.5",
       "context": "",
       "images": [
-        "Images/Pillow Fort Panic Title Screenshot 2026-11-10 230428.png",
-        "Images/Pillow Fort Panic In Game 1 Screenshot 2026-11-10 230428.png",
-        "Images/Pillow Fort Panic In Game 2 Screenshot 2026-11-10 230428.png"
+        "Images/Pillow Fort Panic Title Screenshot 2026-11-15 185020.png",
+        "Images/Pillow Fort Panic In Game 1 Screenshot 2026-11-15 185020.png",
+        "Images/Pillow Fort Panic In Game 2 Screenshot 2026-11-15 185020.png",
+        "Images/Pillow Fort Panic In Game 3 Screenshot 2026-11-15 185020.png"
       ],
       "versions": [
         {
