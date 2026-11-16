@@ -7412,9 +7412,13 @@
       "folder": "Games/Sprinkle Siege",
       "description": "A bright, silly lane tower defense: kitchen critters guard a giant birthday cake from marching candies that pop down one layer at a time. Toothpick hamsters, sprinkle-shaking squirrels, toast-lobbing turtles and freezer penguins, each with goofy upgrades, against 15 rounds of the Sugar Rush and the Mega Marshmallow Blimp.",
       "updated": "2026-11-16",
-      "model": "",
+      "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Sprinkle Siege Title Screenshot 2026-11-16 112124.png",
+        "Images/Sprinkle Siege In Game 1 Screenshot 2026-11-16 112124.png",
+        "Images/Sprinkle Siege In Game 2 Screenshot 2026-11-16 112124.png"
+      ],
       "versions": [
         {
           "version": "v0.1.1",
