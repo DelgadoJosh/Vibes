@@ -7405,6 +7405,22 @@
           "href": "https://builds.joshdelgado.fyi/Games/Bondwright/Versions/v0.1.0/Bondwright.html"
         }
       ]
+    },
+    {
+      "title": "Sprinkle Siege",
+      "kind": "game",
+      "folder": "Games/Sprinkle Siege",
+      "description": "A bright, silly lane tower defense: kitchen critters guard a giant birthday cake from marching candies that pop down one layer at a time. Toothpick hamsters, sprinkle-shaking squirrels, toast-lobbing turtles and freezer penguins, each with goofy upgrades, against 15 rounds of the Sugar Rush and the Mega Marshmallow Blimp.",
+      "updated": "2026-11-16",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.0",
+          "href": "Games/Sprinkle Siege/Versions/v0.1.0/Sprinkle Siege.html"
+        }
+      ]
     }
   ]
 }
