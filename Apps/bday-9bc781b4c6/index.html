@@ -371,7 +371,7 @@
 // ---------- the date ----------
 // Midnight at the start of Nov 17, 2026 in New York (US Eastern), whatever the viewer's own timezone.
 const NAME = "Jacop";
-const VERSION = "v1.3.1"; // bump on every publish; shown in the ?debug panel
+const VERSION = "v1.4.0"; // bump on every publish; shown in the ?debug panel
 function nyMidnight(y, month, day) {
   const fmt = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hourCycle: "h23", year: "numeric", month: "numeric", day: "numeric", hour: "numeric" });
   for (const offsetHours of [5, 4]) { // EST, then EDT
@@ -590,6 +590,7 @@ function startParty(withSound) {
   $("when").textContent = "Have the best birthday ever! 🎂";
   $("big").classList.remove("show");
   document.title = `Happy 21st Birthday ${NAME}! 🎉`;
+  setVideoPhase(true);
   confetti();
   if (withSound) celebrateSound();
 }
@@ -599,6 +600,7 @@ function resetPrep() {
   $("title").textContent = `${NAME}'s 21st Birthday`;
   $("when").textContent = new Date(REAL_TARGET).toLocaleDateString("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", year: "numeric" }) + " · midnight Eastern time";
   document.title = `${NAME}'s Birthday Countdown`;
+  setVideoPhase(false);
   bits = []; raining = 0;
 }
 function update() {
@@ -633,23 +635,38 @@ setInterval(update, 200);
 update();
 
 // ---------- the video at the bottom ----------
-// Fill in ONE source; leave kind "" to hide the video section entirely.
+// One video while counting down, another once the party starts. For each, fill in ONE source;
+// kind "" hides it (an empty VIDEO_AFTER keeps showing VIDEO_BEFORE after midnight).
 //   kind "youtube": src = the video id (the part after watch?v= or youtu.be/), best on phones; use an Unlisted video
 //   kind "drive":   src = the Google Drive file id (drive.google.com/file/d/<ID>/view), shared "Anyone with the link"
 //   kind "file":    src = an .mp4 URL or a path next to this page (e.g. "video.mp4")
 // aspect: "16 / 9" for landscape, "9 / 16" for a phone video held upright.
-// Try a link before committing it: ?debug&video=youtube:<id> (or drive:<id>, file:<url>).
-const VIDEO = { kind: "drive", src: "1pzsNkVmiuFgdXO1PPAS32HuU0RmSbix4", aspect: "16 / 9", label: "A birthday video for you" };
-(function setupVideo() {
-  const q = new URLSearchParams(location.search);
-  const v = { ...VIDEO };
-  if (q.has("debug") && q.get("video")) {
-    const raw = q.get("video"), i = raw.indexOf(":");
+// Try links before committing them: ?debug&video=drive:<id> (before) and &video2=drive:<id> (after);
+// also youtube:<id> or file:<url>, and &aspect=9:16 / &aspect2=9:16.
+// (var, not const: startParty() can run before this part of the script has.)
+var VIDEO_BEFORE = { kind: "drive", src: "1pzsNkVmiuFgdXO1PPAS32HuU0RmSbix4", aspect: "16 / 9", label: "A birthday video for you" };
+var VIDEO_AFTER = { kind: "", src: "", aspect: "16 / 9", label: "A birthday surprise for you 🎉" };
+var videoShown = null;
+function videoFrom(base, param, aspectParam) {
+  const q = new URLSearchParams(location.search), v = { ...base };
+  if (q.has("debug") && q.get(param)) {
+    const raw = q.get(param), i = raw.indexOf(":");
     v.kind = raw.slice(0, i); v.src = raw.slice(i + 1);
-    if (q.get("aspect")) v.aspect = q.get("aspect").replace(":", " / ");
   }
-  if (!["youtube", "drive", "file"].includes(v.kind) || !v.src) return;
+  if (q.has("debug") && q.get(aspectParam)) v.aspect = q.get(aspectParam).replace(":", " / ");
+  return ["youtube", "drive", "file"].includes(v.kind) && v.src ? v : null;
+}
+function setVideoPhase(party) {
+  if (!VIDEO_BEFORE) return; // the video part of the script hasn't run yet; it calls this itself
+  const before = videoFrom(VIDEO_BEFORE, "video", "aspect");
+  const after = videoFrom(VIDEO_AFTER, "video2", "aspect2");
+  const v = party && after ? after : before;
+  const key = v ? v.kind + ":" + v.src : "";
+  if (key === videoShown) return; // already showing this one; don't interrupt it
+  videoShown = key;
   const box = $("videoBox"), frame = $("videoFrame");
+  frame.innerHTML = ""; frame.hidden = true; $("videoPlay").hidden = false;
+  if (!v) { box.hidden = true; return; }
   box.style.setProperty("--video-aspect", v.aspect);
   $("videoLabel").textContent = v.label;
   box.hidden = false;
@@ -672,7 +689,8 @@ const VIDEO = { kind: "drive", src: "1pzsNkVmiuFgdXO1PPAS32HuU0RmSbix4", aspect:
     $("videoPlay").hidden = true;
     frame.hidden = false;
   };
-})();
+}
+setVideoPhase(partied);
 
 // ---------- debug: add ?debug to the URL ----------
 if (new URLSearchParams(location.search).has("debug")) {
