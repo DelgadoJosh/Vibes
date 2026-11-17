@@ -5027,7 +5027,7 @@
       "kind": "game",
       "folder": "Games/Valet Shuffle",
       "description": "A sliding-block parking puzzle: slide the cars, buses and tow trucks along their lanes to clear a path and drive your car out of the lot in as few moves as you can. Solver-checked lots, a daily lot, rush mode and a lot editor.",
-      "updated": "2026-11-16",
+      "updated": "2026-11-17",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -5035,6 +5035,26 @@
         "Images/Valet Shuffle In Game 1 Screenshot 2026-11-09 225325.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.33",
+          "href": "Games/Valet Shuffle/Versions/v0.1.33/Valet Shuffle.html"
+        },
+        {
+          "version": "v0.1.32",
+          "href": "Games/Valet Shuffle/Versions/v0.1.32/Valet Shuffle.html"
+        },
+        {
+          "version": "v0.1.31",
+          "href": "Games/Valet Shuffle/Versions/v0.1.31/Valet Shuffle.html"
+        },
+        {
+          "version": "v0.1.30",
+          "href": "Games/Valet Shuffle/Versions/v0.1.30/Valet Shuffle.html"
+        },
+        {
+          "version": "v0.1.29",
+          "href": "Games/Valet Shuffle/Versions/v0.1.29/Valet Shuffle.html"
+        },
         {
           "version": "v0.1.28",
           "href": "Games/Valet Shuffle/Versions/v0.1.28/Valet Shuffle.html"
@@ -5057,23 +5077,23 @@
         },
         {
           "version": "v0.1.23",
-          "href": "Games/Valet Shuffle/Versions/v0.1.23/Valet Shuffle.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Valet%20Shuffle/Versions/v0.1.23/Valet%20Shuffle.html"
         },
         {
           "version": "v0.1.22",
-          "href": "Games/Valet Shuffle/Versions/v0.1.22/Valet Shuffle.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Valet%20Shuffle/Versions/v0.1.22/Valet%20Shuffle.html"
         },
         {
           "version": "v0.1.21",
-          "href": "Games/Valet Shuffle/Versions/v0.1.21/Valet Shuffle.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Valet%20Shuffle/Versions/v0.1.21/Valet%20Shuffle.html"
         },
         {
           "version": "v0.1.20",
-          "href": "Games/Valet Shuffle/Versions/v0.1.20/Valet Shuffle.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Valet%20Shuffle/Versions/v0.1.20/Valet%20Shuffle.html"
         },
         {
           "version": "v0.1.19",
-          "href": "Games/Valet Shuffle/Versions/v0.1.19/Valet Shuffle.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Valet%20Shuffle/Versions/v0.1.19/Valet%20Shuffle.html"
         },
         {
           "version": "v0.1.18",
