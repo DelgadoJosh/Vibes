@@ -3122,7 +3122,7 @@
       "kind": "game",
       "folder": "Games/Honk Raid",
       "description": "Honk Raid, made in Godot.",
-      "updated": "2026-11-06",
+      "updated": "2026-11-17",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -3131,6 +3131,10 @@
         "Images/Honk Raid In Game 2 Screenshot 2026-10-17 231644.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.82",
+          "href": "Games/Honk Raid/Versions/v0.1.82/Honk Raid.html"
+        },
         {
           "version": "v0.1.81",
           "href": "Games/Honk Raid/Versions/v0.1.81/Honk Raid.html"
@@ -3169,7 +3173,7 @@
         },
         {
           "version": "v0.1.72",
-          "href": "Games/Honk Raid/Versions/v0.1.72/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.72/Honk%20Raid.html"
         },
         {
           "version": "v0.1.71",
