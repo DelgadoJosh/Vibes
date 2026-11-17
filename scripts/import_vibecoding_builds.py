@@ -72,7 +72,8 @@ SOURCES = {
     "Starline Command": {"description": "A space RTS of big fleet battles: mine asteroid fields, build fighter and bomber squadrons, frigates, cruisers and long-range siege ships, guard your stations with turrets, mines and shield platforms, then break the enemy fleet and its flagship."},
     "Bondwright": {},
     "Sprinkle Siege": {"description": "A bright, silly lane tower defense: kitchen critters guard a giant birthday cake from marching candies that pop down one layer at a time. Toothpick hamsters, sprinkle-shaking squirrels, toast-lobbing turtles and freezer penguins, each with goofy upgrades, against 15 rounds of the Sugar Rush and the Mega Marshmallow Blimp."},
-    "Delivery Driver": {"skip": True},  # single flat build, already on the site as Dangerous Delivery Driver
+    "Delivery Driver": {"skip": True},
+    "Grand Hearth": {"skip": True},  # Vintage Story mod shipped as a zip, not a web build  # single flat build, already on the site as Dangerous Delivery Driver
 }
 SKIP_FILES = {".DS_Store", "README.md"}
 VERSION_DIR = re.compile(r"^(v\d+(?:\.\d+)*)(?:\s+(.+))?$")  # "v0.5.0 Scoreboard" -> version, label

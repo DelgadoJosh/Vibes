@@ -186,6 +186,10 @@
       ],
       "versions": [
         {
+          "version": "v0.13.219",
+          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.219/Deadblock 3D 2 — Ashfall.html"
+        },
+        {
           "version": "v0.13.218",
           "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.218/Deadblock 3D 2 — Ashfall.html"
         },
@@ -223,7 +227,7 @@
         },
         {
           "version": "v0.13.209",
-          "href": "Games/Deadblock 3D 2 - Ashfall/Versions/v0.13.209/Deadblock 3D 2 — Ashfall.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Deadblock%203D%202%20-%20Ashfall/Versions/v0.13.209/Deadblock%203D%202%20%E2%80%94%20Ashfall.html"
         },
         {
           "version": "v0.13.208",
@@ -1693,7 +1697,7 @@
       "kind": "game",
       "folder": "Games/Bloomworks",
       "description": "Bring a dead valley back to life, one belt at a time",
-      "updated": "2026-11-07",
+      "updated": "2026-11-17",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -1701,6 +1705,14 @@
         "Images/Bloomworks In Game Screenshot 2026-10-10 014450.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.348",
+          "href": "Games/Bloomworks/Versions/v0.1.348/Bloomworks.html"
+        },
+        {
+          "version": "v0.1.347",
+          "href": "Games/Bloomworks/Versions/v0.1.347/Bloomworks.html"
+        },
         {
           "version": "v0.1.346",
           "href": "Games/Bloomworks/Versions/v0.1.346/Bloomworks.html"
@@ -1735,11 +1747,11 @@
         },
         {
           "version": "v0.1.338",
-          "href": "Games/Bloomworks/Versions/v0.1.338/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.338/Bloomworks.html"
         },
         {
           "version": "v0.1.337",
-          "href": "Games/Bloomworks/Versions/v0.1.337/Bloomworks.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Bloomworks/Versions/v0.1.337/Bloomworks.html"
         },
         {
           "version": "v0.1.336",
@@ -3474,7 +3486,7 @@
       "kind": "game",
       "folder": "Games/Top Down Mech",
       "description": "Top Down Mech, made in Godot.",
-      "updated": "2026-11-06",
+      "updated": "2026-11-17",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -3482,6 +3494,30 @@
         "Images/Top Down Mech In Game 1 Screenshot 2026-10-17 232822.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.61",
+          "href": "Games/Top Down Mech/Versions/v0.1.61/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.60",
+          "href": "Games/Top Down Mech/Versions/v0.1.60/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.59",
+          "href": "Games/Top Down Mech/Versions/v0.1.59/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.58",
+          "href": "Games/Top Down Mech/Versions/v0.1.58/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.57",
+          "href": "Games/Top Down Mech/Versions/v0.1.57/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.56",
+          "href": "Games/Top Down Mech/Versions/v0.1.56/Top Down Mech.html"
+        },
         {
           "version": "v0.1.55",
           "href": "Games/Top Down Mech/Versions/v0.1.55/Top Down Mech.html"
@@ -3500,27 +3536,27 @@
         },
         {
           "version": "v0.1.51",
-          "href": "Games/Top Down Mech/Versions/v0.1.51/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.51/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.50",
-          "href": "Games/Top Down Mech/Versions/v0.1.50/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.50/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.49",
-          "href": "Games/Top Down Mech/Versions/v0.1.49/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.49/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.48",
-          "href": "Games/Top Down Mech/Versions/v0.1.48/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.48/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.47",
-          "href": "Games/Top Down Mech/Versions/v0.1.47/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.47/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.46",
-          "href": "Games/Top Down Mech/Versions/v0.1.46/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.46/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.45",
@@ -3764,7 +3800,7 @@
       "kind": "game",
       "folder": "Games/Infection Cleaner",
       "description": "Infection Cleaner, made in Godot.",
-      "updated": "2026-11-06",
+      "updated": "2026-11-17",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -3772,6 +3808,14 @@
         "Images/Infection Cleaner In Game Screenshot 2026-11-06 082003.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.177",
+          "href": "Games/Infection Cleaner/Versions/v0.1.177/Infection Cleaner.html"
+        },
+        {
+          "version": "v0.1.176",
+          "href": "Games/Infection Cleaner/Versions/v0.1.176/Infection Cleaner.html"
+        },
         {
           "version": "v0.1.175",
           "href": "Games/Infection Cleaner/Versions/v0.1.175/Infection Cleaner.html"
@@ -3806,11 +3850,11 @@
         },
         {
           "version": "v0.1.167",
-          "href": "Games/Infection Cleaner/Versions/v0.1.167/Infection Cleaner.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Infection%20Cleaner/Versions/v0.1.167/Infection%20Cleaner.html"
         },
         {
           "version": "v0.1.166",
-          "href": "Games/Infection Cleaner/Versions/v0.1.166/Infection Cleaner.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Infection%20Cleaner/Versions/v0.1.166/Infection%20Cleaner.html"
         },
         {
           "version": "v0.1.165",
@@ -4805,7 +4849,7 @@
       "kind": "game",
       "folder": "Games/Gridlock Getaway",
       "description": "Gridlock Getaway, made in Godot.",
-      "updated": "2026-11-08",
+      "updated": "2026-11-14",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -4814,24 +4858,80 @@
       ],
       "versions": [
         {
+          "version": "v0.1.18",
+          "href": "Games/Gridlock Getaway/Versions/v0.1.18/Gridlock Getaway.html"
+        },
+        {
+          "version": "v0.1.17",
+          "href": "Games/Gridlock Getaway/Versions/v0.1.17/Gridlock Getaway.html"
+        },
+        {
+          "version": "v0.1.16",
+          "href": "Games/Gridlock Getaway/Versions/v0.1.16/Gridlock Getaway.html"
+        },
+        {
+          "version": "v0.1.15",
+          "href": "Games/Gridlock Getaway/Versions/v0.1.15/Gridlock Getaway.html"
+        },
+        {
+          "version": "v0.1.14",
+          "href": "Games/Gridlock Getaway/Versions/v0.1.14/Gridlock Getaway.html"
+        },
+        {
+          "version": "v0.1.13",
+          "href": "Games/Gridlock Getaway/Versions/v0.1.13/Gridlock Getaway.html"
+        },
+        {
+          "version": "v0.1.12",
+          "href": "Games/Gridlock Getaway/Versions/v0.1.12/Gridlock Getaway.html"
+        },
+        {
+          "version": "v0.1.11",
+          "href": "Games/Gridlock Getaway/Versions/v0.1.11/Gridlock Getaway.html"
+        },
+        {
+          "version": "v0.1.10",
+          "href": "Games/Gridlock Getaway/Versions/v0.1.10/Gridlock Getaway.html"
+        },
+        {
+          "version": "v0.1.9",
+          "href": "Games/Gridlock Getaway/Versions/v0.1.9/Gridlock Getaway.html"
+        },
+        {
+          "version": "v0.1.8",
+          "href": "https://builds.joshdelgado.fyi/Games/Gridlock%20Getaway/Versions/v0.1.8/Gridlock%20Getaway.html"
+        },
+        {
+          "version": "v0.1.7",
+          "href": "https://builds.joshdelgado.fyi/Games/Gridlock%20Getaway/Versions/v0.1.7/Gridlock%20Getaway.html"
+        },
+        {
+          "version": "v0.1.6",
+          "href": "https://builds.joshdelgado.fyi/Games/Gridlock%20Getaway/Versions/v0.1.6/Gridlock%20Getaway.html"
+        },
+        {
+          "version": "v0.1.5",
+          "href": "https://builds.joshdelgado.fyi/Games/Gridlock%20Getaway/Versions/v0.1.5/Gridlock%20Getaway.html"
+        },
+        {
           "version": "v0.1.4",
-          "href": "Games/Gridlock Getaway/Versions/v0.1.4/Gridlock Getaway.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Gridlock%20Getaway/Versions/v0.1.4/Gridlock%20Getaway.html"
         },
         {
           "version": "v0.1.3",
-          "href": "Games/Gridlock Getaway/Versions/v0.1.3/Gridlock Getaway.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Gridlock%20Getaway/Versions/v0.1.3/Gridlock%20Getaway.html"
         },
         {
           "version": "v0.1.2",
-          "href": "Games/Gridlock Getaway/Versions/v0.1.2/Gridlock Getaway.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Gridlock%20Getaway/Versions/v0.1.2/Gridlock%20Getaway.html"
         },
         {
           "version": "v0.1.1",
-          "href": "Games/Gridlock Getaway/Versions/v0.1.1/Gridlock Getaway.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Gridlock%20Getaway/Versions/v0.1.1/Gridlock%20Getaway.html"
         },
         {
           "version": "v0.1.0",
-          "href": "Games/Gridlock Getaway/Versions/v0.1.0/Gridlock Getaway.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Gridlock%20Getaway/Versions/v0.1.0/Gridlock%20Getaway.html"
         }
       ]
     },
@@ -4840,7 +4940,7 @@
       "kind": "game",
       "folder": "Games/Senpai Alert",
       "description": "A goofy anime real-time strategy game in the spirit of Red Alert 3: build a base, harvest, and send chibi idols, school-council mecha or shrine spirits against a rival AI. Three factions with their own gimmicks, fog of war, aimed superweapons, transports, walls, and save and load.",
-      "updated": "2026-11-12",
+      "updated": "2026-11-13",
       "model": "Fable 5.1 (v0.1.0–v0.1.35); Opus 5.5 (v0.1.36+)",
       "context": "",
       "images": [
@@ -4849,44 +4949,164 @@
       ],
       "versions": [
         {
+          "version": "v0.1.75",
+          "href": "Games/Senpai Alert/Versions/v0.1.75/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.74",
+          "href": "Games/Senpai Alert/Versions/v0.1.74/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.73",
+          "href": "Games/Senpai Alert/Versions/v0.1.73/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.72",
+          "href": "Games/Senpai Alert/Versions/v0.1.72/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.71",
+          "href": "Games/Senpai Alert/Versions/v0.1.71/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.70",
+          "href": "Games/Senpai Alert/Versions/v0.1.70/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.69",
+          "href": "Games/Senpai Alert/Versions/v0.1.69/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.68",
+          "href": "Games/Senpai Alert/Versions/v0.1.68/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.67",
+          "href": "Games/Senpai Alert/Versions/v0.1.67/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.66",
+          "href": "Games/Senpai Alert/Versions/v0.1.66/Senpai Alert.html"
+        },
+        {
+          "version": "v0.1.65",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.65/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.64",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.64/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.63",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.63/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.62",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.62/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.61",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.61/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.60",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.60/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.59",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.59/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.58",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.58/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.57",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.57/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.56",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.56/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.55",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.55/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.54",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.54/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.53",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.53/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.52",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.52/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.51",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.51/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.50",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.50/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.49",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.49/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.48",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.48/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.47",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.47/Senpai%20Alert.html"
+        },
+        {
+          "version": "v0.1.46",
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.46/Senpai%20Alert.html"
+        },
+        {
           "version": "v0.1.45",
-          "href": "Games/Senpai Alert/Versions/v0.1.45/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.45/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.44",
-          "href": "Games/Senpai Alert/Versions/v0.1.44/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.44/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.43",
-          "href": "Games/Senpai Alert/Versions/v0.1.43/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.43/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.42",
-          "href": "Games/Senpai Alert/Versions/v0.1.42/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.42/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.41",
-          "href": "Games/Senpai Alert/Versions/v0.1.41/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.41/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.40",
-          "href": "Games/Senpai Alert/Versions/v0.1.40/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.40/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.39",
-          "href": "Games/Senpai Alert/Versions/v0.1.39/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.39/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.38",
-          "href": "Games/Senpai Alert/Versions/v0.1.38/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.38/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.37",
-          "href": "Games/Senpai Alert/Versions/v0.1.37/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.37/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.36",
-          "href": "Games/Senpai Alert/Versions/v0.1.36/Senpai Alert.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Senpai%20Alert/Versions/v0.1.36/Senpai%20Alert.html"
         },
         {
           "version": "v0.1.35",
