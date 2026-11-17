@@ -3132,6 +3132,10 @@
       ],
       "versions": [
         {
+          "version": "v0.1.83",
+          "href": "Games/Honk Raid/Versions/v0.1.83/Honk Raid.html"
+        },
+        {
           "version": "v0.1.82",
           "href": "Games/Honk Raid/Versions/v0.1.82/Honk Raid.html"
         },
@@ -3169,7 +3173,7 @@
         },
         {
           "version": "v0.1.73",
-          "href": "Games/Honk Raid/Versions/v0.1.73/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.73/Honk%20Raid.html"
         },
         {
           "version": "v0.1.72",
