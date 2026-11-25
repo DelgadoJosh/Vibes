@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1794045271|1818033';
+const CACHE_VERSION = '1795622680|2282863';
 /** @type {string} */
 const CACHE_PREFIX = 'Bloomworks-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
