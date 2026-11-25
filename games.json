@@ -3142,7 +3142,7 @@
       "kind": "game",
       "folder": "Games/Honk Raid",
       "description": "An isometric extraction shooter: you are a goose in a tiny tactical helmet, raiding picnic baskets and coolers for snacks and shiny junk, then waddling to an exit before the park closes.",
-      "updated": "2026-11-17",
+      "updated": "2026-11-25",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -3151,6 +3151,10 @@
         "Images/Honk Raid In Game 2 Screenshot 2026-10-17 231644.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.84",
+          "href": "Games/Honk Raid/Versions/v0.1.84/Honk Raid.html"
+        },
         {
           "version": "v0.1.83",
           "href": "Games/Honk Raid/Versions/v0.1.83/Honk Raid.html"
@@ -3189,7 +3193,7 @@
         },
         {
           "version": "v0.1.74",
-          "href": "Games/Honk Raid/Versions/v0.1.74/Honk Raid.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Honk%20Raid/Versions/v0.1.74/Honk%20Raid.html"
         },
         {
           "version": "v0.1.73",
