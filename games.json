@@ -3116,13 +3116,17 @@
       "kind": "game",
       "folder": "Games/Multiplayer Tech Demo",
       "description": "Testing to see if we can have Multiplayer in Godot Web exports",
-      "updated": "2026-10-10",
+      "updated": "2026-11-25",
       "model": "Opus 5.5",
       "context": "",
       "images": [
         "Images/Multiplayer Tech Demo In Game Screenshot 2026-10-10 192807.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.3",
+          "href": "Games/Multiplayer Tech Demo/Versions/v0.1.3/WebRTC Zombies.html"
+        },
         {
           "version": "v0.1.2",
           "href": "Games/Multiplayer Tech Demo/Versions/v0.1.2/WebRTC Zombies.html"
