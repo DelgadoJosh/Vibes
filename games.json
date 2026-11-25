@@ -3486,7 +3486,7 @@
       "kind": "game",
       "folder": "Games/Top Down Mech",
       "description": "Top Down Mech, made in Godot.",
-      "updated": "2026-11-17",
+      "updated": "2026-11-25",
       "model": "Opus 5.5",
       "context": "",
       "images": [
@@ -3494,6 +3494,14 @@
         "Images/Top Down Mech In Game 1 Screenshot 2026-10-17 232822.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.63",
+          "href": "Games/Top Down Mech/Versions/v0.1.63/Top Down Mech.html"
+        },
+        {
+          "version": "v0.1.62",
+          "href": "Games/Top Down Mech/Versions/v0.1.62/Top Down Mech.html"
+        },
         {
           "version": "v0.1.61",
           "href": "Games/Top Down Mech/Versions/v0.1.61/Top Down Mech.html"
@@ -3528,11 +3536,11 @@
         },
         {
           "version": "v0.1.53",
-          "href": "Games/Top Down Mech/Versions/v0.1.53/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.53/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.52",
-          "href": "Games/Top Down Mech/Versions/v0.1.52/Top Down Mech.html"
+          "href": "https://builds.joshdelgado.fyi/Games/Top%20Down%20Mech/Versions/v0.1.52/Top%20Down%20Mech.html"
         },
         {
           "version": "v0.1.51",
