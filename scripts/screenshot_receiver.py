@@ -10,15 +10,20 @@ Run it in the background, then paste SNIPPET (printed on start) into the
 game's page with the browser's JavaScript tool and call
 `await __save('<Game> Title')` / `await __save('<Game> In Game 1')`.
 Each call writes `<name> Screenshot YYYY-MM-DD HHMMSS.png`. Stop the server
-when done. It only listens on 127.0.0.1:8799.
+when done. It only listens on 127.0.0.1:8799, and only accepts pages served from
+localhost or 127.0.0.1 (any port), so another website open meanwhile can't drop
+files into Images/ (security audit 2026-11-25).
 """
 import base64
 import http.server
 import os
+import re
 import sys
 import urllib.parse
 
 PORT = 8799
+LOCAL_ORIGIN = re.compile(r"^http://(localhost|127\.0\.0\.1)(:\d+)?$")
+MAX_BYTES = 64 * 1024 * 1024
 OUT = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else
                       os.path.join(os.path.dirname(__file__), "..", "Images"))
 
@@ -27,24 +32,41 @@ window.__hold = (key, ms) => new Promise(r => { const code = key.length===1 ? 'K
 
 
 class Handler(http.server.BaseHTTPRequestHandler):
+    def _local(self):
+        # Browsers always send Origin on a cross-origin POST; a local tool may send none.
+        origin = self.headers.get("Origin")
+        return origin is None or bool(LOCAL_ORIGIN.match(origin))
+
     def _cors(self):
-        self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Access-Control-Allow-Headers", "*")
-        self.send_header("Access-Control-Allow-Private-Network", "true")
+        origin = self.headers.get("Origin")
+        if origin and LOCAL_ORIGIN.match(origin):
+            self.send_header("Access-Control-Allow-Origin", origin)
+            self.send_header("Vary", "Origin")
+            self.send_header("Access-Control-Allow-Headers", "*")
+            self.send_header("Access-Control-Allow-Private-Network", "true")
+
+    def _refuse(self, code):
+        self.send_response(code)
+        self._cors()
+        self.end_headers()
 
     def do_OPTIONS(self):
+        if not self._local():
+            return self._refuse(403)
         self.send_response(204)
         self._cors()
         self.end_headers()
 
     def do_POST(self):
+        if not self._local():
+            return self._refuse(403)
+        length = int(self.headers.get("Content-Length") or 0)
+        if length <= 0 or length > MAX_BYTES:
+            return self._refuse(413)
         name = os.path.basename(urllib.parse.unquote(self.path.lstrip("/")))
         if not name.endswith(".png"):
-            self.send_response(400)
-            self._cors()
-            self.end_headers()
-            return
-        data = self.rfile.read(int(self.headers["Content-Length"])).decode()
+            return self._refuse(400)
+        data = self.rfile.read(length).decode()
         path = os.path.join(OUT, name)
         with open(path, "wb") as f:
             f.write(base64.b64decode(data.split(",", 1)[1]))

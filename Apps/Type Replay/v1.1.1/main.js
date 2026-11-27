@@ -69,7 +69,7 @@ function paintKeys(keys) {
 }
 
 function esc(s) {
-  return s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" })[c]);
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" })[c]);
 }
 
 // ---------- typing engine (shared by live tests and replays) ----------
@@ -576,15 +576,15 @@ function showStats() {
   for (const b of $("st-modes").children) b.classList.toggle("on", b.dataset.key === statsMode);
 
   drawHistory(inMode);
-  const row = (r, first) => `<tr data-id="${r.id}">${first}<td class="hl">${Math.round(r.wpm)}</td><td>${Math.round(r.acc)}%</td>` +
-    `<td>${Math.round(r.raw)}</td><td class="dim">${fmtDate(r.at)}</td>` +
+  const row = (r, first) => `<tr data-id="${esc(r.id)}">${first}<td class="hl">${Math.round(r.wpm)}</td><td>${Math.round(r.acc)}%</td>` +
+    `<td>${Math.round(r.raw)}</td><td class="dim">${esc(fmtDate(r.at))}</td>` +
     `<td>${r.hasRec ? `<button data-act="replay">replay</button>` : ""}</td></tr>`;
   const head = first => `<tr><th>${first}</th><th>wpm</th><th>acc</th><th>raw</th><th>date</th><th></th></tr>`;
   const lb = leaderboard(statsMode);
   $("st-lb").innerHTML = lb.length ? head("#") + lb.map((r, i) => row(r, `<td class="dim">${i + 1}</td>`)).join("")
     : `<tr><td class="dim">no ${statsMode} tests yet</td></tr>`;
   const recent = runs.slice(-RECENT_N).reverse();
-  $("st-recent").innerHTML = recent.length ? head("test") + recent.map(r => row(r, `<td class="dim">${modeKey(r)}</td>`)).join("")
+  $("st-recent").innerHTML = recent.length ? head("test") + recent.map(r => row(r, `<td class="dim">${esc(modeKey(r))}</td>`)).join("")
     : `<tr><td class="dim">no tests yet</td></tr>`;
   show("stats");
 }
@@ -646,6 +646,19 @@ $("btn-export").addEventListener("click", () => {
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 });
 
+// Security fix 2026-11-25 (backported from v1.1.2): an import file can come from anyone,
+// so keep only known fields of the right types.
+function cleanImportedRun(r) {
+  if (!r || typeof r.id !== "string" || !/^[A-Za-z0-9]{1,40}$/.test(r.id)) return null;
+  const amount = Number(r.amount);
+  if (typeof r.mode !== "string" || !MODES.includes(`${r.mode} ${amount}`)) return null;
+  const num = v => Number.isFinite(Number(v)) ? Number(v) : 0;
+  return {
+    id: r.id, at: num(r.at), mode: r.mode, amount, wpm: num(r.wpm), raw: num(r.raw), acc: num(r.acc),
+    chars: Array.isArray(r.chars) ? r.chars.slice(0, 4).map(num) : [0, 0, 0, 0], dur: num(r.dur), hasRec: false,
+  };
+}
+
 $("btn-import").addEventListener("click", () => $("import-file").click());
 $("import-file").addEventListener("change", async e => {
   const file = e.target.files[0];
@@ -655,7 +668,7 @@ $("import-file").addEventListener("change", async e => {
   try { data = JSON.parse(await file.text()); } catch { data = null; }
   if (data?.app !== "type-replay" || !Array.isArray(data.runs)) { alert("That isn't a Type Replay export."); return; }
   const have = new Set(runs.map(r => r.id));
-  const added = data.runs.filter(r => r && r.id && !have.has(r.id) && MODES.includes(modeKey(r)));
+  const added = data.runs.map(cleanImportedRun).filter(r => r && !have.has(r.id));
   for (const r of added) {
     const packed = data.recs?.[r.id];
     r.hasRec = !!packed && save(REC_PREFIX + r.id, packed);
