@@ -1593,13 +1593,17 @@
       "kind": "app",
       "folder": "Apps/Dnd Initiative Tracker",
       "description": "A realtime turn manager for Dungeons & Dragons 5e, providing synchronized views for DMs and players.",
-      "updated": "2026-10-04",
+      "updated": "2026-11-26",
       "model": "Opus (likely 4.8)",
       "context": "",
       "images": [
         "Images/Dnd Turn Manager Title Screenshot 2026-10-08 184628.png"
       ],
       "versions": [
+        {
+          "version": "v1.0.1",
+          "href": "Apps/Dnd Initiative Tracker/v1.0.1/index.html"
+        },
         {
           "version": "v1.0.0",
           "href": "Apps/Dnd Initiative Tracker/v1/Dnd Turn Manager/dist/index.html"
@@ -1611,13 +1615,17 @@
       "kind": "app",
       "folder": "Apps/Dnd Party Manager",
       "description": "D&D 5e character sheets, HP and inventory for the whole party, like D&D Beyond. DM, player and party-screen views of the same data, live over peer-to-peer, saved as plain YAML you can edit by hand.",
-      "updated": "2026-10-26",
+      "updated": "2026-11-26",
       "model": "Claude Opus 5.5",
       "context": "Wanted the Initiative Tracker's DM and player views for the rest of the game: stats, HP and loot, in a file format that isn't locked in.",
       "images": [
         "Images/Dnd Party Manager Title Screenshot 2026-10-26.png"
       ],
       "versions": [
+        {
+          "version": "v0.1.1",
+          "href": "Apps/Dnd Party Manager/v0.1.1/index.html"
+        },
         {
           "version": "v0.1.0",
           "href": "Apps/Dnd Party Manager/v0.1.0/index.html"
