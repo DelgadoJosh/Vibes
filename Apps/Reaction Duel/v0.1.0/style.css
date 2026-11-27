@@ -1,0 +1,107 @@
+/* Additive display: black is see-through, so everything is light-on-black. */
+:root {
+  --fg: #e8f0ff;
+  --dim: #7f8aa3;
+  --gold: #ffd34d;
+  --red: #ff5a5a;
+  --green: #5dff9a;
+  --cyan: #59d8ff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: #000;
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+/* The glasses page can't scroll; a small laptop window can, to reach the simulator. */
+body.lens { overflow: hidden; }
+body.desktop { padding: 16px 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+#lens {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+body.desktop #lens { outline: 1px solid #2a2f3a; border-radius: 12px; }
+body.lens #sim { display: none; }
+
+/* ---------- shared pieces ---------- */
+.title { font-size: 44px; font-weight: 800; letter-spacing: 2px; color: var(--gold); margin: 0 0 6px; }
+.sub { font-size: 22px; color: var(--dim); margin: 0 0 28px; }
+.big { font-size: 96px; font-weight: 900; line-height: 1; margin: 0; }
+.mid { font-size: 34px; font-weight: 700; margin: 8px 0; }
+.body { font-size: 24px; margin: 6px 0; }
+.small { font-size: 20px; color: var(--dim); margin: 6px 0; }
+.hint { position: absolute; bottom: 28px; left: 0; right: 0; font-size: 20px; color: var(--dim); }
+.top { position: absolute; top: 28px; left: 40px; right: 40px; display: flex; justify-content: space-between; font-size: 22px; color: var(--dim); }
+
+.gold { color: var(--gold); }
+.red { color: var(--red); }
+.green { color: var(--green); }
+.cyan { color: var(--cyan); }
+
+/* ---------- menu ---------- */
+.menu { list-style: none; padding: 0; margin: 0; width: 380px; }
+.menu li {
+  font-size: 28px;
+  padding: 10px 18px;
+  margin: 6px 0;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  color: var(--dim);
+}
+.menu li.sel { color: var(--fg); border-color: var(--cyan); }
+
+/* ---------- lives ---------- */
+.lives span { display: inline-block; width: 16px; height: 16px; border-radius: 50%; margin-left: 8px; border: 2px solid var(--red); }
+.lives span.on { background: var(--red); }
+
+/* ---------- quick draw target ---------- */
+.ring { width: 220px; height: 220px; border-radius: 50%; border: 6px solid #333a48; margin: 10px auto 24px; }
+.ring.live { border-color: var(--green); box-shadow: 0 0 40px var(--green); }
+
+.arrow svg { width: 240px; height: 240px; }
+
+/* ---------- stats table ---------- */
+table { border-collapse: collapse; font-size: 22px; margin: 0 auto 16px; }
+th, td { padding: 6px 14px; text-align: right; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--dim); font-weight: 600; }
+
+/* ---------- simulator ---------- */
+#sim { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.sim-row { display: flex; gap: 8px; }
+#sim button {
+  font: inherit;
+  font-size: 15px;
+  padding: 10px 14px;
+  min-width: 110px;
+  background: #151922;
+  color: var(--fg);
+  border: 1px solid #333a48;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#sim button:active { background: #232a38; }
+#sim button.pinch { border-color: var(--cyan); }
+.sim-note { font-size: 13px; color: var(--dim); margin: 4px 0 0; }

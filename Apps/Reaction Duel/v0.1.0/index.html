@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reaction Duel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- The 600 x 600 lens. On the glasses this is the whole screen. -->
+  <main id="lens" aria-live="polite"></main>
+
+  <!-- Browser-only stand-in for the Neural Band. Hidden on a lens-sized screen. -->
+  <section id="sim" aria-label="Gesture simulator">
+    <div class="sim-row">
+      <button data-key="ArrowUp">Swipe up</button>
+    </div>
+    <div class="sim-row">
+      <button data-key="ArrowLeft">Swipe left</button>
+      <button data-key="Enter" class="pinch">Pinch</button>
+      <button data-key="ArrowRight">Swipe right</button>
+    </div>
+    <div class="sim-row">
+      <button data-key="ArrowDown">Swipe down</button>
+      <button data-key="Escape">Back</button>
+    </div>
+    <p class="sim-note">Keyboard works too: arrows, Enter, Esc. Version <span id="ver"></span></p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

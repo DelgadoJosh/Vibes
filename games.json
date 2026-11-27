@@ -4712,6 +4712,24 @@
       ]
     },
     {
+      "title": "Reaction Duel",
+      "kind": "app",
+      "folder": "Apps/Reaction Duel",
+      "description": "A Western quick-draw reaction game for the Meta Ray-Ban Display: pinch on DRAW before the rival does, and don't fall for HOLD. Practice modes time every pinch and swipe, and Stats compare glasses against laptop to measure the Neural Band's input lag. Arrow keys and Enter on a computer.",
+      "updated": "2026-11-27",
+      "model": "Claude Opus 5.5",
+      "context": "First game for the Ray-Ban Display glasses, and a way to measure gesture latency before building a rhythm game.",
+      "images": [
+        "Images/Reaction Duel Title Screenshot 2026-11-27.png"
+      ],
+      "versions": [
+        {
+          "version": "v0.1.0",
+          "href": "Apps/Reaction Duel/v0.1.0/index.html"
+        }
+      ]
+    },
+    {
       "title": "Hookpin Heist",
       "kind": "game",
       "folder": "Games/Hookpin Heist",
