@@ -7886,9 +7886,13 @@
       "folder": "Games/Mochi Pal",
       "description": "A cute virtual pet: hatch an egg and raise a squishy mochi blob. Feed it, play, bathe it, tuck it in and rub it for hearts; win coins in mini-games for treats and hats, and see which of six grown-ups it becomes. Saves itself, and you can share your pet with a code or file.",
       "updated": "2026-11-27",
-      "model": "",
+      "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Mochi Pal Title Screenshot 2026-11-27 230151.png",
+        "Images/Mochi Pal In Game 1 Screenshot 2026-11-27 230151.png",
+        "Images/Mochi Pal In Game 2 Screenshot 2026-11-27 230151.png"
+      ],
       "versions": [
         {
           "version": "v0.1.1",
