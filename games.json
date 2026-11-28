@@ -7908,11 +7908,15 @@
       "title": "Rummage",
       "kind": "game",
       "folder": "Games/Rummage",
-      "description": "Rummage, made in Godot.",
+      "description": "Sneak through post-apocalyptic ruins and dig through containers stacked in layers of junk to reach the loot underneath. Searching fast is quicker but loud, and cameras and guards are listening.",
       "updated": "2026-11-27",
-      "model": "",
+      "model": "Opus 5.5",
       "context": "",
-      "images": [],
+      "images": [
+        "Images/Rummage Title Screenshot 2026-11-27 233637.png",
+        "Images/Rummage In Game 1 Screenshot 2026-11-27 233637.png",
+        "Images/Rummage In Game 2 Screenshot 2026-11-27 233637.png"
+      ],
       "versions": [
         {
           "version": "v0.1.8",
