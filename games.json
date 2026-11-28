@@ -7879,6 +7879,26 @@
           "href": "https://builds.joshdelgado.fyi/Games/Sprinkle%20Siege/Versions/v0.1.0/Sprinkle%20Siege.html"
         }
       ]
+    },
+    {
+      "title": "Mochi Pal",
+      "kind": "game",
+      "folder": "Games/Mochi Pal",
+      "description": "A cute virtual pet: hatch an egg and raise a squishy mochi blob. Feed it, play, bathe it, tuck it in and rub it for hearts; win coins in mini-games for treats and hats, and see which of six grown-ups it becomes. Saves itself, and you can share your pet with a code or file.",
+      "updated": "2026-11-27",
+      "model": "",
+      "context": "",
+      "images": [],
+      "versions": [
+        {
+          "version": "v0.1.1",
+          "href": "Games/Mochi Pal/Versions/v0.1.1/Mochi Pal.html"
+        },
+        {
+          "version": "v0.1.0",
+          "href": "Games/Mochi Pal/Versions/v0.1.0/Mochi Pal.html"
+        }
+      ]
     }
   ]
 }
